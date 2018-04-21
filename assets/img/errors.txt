@@ -1,0 +1,5 @@
+[2018-04-21 04:43:30] layer "Enjoy the wildest threesome of video, card and miniature games,": Expected end of input but "," found.
+[2018-04-21 04:43:30] layer "+": Expected Either a default asset specification or a layer asset specification but "+" found.
+[2018-04-21 04:43:30] layer "+": Expected Either a default asset specification or a layer asset specification but "+" found.
+[2018-04-21 04:43:30] layer "+": Expected Either a default asset specification or a layer asset specification but "+" found.
+[2018-04-21 04:43:30] layer "+": Expected Either a default asset specification or a layer asset specification but "+" found.

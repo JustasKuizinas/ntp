@@ -1,0 +1,74 @@
+html {
+    font-size: 62.5%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: $text-color;
+    font-family: $font-roboto;
+    font-size: $default-font-size;
+    position: relative;
+    line-height: initial;
+    overflow-y: scroll;
+    &.popup-is-active {
+        overflow: hidden;
+    }
+    &.is-desktop.popup-is-active.has-scrollbar {
+        padding-right:17px;
+    }
+    &.off-canvas-is-active {
+        overflow:hidden;
+    }
+}
+
+button{
+  &:focus{
+      outline: none;
+  }
+}
+
+
+a {
+    color: $link-color;
+    cursor: pointer;
+    text-decoration: none;
+    &.hover {
+        color: inherit;
+    }
+}
+
+table {
+    width: 100%;
+}
+
+::-webkit-input-placeholder {
+    color: #a7a9ac;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #a7a9ac;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #a7a9ac;
+}
+
+:-ms-input-placeholder {
+    color: #a7a9ac !important;
+}
+
+// ::-moz-selection {
+//     background: #173057;
+//     color: #fff;
+// }
+
+// ::selection {
+//     background: #173057;
+//     color: #fff;
+// }

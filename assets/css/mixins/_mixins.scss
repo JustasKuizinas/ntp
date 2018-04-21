@@ -1,0 +1,108 @@
+$break-tablet: 768px;
+$break-desktop: 1024px;
+
+@mixin media($media) { 
+	@if $media == mobile-only {
+		@media only screen and (max-width:  $break-desktop - 1) { @content; }
+	}
+	@else if $media == phone-only {
+		@media only screen and (max-width:  $break-tablet - 1) { @content; }
+	}
+	@else if $media == tablet {
+		@media only screen and (min-width: $break-tablet ) { @content; }
+	}
+	@else if $media == tablet-land {
+		@media only screen and (min-width: 1024px ) { @content; }
+	}
+	@else if $media == tablet-only {
+		@media only screen and (min-width: $break-tablet ) and (max-width: $break-desktop - 1) { @content; }
+	}
+	@else if $media == desktop {
+		@media only screen and (min-width: $break-desktop) { @content; }
+	}
+	@else{
+		@media only screen and (min-width: $media) { @content; }
+	}
+}
+
+@mixin img-retina($file, $width, $height) {
+	background-image: url("../img/" + $file + ".png");
+	background-repeat: no-repeat;
+	width: $width; 
+	height: $height;  
+	@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   min--moz-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx) {
+		background-image: url("../img/" + $file + "@2x.png"); 
+		background-size: $width $height;  
+	}
+}
+
+
+@mixin hover(){
+	.is-desktop &{
+		&:hover {
+			@content;
+		}
+	}
+	.is-mobile &{
+		&:active {
+			@content;
+		}
+	}
+}
+
+
+@mixin forceHardware(){
+	transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;   
+}
+
+@mixin display-from($rez, $type) {
+    display: none;
+    @include media($rez) {
+        display: $type;
+    }
+}
+
+@mixin hide-from($rez) {
+    @include media($rez) {
+        display: none;
+    }
+}
+
+@mixin font($size, $lineHeight:false) {
+    font-size: $size;
+    @if $lineHeight !=false {
+        line-height: $lineHeight;
+    }
+    @else {
+        line-height: 1;
+    }
+}
+
+@mixin placeholder(){
+    ::-webkit-input-placeholder {
+       @content;
+    }
+
+    :-moz-placeholder {
+        /* Firefox 18- */
+        @content;
+    }
+
+    ::-moz-placeholder {
+        /* Firefox 19+ */
+        @content;
+    }
+
+    :-ms-input-placeholder {
+        @content;
+    }
+
+}

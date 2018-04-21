@@ -1,0 +1,962 @@
+@import "mixins/mixins";
+@import "fonts/fonts";
+@import "base/config";
+@import "base/normalize";
+@import "base/helpers";
+@import "base/helpers-extend";
+@import "base/base";
+
+
+.main-content{
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.logo {
+    width: 157px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.3;
+    color: #ffc731;
+    font-weight: 400;
+    font-family: $font-astoria;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.button {
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    &:focus {
+        outline: none;
+    }
+    &.-primary {
+        text-transform: uppercase;
+        font-family: $font-astoria;
+        color: #d9d9d9;
+        width: 163px;
+        height: 48px;
+        background: url('../img/btn-bg@2x.png');
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 400;
+
+        &:hover{
+            color: #fff;
+        }
+    }
+    &.-circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 42px;
+        height: 42px;
+        background: url('../img/btn-circle.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &.-play {
+        width: 98px;
+        height: 98px;
+        background-image: url(../img/play-btn.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &.-iron {
+        width: 32px;
+        height: 32px;
+        font-family: $font-roboto;
+        font-size: 2.4rem;
+        font-weight: 700;
+        position: relative;
+        color: #d1d1d1;
+        background: none;
+        background-image: url(../img/iron-btn@2x.png);
+        background-size: cover;
+
+        &.swiper-pagination-bullet-active {
+            color: #ffc731;
+        }
+    }
+    &.-iron-toggle {
+        width: 32px;
+        height: 32px;
+        font-family: $font-roboto;
+        font-size: 2.4rem;
+        font-weight: 700;
+        position: relative;
+        color: #d1d1d1;
+        background-image: url(../img/iron-btn@2x.png);
+        background-size: cover;
+        &:before {
+            @extend .h-center-xy;
+            position: absolute;
+            content: '-';
+        }
+
+        .accordion .collapsed & {
+            &:before {
+                content: '+';
+            }
+        }
+
+    }
+
+}
+
+[class^=icon-] {
+    fill: #d9d9d9;
+}
+
+.icon-btc {
+    width: 16px;
+    height: 23px;
+}
+
+.icon-fb {
+    width: 23px;
+    height: 26px;
+}
+
+.icon-tw {
+    width: 19px;
+    height: 19px;
+}
+
+.icon-insta {
+    width: 18px;
+    height: 18px;
+}
+
+.icon-telegram {
+    width: 18px;
+    height: 17px;
+}
+
+.icon-ln {
+    width: 25px;
+    height: 25px;
+}
+
+.container-primary {
+    max-width: 1200px;
+}
+
+.row {
+    &.-no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+
+        > .col,
+        > [class*="col-"] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.subscribe {
+    height: 60px;
+    display: flex;
+    input {
+        &::placeholder {
+            color: #000000;
+        }
+        flex: 1;
+        height: 100%;
+        background-color: #979695;
+        font-family: $font-roboto;
+        color: #000000;
+        font-size: 18px;
+        padding: 0 25px;
+    }
+    button {
+        width: 160px;
+        height: 100%;
+        background-color: #0c0c0c;
+        font-family: $font-astoria;
+        color: #ffc731;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        &:hover{
+            color: #fccb49;
+        }
+    }
+}
+
+.social {
+    display: flex;
+
+    .button {
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+.menu {
+    width: 1170px;
+    height: 57px;
+    background-image: url('../img/menu-back.png');
+    background-size: cover;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    margin-left: -585px;
+    z-index: 250;
+
+    &__left {
+        position: absolute;
+        left: 15px;
+        top: 22px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__right {
+        position: absolute;
+        right: 40px;
+        top: 22px;
+        display: flex;
+        align-items: center;
+    }
+
+    a {
+        font-family: $font-astoria;
+        display: block;
+        font-size: 1.4rem;
+        color: #d9d9d9;
+        text-transform: uppercase;
+        padding-left: 30px;
+        background: url(../img/menu-sep.png) no-repeat 12px 1px;
+        &:first-child {
+            background: none;
+        }
+        &.active, &:hover{
+            color: #fff;
+        }
+    }
+
+    .logo {
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        margin-left: -85px;
+    }
+}
+
+.section {
+    position: relative;
+    padding-bottom: 17px;
+    background-size: cover;
+    background-position: center center;
+
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-size: cover;
+        background-position: center center;
+    }
+    &__divider {
+        z-index: 15;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: url('../img/iron-line-2.png') center bottom;
+        width: 100%;
+        height: 19px;
+        background-repeat: repeat-x;
+    }
+    &__content {
+        position: relative;
+        z-index: 10;
+    }
+}
+
+.orc {
+    width: 648px;
+    height: 773px;
+    &__orcy {
+        width: 100%;
+    }
+    &__smoke {
+        position: absolute;
+        bottom: 0px;
+        left: -25px;
+    }
+}
+
+.paladin {
+    &__main {
+        position: relative;
+        z-index: 5;
+    }
+    &__aura {
+        position: absolute;
+        @extend .h-center-x;
+        bottom: 0px;
+        z-index: 10;
+    }
+}
+
+.divider {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &.-push {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+    &.-primary {
+        width: 233px;
+        height: 16px;
+        background-image: url(../img/boarder-1@2x.png);
+    }
+    &.-secondary {
+        width: 143px;
+        height: 14px;
+        background-image: url(../img/border-3@2x.png);
+    }
+    &.-trail-r {
+        width: 451px;
+        height: 13px;
+        background-image: url(../img/boarder-2@2x.png);
+
+    }
+    &.-trail-l {
+        width: 451px;
+        height: 13px;
+        background-image: url(../img/border-5@2x.png);
+
+    }
+}
+
+.par {
+    font-family: $font-roboto;
+    color: #a1a1a1;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    display: block;
+}
+
+.par + .par {
+    margin-top: 15px;
+}
+
+.accordion {
+
+    &__block {
+
+    }
+
+    &__head {
+        padding: 15px 15px 15px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        .button {
+            margin-right: 10px;
+        }
+    }
+
+    &__body {
+    }
+
+    &__inner {
+        padding-bottom: 20px;
+    }
+
+    .divider {
+        margin: 0;
+    }
+
+}
+
+.shield {
+    display: inline-block;
+    background-image: url(../img/rune-shield@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+
+}
+
+.no {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &.-t1 {
+        &.lazyloaded {
+            width: 17px;
+            height: 40px;
+            background-image: url(../img/no1@2x.png);
+        }
+    }
+    &.-t2 {
+        &.lazyloaded {
+            &.lazyloaded {
+                width: 26px;
+                height: 40px;
+                background-image: url(../img/no2@2x.png);
+            }
+        }
+    }
+    &.-t3 {
+        &.lazyloaded {
+            &.lazyloaded {
+                width: 25px;
+                height: 40px;
+                background-image: url(../img/no3@2x.png);
+            }
+        }
+    }
+    &.-t4 {
+        &.lazyloaded {
+            &.lazyloaded {
+                width: 29px;
+                height: 40px;
+                background-image: url(../img/no4@2x.png);
+            }
+        }
+    }
+    &.-t5 {
+        &.lazyloaded {
+            &.lazyloaded {
+                width: 25px;
+                height: 40px;
+                background-image: url(../img/no5@2x.png);
+            }
+        }
+    }
+    &.-t6 {
+        &.lazyloaded {
+            &.lazyloaded {
+                width: 28px;
+                height: 40px;
+                background-image: url(../img/no6@2x.png);
+            }
+        }
+    }
+    &.-t7 {
+        &.lazyloaded {
+            &.lazyloaded {
+                width: 26px;
+                height: 40px;
+                background-image: url(../img/no7@2x.png);
+            }
+        }
+    }
+    &.-t8 {
+        &.lazyloaded {
+            &.lazyloaded {
+                width: 29px;
+                height: 40px;
+                background-image: url(../img/no8@2x.png);
+            }
+        }
+    }
+}
+
+.person {
+    text-align: center;
+    &__img-hold {
+        max-width: 230px;
+        margin: 0 auto;
+    }
+    &__img {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        padding-bottom: 100%;
+        display: block;
+
+        margin-bottom: 10px;
+        object-fit: cover;
+        mask-image: url("../img/masker.png");
+        mask-size: 100%;
+    }
+    &__name {
+        font-size: 2.4rem;
+        color: #ffc731;
+        margin-bottom: 5px;
+    }
+    &__sub {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: #a1a1a1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span {
+            margin-right: 5px;
+        }
+        a {
+            display: inline-block;
+            margin-right: 5px;
+            margin-top: 3px;
+        }
+        .icon-in {
+            width: 20px;
+            height: 20px;
+            fill: #ffc731;
+        }
+    }
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+.blog {
+    &__main-img{
+        @extend .h-center-bg-image;
+        width: 110%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+
+        @include media(phone-only){
+            height: 230px;
+        }
+    }
+    &__card {
+
+    }
+    &__img {
+        width: 100%;
+        height: 230px;
+        background-size: cover;
+    }
+    &__text {
+        padding: 10px 10px 20px;
+        background-image: url(../img/bg-2.jpg);
+        background-size: cover;
+        h3 {
+            font-size: 2.4rem;
+            margin-bottom: 8px;
+        }
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+    }
+    &__date {
+        font-size: 1.2rem;
+    }
+}
+
+.app-modal{
+    .modal-dialog{
+        max-width: 900px;
+        margin-top: 50px;
+    }
+    .modal-content{
+        border:none;
+    }
+    .modal-body{
+        padding: 0;
+        width: 100%;
+        padding-bottom:  56.25%;
+        background-color: #000;
+    }
+    .close{ 
+        font-size: 5.5rem;
+        position: absolute;
+        right: -35px;
+        top: 0;
+        color: #ccc;
+    }
+
+    iframe{
+        border: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+
+    }
+}
+
+//==================================
+
+.section-1 {
+    overflow: hidden;
+    &__about {
+        float: right;
+        width: 523px;
+        margin-top: 200px;
+        margin-bottom: 200px;
+
+        h1 {
+            margin-bottom: 25px;
+        }
+        p {
+            font-family: $font-roboto;
+            color: #bcbcbc;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+    }
+    &__btns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .subscribe {
+        margin-bottom: 20px;
+    }
+
+    .section {
+        &__bg {
+            background-image: url('../img/wood3.jpg');
+        }
+    }
+
+    .orc {
+        position: absolute;
+        bottom: -87px;
+        left: 101px;
+    }
+
+}
+
+.section-2 {
+    background-color: #151515;
+    padding: 130px 0 110px;
+    &__text {
+        text-align: center;
+    }
+
+    &__yt {
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        .button {
+            position: absolute;
+            @extend .h-center-xy;
+        }
+    }
+
+}
+
+.section-3 {
+    &__text {
+        padding: 112px 0 110px;
+        h2 {
+            text-align: center;
+        }
+    }
+
+}
+
+.section-4 {
+    text-align: center;
+    .section {
+        &__content {
+            padding: 140px 0 130px;
+        }
+    }
+}
+
+.section-5 {
+    background: #151515;
+    .section {
+        &__content {
+            padding: 110px 0 130px;
+        }
+    }
+
+}
+
+.section-6 {
+    &__shield {
+        max-width: 150px;
+    }
+    h3 {
+        font-size: 24px;
+        margin: 15px 0;
+    }
+
+    .divider {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .container-fluid {
+        text-align: center;
+    }
+    .section {
+        &__content {
+            padding: 110px 0 130px;
+        }
+    }
+
+
+
+}
+
+.shield-slider {
+    padding-bottom: 50px;
+    &:not(.swiper-container-horizontal){
+        .swiper-wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+        .swiper-slide{
+            width: 32%;
+        }
+    }
+    &.swiper-container-horizontal>.swiper-pagination-bullets{
+        bottom: 0px;
+    }
+
+
+    .swiper-pagination-bullet {
+        opacity: 1;
+    }
+
+
+
+
+}
+
+.timeline {
+    width: 740px;
+    position: relative;
+    &__circle {
+        position: relative;
+        background-image: url(../img/big-circle@2x.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        padding-bottom: 97.6%;
+    }
+    &__milestone {
+        max-width: 180px;
+        text-align: center;
+
+        @include media(tablet) {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        &.-t1 {
+            @include media(tablet) {
+                left: 37%;
+                top: -5%;
+            }
+        }
+        &.-t2 {
+            @include media(tablet) {
+                left: 75%;
+                top: 9%;
+            }
+        }
+        &.-t3 {
+            @include media(tablet) {
+                left: 89%;
+                top: 36%;
+            }
+        }
+        &.-t4 {
+            @include media(tablet) {
+                left: 79%;
+                top: 67%;
+            }
+        }
+        &.-t5 {
+            @include media(tablet) {
+                left: 37%;
+                top: 84%;
+            }
+        }
+        &.-t6 {
+            @include media(tablet) {
+                left: -5%;
+                top: 68%;
+            }
+        }
+        &.-t7 {
+            @include media(tablet) {
+                left: -15%;
+                top: 34%;
+            }
+        }
+        &.-t8 {
+            @include media(tablet) {
+                left: 0%;
+                top: 7%;
+            }
+        }
+
+        .no {
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 2.4rem;
+            line-height: 1;
+        }
+        p {
+            font-family: $font-pt-sans;
+            font-size: 1.6rem;
+            line-height: 1.2;
+        }
+    }
+    h2 {
+        @extend .h-center-xy;
+        transform: translate(-49%, -6%);
+        position: absolute;
+    }
+}
+
+.section-7 {
+    background-color: #151515;
+
+    .timeline {
+        margin: 0 auto;
+    }
+    .section {
+        &__content {
+            padding: 110px 0 130px;
+        }
+    }
+}
+
+.section-8 {
+    background: url("../img/section-8.jpg") no-repeat;
+    background-size: cover;
+
+    .section {
+        &__content {
+            padding: 110px 0 130px
+        }
+    }
+    h2 {
+        text-align: center;
+    }
+    .divider {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .person {
+        margin-bottom: 40px;
+    }
+}
+
+.section-9 {
+    background-color: #151515;
+    .section {
+        &__content {
+            padding: 110px 0 130px;
+        }
+    }
+
+    .container-fluid + .container-fluid{
+        margin-top: 30px;
+    }
+}
+
+.section-10{
+    @extend .h-center-bg-image;
+    background-image: url(../img/iron-wall.jpg);
+
+    h3{
+        margin-bottom: 10px;
+    }
+    .subscribe{
+        margin-bottom: 15px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        
+        input{
+            background-color: #c7c7c7;
+        }
+    }
+    .par{
+        margin-bottom: 5px;
+        font-size: 1.4rem;
+        display: block;
+        text-align: center;
+    }
+    .social{
+        justify-content: center;
+        button{
+            margin-right: 7px;
+            margin-left: 7px;
+            margin-bottom: 15px;
+        }
+    }
+    .section{
+        &__content{
+            margin: 0 auto;
+            max-width: 517px;
+            padding: 50px 0 50px;
+        }
+    }
+}
+
+.footer{
+    height: 74px;
+    background-color: #151515;
+    color: #949899;
+    font-size: 1.4rem;
+
+    display: flex;
+    align-items: center;
+
+    a{
+        margin-right: 15px;
+    }
+
+    .container-fluid{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

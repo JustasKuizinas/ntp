@@ -1,0 +1,350 @@
+body {
+    overflow-x: hidden;
+}
+
+button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+ul, ol, h1, h2, h3, h4, h5, h6, input, textarea, p, button, figure, dt, dd, dl {
+    margin: 0;
+    padding: 0;
+}
+
+a, button, input, select, textarea, label, summary {
+    touch-action: manipulation;
+}
+
+input, textarea {
+    outline: none;
+    border: none;
+}
+
+img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    max-width: 100%;
+}
+
+[ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+ul li, ol li {
+    list-style: none;
+    list-style-position: inside;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+video::-webkit-media-controls-start-playback-button {
+  display: none;
+}
+
+
+
+
+.al {
+    font-size: 0.1px; //reikia del ie, su font-size 0 neveiks ant ie justifyinimas
+}
+
+.al__span {
+    display: inline-block;
+    width: 0px;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.al--justify {
+    text-align: justify;
+}
+
+.al--justify:after {
+    content: " ";
+    width: 100%;
+    display: inline-block;
+}
+
+.al--center {
+    text-align: center;
+}
+
+.al--middle > .al__item {
+    vertical-align: middle;
+}
+
+.al--center-single {
+    text-align: center;
+}
+
+.al--center-single::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 0px;
+    vertical-align: middle;
+}
+
+.al__item {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.cf:before, .cf:after {
+    clear: both;
+    content: " ";
+    display: table;
+}
+
+
+/*helpers*/
+
+.h-center {
+    margin: 0 auto;
+}
+
+.h-push-left {
+    float: left;
+}
+
+.h-push-right {
+    float: right;
+}
+
+.h-push-none {
+    float: none !important;
+}
+
+.h-hidden {
+    display: none !important;
+}
+
+.h-hidden-preloaded {
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+.h-invisible {
+    visibility: hidden !important;
+}
+
+.h-opacity-0 {
+    filter: alpha(opacity=0) !important;
+    opacity: 0 !important;
+}
+
+.h-opacity-1 {
+    filter: alpha(opacity=100) !important;
+    opacity: 1 !important;
+}
+
+.h-pointer {
+    cursor: pointer;
+}
+
+.h-us-none {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.h-responsive-imgs img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+}
+
+.h-rel {
+    position: relative;
+}
+
+.h-bold {
+    font-weight: bold;
+}
+
+.h-no-deco {
+    text-decoration: none;
+}
+
+.h-abs-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("about:blank");
+    border: none;
+    text-decoration: none;
+    z-index: 10;
+}
+
+.h-center-xy {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.h-center-x {
+    left: 50%;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+}
+
+.h-center-y {
+    top: 50%;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+}
+
+.h-abs-link:hover {
+    border: none;
+    text-decoration: none;
+}
+
+.h-text-center {
+    text-align: center;
+}
+
+.h-uppr {
+    text-transform: uppercase;
+}
+
+.h-w100 {
+    width: 100%;
+}
+
+.h-h100 {
+    height: 100%;
+}
+
+.h-abs {
+    position: absolute;
+}
+
+.h-inlineb {
+    display: inline-block;
+}
+
+.h-bg-light {
+    background: #fff;
+}
+
+.h-text-line {
+    text-decoration: line-through;
+}
+
+.h-block {
+    display: block;
+}
+
+.h-dummy-span {
+    display: inline-block;
+    width: 0px;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.h-hyphenate {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+.h-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.h-children-vertical {
+    > * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.h-children-justify {
+    text-align: justify;
+    font-size: 0.1px;
+    > *{
+        display: inline-block;
+    }
+    &:after {
+        content: " ";
+        width: 100%;
+        display: inline-block;
+    }
+}
+
+
+.h-full-abs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.h-center-bg-image{
+    background-position: center center;
+    background-size: cover;
+}
+
+
+
+.h-bxslider-clear {
+    .bx-wrapper {
+        margin: 0;
+        box-shadow: none;
+        border: none;
+        margin: 0;
+        background: none;
+    }
+    .bx-pager {
+        bottom: auto;
+        padding: 0;
+        font-size: 0;
+    }
+    .bx-wrapper .bx-loading {
+        background: transparent;
+    }
+}
+
