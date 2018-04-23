@@ -20,191 +20,241 @@
 
 
 <body id="body" data-spy="scroll" data-target="#main-menu" data-offset="180">
-<div class="page-wrapper">
-    <nav class="menu" id="main-menu">
-        <div class="menu__left">
-            <a class="nav-link" href="#intro-section">intro</a>
-            <a class="nav-link" href="#game-section">the game</a>
-            <a class="nav-link" href="#solution-section"> solution</a>
-            <a class="nav-link" href="#mechanics-section">game mechanics</a>
-        </div>
-        <img class="logo" src="assets/img/logo@2x.png" alt="">
-        <div class="menu__right">
-            <a class="nav-link" href="#model-section">Business model</a>
-            <a class="nav-link" href="#timeline-section">Timeline</a>
-            <a class="nav-link" href="#team-section">Team /Advisors</a>
-            <a class="nav-link" href="#blog-section">blog</a>
-        </div>
-    </nav>
 
-    <div class="app-modal modal fade" id="videoModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <div>
-                        <iframe width="100%" src=""></iframe>
+<div class="off-canvas-bg"></div>
+<div class="off-canvas-holder">
+    <div class="off-canvas off-canvas-side-menu">
+        <button class="off-canvas__close btn-x -dark">
+            <span>x</span>
+        </button>
+        <div class="off-canvas__container">
+            <ul class="menu-vertical">
+                <li class="">
+                    <a class="nav-link" href="#intro-section">intro</a>
+                </li>
+                <li class="">
+                    <a class="nav-link" href="#game-section">the game</a>
+                </li>
+                <li class="">
+                    <a class="nav-link" href="#solution-section"> solution</a>
+                </li>
+                <li class="">
+                    <a class="nav-link" href="#mechanics-section">game mechanics</a>
+                </li>
+                <li class="">
+                    <a class="nav-link" href="#model-section">Business model</a>
+                </li>
+                <li class="">
+                    <a class="nav-link" href="#timeline-section">Timeline</a>
+                </li>
+                <li class="">
+                    <a class="nav-link" href="#team-section">Team /Advisors</a>
+                </li>
+                <li class="">
+                    <a class="nav-link" href="#blog-section">blog</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<nav class="menu" id="main-menu">
+    <div class="menu__left">
+        <a class="nav-link" href="#intro-section">intro</a>
+        <a class="nav-link" href="#game-section">the game</a>
+        <a class="nav-link" href="#solution-section"> solution</a>
+        <a class="nav-link" href="#mechanics-section">game mechanics</a>
+    </div>
+    <img class="logo" src="assets/img/logo@2x.png" alt="">
+    <div class="menu__right">
+        <a class="nav-link" href="#model-section">Business model</a>
+        <a class="nav-link" href="#timeline-section">Timeline</a>
+        <a class="nav-link" href="#team-section">Team /Advisors</a>
+        <a class="nav-link" href="#blog-section">blog</a>
+    </div>
+</nav>
+
+<div class="hamburger">
+    <div class="hamburger__lines"></div>
+</div>
+
+<div class="app-modal modal fade" id="videoModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div>
+                    <iframe width="100%" src=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-wrapper">
+
+    <div class="section section-1" id="section-1">
+        <div class="section__bg"></div>
+        <div class="section__divider"></div>
+        <div class="section__content">
+            <div class="container-fluid container-primary">
+                <div class="row no-gutters">
+                    <div class="col-lg-6 h-rel">
+                        <div class="orc">
+                            <img class="orc__smoke" src="assets/img/orc-bg.png" alt="">
+                            <img class="orc__orcy" src="assets/img/orc@2x.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 h-rel">
+                        <div class="section-1__about">
+                            <h1>
+                                Video game where distributed
+                                ledger finally makes sense
+                            </h1>
+                            <p>
+                                GET ADDICTED to Not for Pussies, turn-based tactical arena skirmish created for true gamers by true gamers.
+                            </p>
+                            <p>
+                                BE AMAZED by the post-apocalyptic world where engaging PvP battles go hand in hand with a great story and exclusively rich lore.
+                            </p>
+                            <p>
+                                EXPERIENCE how distributed ledger solves real gamers problems, including in-game assets ownership.
+                            </p>
+                            <div class="section-1__btns">
+                                <a href="" class="button -primary">
+                                    one-pager
+                                </a>
+                                <a href="" class="button -primary">
+                                    Whitepaper
+                                </a>
+                                <a href="" class="button -primary">
+                                    WATCH INTRO
+                                </a>
+                            </div>
+                            <div class="subscribe">
+                                <input type="text" placeholder="Subscribe to get latest news">
+                                <button>Join now</button>
+                            </div>
+                            <div class="social">
+                                <a href="" class="button -circle">
+                                    <svg class="icon-tw">
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                                <a href="" class="button -circle">
+                                    <svg class="icon-fb">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                                <a href="" class="button -circle">
+                                    <svg class="icon-ln">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                                <a href="" class="button -circle">
+                                    <svg class="icon-insta">
+                                        <use xlink:href="#instagram"></use>
+                                    </svg>
+                                </a>
+                                <a href="" class="button -circle">
+                                    <svg class="icon-btc">
+                                        <use xlink:href="#bitcoin"></use>
+                                    </svg>
+                                </a>
+                                <a href="" class="button -circle">
+                                    <svg class="icon-telegram">
+                                        <use xlink:href="#telegram"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="main-content">
-        <div class="section section-1" id="section-1">
-            <div class="section__bg"></div>
-            <div class="section__divider"></div>
-            <div class="section__content">
-                <div class="app-container cf h-rel">
-                    <div class="orc">
-                        <img class="orc__smoke" src="assets/img/orc-bg.png" alt="">
-                        <img class="orc__orcy" src="assets/img/orc.png" alt="">
+    <div class="section section-2" id="intro-section">
+        <div class="section__divider"></div>
+        <div class="section__content">
+            <div class="container-fluid container-primary">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="section-2__text">
+                            <h2>Intro</h2>
+                            <div class="divider -primary -push"></div>
+                            <p class="par">
+                                Enjoy the wildest threesome of video, card and miniature games, based on distributed ledger. Enter the world of permanent fights, primitive instincts, abuse of power and magic, wildest sex and impolite politics.
+                            </p>
+                            <p class="par">
+                                Unleash your darkest side where only not pussies survive the night.
+                            </p>
+                        </div>
                     </div>
-                    <div class="section-1__about">
-                        <h1>
-                            Video game where distributed
-                            ledger finally makes sense
-                        </h1>
-                        <p>
-                            GET ADDICTED to Not for Pussies, turn-based tactical arena skirmish created for true gamers by true gamers.
-                        </p>
-                        <p>
-                            BE AMAZED by the post-apocalyptic world where engaging PvP battles go hand in hand with a great story and exclusively rich lore.
-                        </p>
-                        <p>
-                            EXPERIENCE how distributed ledger solves real gamers problems, including in-game assets ownership.
-                        </p>
-                        <div class="section-1__btns">
-                            <a href="" class="button -primary">
-                                one-pager
-                            </a>
-                            <a href="" class="button -primary">
-                                Whitepaper
-                            </a>
-                            <a href="" class="button -primary">
-                                WATCH INTRO
-                            </a>
-                        </div>
-                        <div class="subscribe">
-                            <input type="text" placeholder="Subscribe to get latest news">
-                            <button>Join now</button>
-                        </div>
-                        <div class="social">
-                            <a href="" class="button -circle">
-                                <svg class="icon-tw">
-                                    <use xlink:href="#twitter"></use>
-                                </svg>
-                            </a>
-                            <a href="" class="button -circle">
-                                <svg class="icon-fb">
-                                    <use xlink:href="#facebook"></use>
-                                </svg>
-                            </a>
-                            <a href="" class="button -circle">
-                                <svg class="icon-ln">
-                                    <use xlink:href="#linkedin"></use>
-                                </svg>
-                            </a>
-                            <a href="" class="button -circle">
-                                <svg class="icon-insta">
-                                    <use xlink:href="#instagram"></use>
-                                </svg>
-                            </a>
-                            <a href="" class="button -circle">
-                                <svg class="icon-btc">
-                                    <use xlink:href="#bitcoin"></use>
-                                </svg>
-                            </a>
-                            <a href="" class="button -circle">
-                                <svg class="icon-telegram">
-                                    <use xlink:href="#telegram"></use>
-                                </svg>
-                            </a>
+                    <div class="col-md-6">
+                        <div class="section-2__yt">
+                            <img src="assets/img/youtube.jpg" alt="">
+                            <button class="button -play" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/f4uO7miigQw"></button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="section section-2" id="intro-section">
-            <div class="section__divider"></div>
-            <div class="section__content">
-                <div class="container-fluid container-primary">
-                    <div class="row align-items-center no-gutters">
-                        <div class="col-md-6">
-                            <div class="section-2__text">
-                                <h2>Intro</h2>
-                                <div class="divider -primary -push"></div>
-                                <p class="par">
-                                    Enjoy the wildest threesome of video, card and miniature games, based on distributed ledger. Enter the world of permanent fights, primitive instincts, abuse of power and magic, wildest sex and impolite politics.
-                                </p>
-                                <p class="par">
-                                    Unleash your darkest side where only not pussies survive the night.
-                                </p>
+
+        </div>
+    </div>
+
+    <div class="section section-3" style="background-image:url(assets/img/fog-bg.jpg);" id="game-section">
+        <div class="section__divider"></div>
+        <div class="section__content">
+            <div class="container-fluid container-primary">
+                <div class="row align-items-end -no-gutters">
+
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="section-3__text">
+                            <h2>The GAME</h2>
+                            <div class="divider -primary -push"></div>
+                            <p class="par">
+                                In 2176, 150 years after the Merge, a post-apocalyptic Earth is slowly and chaotically recovering from the disaster that buried 21 century human civilization, erupted planet’s ecosystem and brought new inhabitants.
+                            </p>
+                            <p class="par">
+
+                                Scattered across the ruins of past glory four races battle for survival and dominance: Orcs, Dwarves, Elves and the remains of Humans. Magic and sword is the new law in the land where travel, communication and even social constructs are diminished to the levels of Dark Ages.
+                            </p>
+                            <div class="par">
+                                In the fragmented world full of empty spaces, new forms of wildlife and unknown monsters, new saviors appeared – the Immortals, who fight each other in the magic-fused battles.
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="section-2__yt">
-                                <img src="assets/img/youtube.jpg" alt="">
-                                <button class="button -play" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/f4uO7miigQw" ></button>
+                            <div class="par">
+                                Take the role of the Immortal, pick 5 various characters to your warband and fight your rivals in highly competitive 1v1 matches or measure your powers in the story driven single player campaign.
+                            </div>
+                            <div class="par">
+                                Enjoy the game created both by passionate geeks and most advanced technologies. Distributed ledger perfectly solves the problem of in-game properties ownership. Artificial intelligence analyzes already played battles data and balances the game. It is also employed for practice mode to train you for real battles.
                             </div>
                         </div>
                     </div>
-                </div>
-
-
-            </div>
-        </div>
-
-        <div class="section section-3" style="background-image:url(assets/img/fog-bg.jpg);"  id="game-section">
-            <div class="section__divider"></div>
-            <div class="section__content">
-                <div class="container-fluid container-primary">
-                    <div class="row align-items-end -no-gutters">
-
-                        <div class="col-lg-6 order-lg-2">
-                            <div class="section-3__text">
-                                <h2>The GAME</h2>
-                                <div class="divider -primary -push"></div>
-                                <p class="par">
-                                    In 2176, 150 years after the Merge, a post-apocalyptic Earth is slowly and chaotically recovering from the disaster that buried 21 century human civilization, erupted planet’s ecosystem and brought new inhabitants.
-                                </p>
-                                <p class="par">
-
-                                    Scattered across the ruins of past glory four races battle for survival and dominance: Orcs, Dwarves, Elves and the remains of Humans. Magic and sword is the new law in the land where travel, communication and even social constructs are diminished to the levels of Dark Ages.
-                                </p>
-                                <div class="par">
-                                    In the fragmented world full of empty spaces, new forms of wildlife and unknown monsters, new saviors appeared – the Immortals, who fight each other in the magic-fused battles.
-                                </div>
-                                <div class="par">
-                                    Take the role of the Immortal, pick 5 various characters to your warband and fight your rivals in highly competitive 1v1 matches or measure your powers in the story driven single player campaign.
-                                </div>
-                                <div class="par">
-                                    Enjoy the game created both by passionate geeks and most advanced technologies. Distributed ledger perfectly solves the problem of in-game properties ownership. Artificial intelligence analyzes already played battles data and balances the game. It is also employed for practice mode to train you for real battles.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 order-lg-1">
-                            <div class="paladin">
-                                <img class="paladin__main" src="assets/img/palading.png" alt="">
-                                <img class="paladin__aura" src="assets/img/red-aura.png" alt="">
-                            </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="paladin">
+                            <img class="paladin__main" src="assets/img/palading@2x.png" alt="">
+                            <img class="paladin__aura" src="assets/img/red-aura.png" alt="">
                         </div>
                     </div>
                 </div>
-
-
             </div>
+
+
         </div>
+    </div>
 
-        <div class="section section-4"  id="solution-section">
-            <div class="section__bg" style="background: url(assets/img/section-4.jpg)"></div>
-            <div class="section__divider"></div>
-            <div class="section__content">
-                <div class="container-fluid container-primary">
-                    <div class="row -no-gutters">
+    <div class="section section-4" id="solution-section">
+        <div class="section__bg" style="background-image: url(assets/img/section-4.jpg)"></div>
+        <div class="section__divider"></div>
+        <div class="section__content">
+            <div class="container-fluid container-primary">
+                <div class="row -no-gutters">
 
-                        <div class="col-lg-6">
+                    <div class=" col-md-6">
+                        <div class="section-4__left">
                             <h2>Elsewhere problems</h2>
                             <div class="divider -primary -push"></div>
                             <div class="section-4__desc">
@@ -240,7 +290,9 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-6 ">
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="section-4__right">
                             <h2>Our solutions</h2>
                             <div class="divider -primary -push"></div>
                             <div class="section-4__desc">
@@ -273,687 +325,761 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
+
+
         </div>
+    </div>
 
-        <div class="section section-5"  id="mechanics-section">
-            <div class="section__divider"></div>
-            <div class="section__content">
-                <div class="container-fluid container-primary">
-                    <div class="row -no-gutters">
-
-                        <div class="col-lg-6">
-                            <div class="accordion" id="accordion">
-                                <div class="accordion__block">
-                                    <img src="assets/img/boarder-2@2x.png" alt="">
-                                    <div class="accordion__head" data-toggle="collapse" data-target="#collapse-1">
-                                        <buttton class="button -iron-toggle"></buttton>
-                                        <h3>Combine</h3>
-                                    </div>
-                                    <div class="collapse accordion__body" id="collapse-1" data-parent="#accordion">
-                                        <div class="accordion__inner">
-                                            <p class="par">
-                                                Players get characters by combining 3 aspects: Class, Race and Element. For example, combining Rogue Class with Human Race and Wind Element the player gets Human Wind Rogue character as a result. Each aspect has its own min-max values which is randomized when combined, so each character has different stats and skill sets. Combining options are unlimited. You are able to combine already created characters and get even more powerful variations. Thus, the longer you play, the more options you have to create unique characters and new battle tactics.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <img src="assets/img/boarder-2@2x.png" alt="">
-                                </div>
-                                <div class="accordion__block">
-                                    <div class="accordion__head" data-toggle="collapse" data-target="#collapse-2">
-                                        <buttton class="button -iron-toggle"></buttton>
-                                        <h3>Combine</h3>
-                                    </div>
-                                    <div class="collapse accordion__body" id="collapse-2" data-parent="#accordion">
-                                        <div class="accordion__inner">
-                                            <p class="par">
-                                                Players get characters by combining 3 aspects: Class, Race and Element. For example, combining Rogue Class with Human Race and Wind Element the player gets Human Wind Rogue character as a result. Each aspect has its own min-max values which is randomized when combined, so each character has different stats and skill sets. Combining options are unlimited. You are able to combine already created characters and get even more powerful variations. Thus, the longer you play, the more options you have to create unique characters and new battle tactics.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <img src="assets/img/border-5@2x.png" alt="">
-                                </div>
-                                <div class="accordion__block">
-                                    <div class="accordion__head" data-toggle="collapse" data-target="#collapse-3">
-                                        <buttton class="button -iron-toggle"></buttton>
-                                        <h3>Combine</h3>
-                                    </div>
-                                    <div class="collapse accordion__body" id="collapse-3" data-parent="#accordion">
-                                        <div class="accordion__inner">
-                                            <p class="par">
-                                                Players get characters by combining 3 aspects: Class, Race and Element. For example, combining Rogue Class with Human Race and Wind Element the player gets Human Wind Rogue character as a result. Each aspect has its own min-max values which is randomized when combined, so each character has different stats and skill sets. Combining options are unlimited. You are able to combine already created characters and get even more powerful variations. Thus, the longer you play, the more options you have to create unique characters and new battle tactics.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <img src="assets/img/boarder-2@2x.png" alt="">
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-6">
-
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
-        <div class="section section-6" style="background-image:url(assets/img/section-6.jpg);"  id="model-section">
-            <div class="section__divider"></div>
-            <div class="section__content">
-                <div class="container-fluid container-primary">
-                    <h2 class="h-text-center">Bussines model</h2>
-                    <div class="divider -primary"></div>
-                    <!--<div class="row">-->
-                        <!--<div class="col-md-4">-->
-                            <!--<div class="shield"></div>-->
-                            <!--<h3>Lorem ispum</h3>-->
-                            <!--<p class="par">-->
-                                <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua.-->
-                            <!--</p>-->
-                        <!--</div>-->
-                        <!--<div class="col-md-4">-->
-                            <!--<div class="shield"></div>-->
-                            <!--<h3>Lorem ispum</h3>-->
-                            <!--<p class="par">-->
-                                <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua.-->
-                            <!--</p>-->
-                        <!--</div>-->
-                        <!--<div class="col-md-4">-->
-                            <!--<div class="shield"></div>-->
-                            <!--<h3>Lorem ispum</h3>-->
-                            <!--<p class="par">-->
-                                <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua.-->
-                            <!--</p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-
-                    <div class="shield-slider swiper-container">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-                                <div class="shield"></div>
-                                <h3>Lorem ispum</h3>
-                                <p class="par">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua.
-                                </p>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="shield"></div>
-                                <h3>Lorem ispum</h3>
-                                <p class="par">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua.
-                                </p>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="shield"></div>
-                                <h3>Lorem ispum</h3>
-                                <p class="par">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
-        <div class="section section-7"  id="timeline-section">
-            <div class="section__divider"></div>
-            <div class="section__content">
-                <div class="timeline">
-                    <div class="timeline__circle">
-                        <h2>Timeline</h2>
-                    </div>
-                    <div class="timeline__milestone -t1">
-                        <div class="no -t1 lazyload"></div>
-                        <h3>2018 June</h3>
-                        <p class="par">
-                            it amet, consectet dolor
-                            sit amet, consectet
-                        </p>
-                    </div>
-                    <div class="timeline__milestone -t2">
-                        <div class="no -t2 lazyload"></div>
-                        <h3>2018 April</h3>
-                        <p class="par">
-                            it amet, consectet dolor
-                            sit amet, consectet
-                        </p>
-                    </div>
-                    <div class="timeline__milestone -t3">
-                        <div class="no -t3 lazyload"></div>
-                        <h3>2018 September</h3>
-                        <p class="par">
-                            it amet, consectet dolor
-                            sit amet, consectet
-                        </p>
-                    </div>
-                    <div class="timeline__milestone -t4">
-                        <div class="no -t4 lazyload"></div>
-                        <h3>2018 November</h3>
-                        <p class="par">
-                            it amet, consectet dolor
-                            sit amet, consectet
-                        </p>
-                    </div>
-                    <div class="timeline__milestone -t5">
-                        <div class="no -t5 lazyload"></div>
-                        <h3>2019 June</h3>
-                        <p class="par">
-                            it amet, consectet dolor
-                            sit amet, consectet
-                        </p>
-                    </div>
-                    <div class="timeline__milestone -t6">
-                        <div class="no -t6 lazyload"></div>
-                        <h3>2019 September</h3>
-                        <p class="par">
-                            it amet, consectet dolor
-                            sit amet, consectet
-                        </p>
-                    </div>
-                    <div class="timeline__milestone -t7">
-                        <div class="no -t7 lazyload"></div>
-                        <h3>2019 November</h3>
-                        <p class="par">
-                            it amet, consectet dolor
-                            sit amet, consectet
-                        </p>
-                    </div>
-                    <div class="timeline__milestone -t8">
-                        <div class="no -t8 lazyload"></div>
-                        <h3>2019 October</h3>
-                        <p class="par">
-                            it amet, consectet dolor
-                            sit amet, consectet
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="section section-8"  id="team-section">
-            <div class="section__divider"></div>
-            <div class="section__content">
-                <h2>Team</h2>
-                <div class="divider -primary"></div>
-                <div class="container-fluid container-primary">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="person">
-                                <div class="person__img-hold">
-                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
-                                </div>
-                                <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
-                                <div class="person__name">
-                                    Anne Anders
-                                </div>
-                                <div class="person__sub">
-                                    <span>
-                                    Full Stack Engineer
-                                    </span>
-                                    <a href="">
-                                        <svg class="icon-in">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <p class="par">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="person">
-                                <div class="person__img-hold">
-                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
-                                </div>
-                                <div class="person__name">
-                                    Anne Anders
-                                </div>
-                                <div class="person__sub">
-                                    <span>
-                                    Full Stack Engineer
-                                    </span>
-                                    <a href="">
-                                        <svg class="icon-in">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <p class="par">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="person">
-                                <div class="person__img-hold">
-                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
-                                </div>
-                                <div class="person__name">
-                                    Anne Anders
-                                </div>
-                                <div class="person__sub">
-                                    <span>
-                                    Full Stack Engineer
-                                    </span>
-                                    <a href="">
-                                        <svg class="icon-in">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <p class="par">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="person">
-                                <div class="person__img-hold">
-                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
-                                </div>
-                                <div class="person__name">
-                                    Anne Anders
-                                </div>
-                                <div class="person__sub">
-                                    <span>
-                                    Full Stack Engineer
-                                    </span>
-                                    <a href="">
-                                        <svg class="icon-in">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <p class="par">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="person">
-                                <div class="person__img-hold">
-                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
-                                </div>
-                                <div class="person__name">
-                                    Anne Anders
-                                </div>
-                                <div class="person__sub">
-                                    <span>
-                                    Full Stack Engineer
-                                    </span>
-                                    <a href="">
-                                        <svg class="icon-in">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <p class="par">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="person">
-                                <div class="person__img-hold">
-                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
-                                </div>
-                                <div class="person__name">
-                                    Anne Anders
-                                </div>
-                                <div class="person__sub">
-                                    <span>
-                                    Full Stack Engineer
-                                    </span>
-                                    <a href="">
-                                        <svg class="icon-in">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <p class="par">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="person">
-                                <div class="person__img-hold">
-                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
-                                </div>
-                                <div class="person__name">
-                                    Anne Anders
-                                </div>
-                                <div class="person__sub">
-                                    <span>
-                                    Full Stack Engineer
-                                    </span>
-                                    <a href="">
-                                        <svg class="icon-in">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <p class="par">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="person">
-                                <div class="person__img-hold">
-                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
-                                </div>
-                                <div class="person__name">
-                                    Anne Anders
-                                </div>
-                                <div class="person__sub">
-                                    <span>
-                                    Full Stack Engineer
-                                    </span>
-                                    <a href="">
-                                        <svg class="icon-in">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <p class="par">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2>Advisors</h2>
-                <div class="divider -primary"></div>
-
-                <div class="container-fluid container-primary">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="person">
-                                <div class="person__img-hold">
-                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
-                                </div>
-                                <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
-                                <div class="person__name">
-                                    Anne Anders
-                                </div>
-                                <div class="person__sub">
-                                    <span>
-                                    Full Stack Engineer
-                                    </span>
-                                    <a href="">
-                                        <svg class="icon-in">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <p class="par">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="person">
-                                <div class="person__img-hold">
-                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
-                                </div>
-                                <div class="person__name">
-                                    Anne Anders
-                                </div>
-                                <div class="person__sub">
-                                    <span>
-                                    Full Stack Engineer
-                                    </span>
-                                    <a href="">
-                                        <svg class="icon-in">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <p class="par">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="person">
-                                <div class="person__img-hold">
-                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
-                                </div>
-                                <div class="person__name">
-                                    Anne Anders
-                                </div>
-                                <div class="person__sub">
-                                    <span>
-                                    Full Stack Engineer
-                                    </span>
-                                    <a href="">
-                                        <svg class="icon-in">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <p class="par">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="person">
-                                <div class="person__img-hold">
-                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
-                                </div>
-                                <div class="person__name">
-                                    Anne Anders
-                                </div>
-                                <div class="person__sub">
-                                    <span>
-                                    Full Stack Engineer
-                                    </span>
-                                    <a href="">
-                                        <svg class="icon-in">
-                                            <use xlink:href="#linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <p class="par">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section section-9"  id="blog-section">
-            <div class="section__divider"></div>
-            <div class="section__content">
-                <h2 class="h-text-center">Blog</h2>
-                <div class="divider -primary -push"></div>
-                <div class="blog">
-                    <div class="container-fluid container-primary">
-                        <div class="row ">
-                            <div class=" col-md-8  order-md-2">
-                                <div class="blog__main-img" style="background-image:url(assets/img/bl1.jpg);"></div>
-
-                            </div>
-                            <div class="col-md-4 order-md-1">
-                                <div class="blog__card">
-                                    <div class="blog__text">
-                                        <h3>
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit
-                                        </h3>
-                                        <p class="par">
-                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremq auda
-                                            tium, totam rem aperiam, eaque ipsa accus.
-                                        </p>
-                                        <p class="par blog__date">
-                                            January 2, 2018
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-fluid container-primary">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="blog__card">
-                                    <div class="blog__img" style="background-image:url(assets/img/bl2.jpg);"></div>
-                                    <div class="blog__text">
-                                        <h3>
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit
-                                        </h3>
-                                        <p class="par">
-                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremq auda
-                                            tium, totam rem aperiam, eaque ipsa accus.
-                                        </p>
-                                        <p class="par blog__date">
-                                            January 2, 2018
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="blog__card">
-                                    <div class="blog__img" style="background-image:url(assets/img/bl2.jpg);"></div>
-                                    <div class="blog__text">
-                                        <h3>
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit
-                                        </h3>
-                                        <p class="par">
-                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremq auda
-                                            tium, totam rem aperiam, eaque ipsa accus.
-                                        </p>
-                                        <p class="par blog__date">
-                                            January 2, 2018
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="blog__card">
-                                    <div class="blog__img" style="background-image:url(assets/img/bl2.jpg);"></div>
-                                    <div class="blog__text">
-                                        <h3>
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit
-                                        </h3>
-                                        <p class="par">
-                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremq auda
-                                            tium, totam rem aperiam, eaque ipsa accus.
-                                        </p>
-                                        <p class="par blog__date">
-                                            January 2, 2018
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section section-10">
-            <div class="section__divider"></div>
-            <div class="section__content">
-                <h3 class="h-text-center">
-                    Get your exclusive news and updates
-                    about NotForPussies
-                </h3>
-                <div class="subscribe">
-                    <input type="text" placeholder="Subscribe to get latest news">
-                    <button>Join now</button>
-                </div>
-
-                <p class="par">
-                    You can find us on:
-                </p>
-                <div class="social">
-                    <a href="" class="button -circle">
-                        <svg class="icon-tw">
-                            <use xlink:href="#twitter"></use>
-                        </svg>
-                    </a>
-                    <a href="" class="button -circle">
-                        <svg class="icon-fb">
-                            <use xlink:href="#facebook"></use>
-                        </svg>
-                    </a>
-                    <a href="" class="button -circle">
-                        <svg class="icon-ln">
-                            <use xlink:href="#linkedin"></use>
-                        </svg>
-                    </a>
-                    <a href="" class="button -circle">
-                        <svg class="icon-insta">
-                            <use xlink:href="#instagram"></use>
-                        </svg>
-                    </a>
-                    <a href="" class="button -circle">
-                        <svg class="icon-btc">
-                            <use xlink:href="#bitcoin"></use>
-                        </svg>
-                    </a>
-                    <a href="" class="button -circle">
-                        <svg class="icon-telegram">
-                            <use xlink:href="#telegram"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <footer class="footer">
+    <div class="section section-5" id="mechanics-section">
+        <div class="section__divider"></div>
+        <div class="section__content">
             <div class="container-fluid container-primary">
-                <nav>
-                    <a href="">
-                        FAQ
-                    </a>
-                    <a href="">Token Model </a>
-                    <a href="">Privacy Policy</a>
-                    <a href="mailto:info@nor4pussies.com">info@nor4pussies.com</a>
-                </nav>
-                <div>
-                    © Not For Pussies. 2018 All rights reserved.
+                <div class="row align-items-md-center no-gutters">
+
+                    <div class="col-md-5">
+                        <div class="accordion" id="accordion">
+                            <div class="accordion__block">
+                                <img class="accordion__border d-none d-sm-block" src="assets/img/boarder-2@2x.png" alt="">
+                                <img class="accordion__border d-sm-none" src="assets/img/border-line.png" alt="">
+                                <div class="accordion__head collapsed" data-toggle="collapse" data-target="#collapse-1">
+                                    <buttton class="button -iron-toggle"></buttton>
+                                    <h3>Combine</h3>
+                                </div>
+                                <div class="collapse accordion__body" id="collapse-1" data-parent="#accordion">
+                                    <div class="accordion__inner">
+                                        <p class="par">
+                                            Players get characters by combining 3 aspects: Class, Race and Element. For example, combining Rogue Class with Human Race and Wind Element the player gets Human Wind Rogue character as a result. Each aspect has its own min-max values which is randomized when combined, so each character has different stats and skill sets. Combining options are unlimited. You are able to combine already created characters and get even more powerful variations. Thus, the longer you play, the more options you have to create unique characters and new battle tactics.
+                                        </p>
+                                        <img src="assets/img/combine.png" alt="">
+                                    </div>
+                                </div>
+                                <img class="accordion__border d-none d-sm-block" src="assets/img/boarder-2@2x.png" alt="">
+                                <img class="accordion__border d-sm-none" src="assets/img/border-line.png" alt="">
+                            </div>
+                            <div class="accordion__block">
+                                <div class="accordion__head collapsed" data-toggle="collapse" data-target="#collapse-2">
+                                    <buttton class="button -iron-toggle"></buttton>
+                                    <h3>Fight</h3>
+                                </div>
+                                <div class="collapse accordion__body" id="collapse-2" data-parent="#accordion">
+                                    <div class="accordion__inner">
+                                        <p class="par">
+                                            Players get characters by combining 3 aspects: Class, Race and Element. For example, combining Rogue Class with Human Race and Wind Element the player gets Human Wind Rogue character as a result. Each aspect has its own min-max values which is randomized when combined, so each character has different stats and skill sets. Combining options are unlimited. You are able to combine already created characters and get even more powerful variations. Thus, the longer you play, the more options you have to create unique characters and new battle tactics.
+                                        </p>
+                                        <img src="assets/img/bl1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <img class="accordion__border d-none d-sm-block" src="assets/img/border-5@2x.png" alt="">
+                                <img class="accordion__border d-sm-none" src="assets/img/border-line.png" alt="">
+                            </div>
+                            <div class="accordion__block">
+                                <div class="accordion__head collapsed" data-toggle="collapse" data-target="#collapse-3">
+                                    <buttton class="button -iron-toggle"></buttton>
+                                    <h3>Compare</h3>
+                                </div>
+                                <div class="collapse accordion__body" id="collapse-3" data-parent="#accordion">
+                                    <div class="accordion__inner">
+                                        <p class="par">
+                                            Players get characters by combining 3 aspects: Class, Race and Element. For example, combining Rogue Class with Human Race and Wind Element the player gets Human Wind Rogue character as a result. Each aspect has its own min-max values which is randomized when combined, so each character has different stats and skill sets. Combining options are unlimited. You are able to combine already created characters and get even more powerful variations. Thus, the longer you play, the more options you have to create unique characters and new battle tactics.
+                                        </p>
+                                        <img src="assets/img/combine.png" alt="">
+                                    </div>
+                                </div>
+                                <img class="accordion__border d-none d-sm-block" src="assets/img/boarder-2@2x.png" alt="">
+                                <img class="accordion__border d-sm-none" src="assets/img/border-line.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-7">
+                        <div class="accordion-imgs">
+                            <img src="assets/img/combine.png" alt="">
+                            <img src="assets/img/bl1.jpg" alt="">
+                            <img src="assets/img/combine.png" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
-    </div><!--main-content-->
+
+
+        </div>
+    </div>
+
+    <div class="section section-6" style="background-image:url(assets/img/section-6.jpg);" id="model-section">
+        <div class="section__divider"></div>
+        <div class="section__content">
+            <div class="container-fluid container-primary">
+                <h2 class="h-text-center">Bussines model</h2>
+                <div class="divider -primary"></div>
+
+                <div class="shield-slider swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="shield"></div>
+                            <h3>Lorem ispum</h3>
+                            <p class="par">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="shield"></div>
+                            <h3>Lorem ispum</h3>
+                            <p class="par">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="shield"></div>
+                            <h3>Lorem ispum</h3>
+                            <p class="par">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section section-7" id="timeline-section">
+        <div class="section__divider"></div>
+        <div class="section__content">
+            <div class="timeline">
+                <div class="timeline__circle">
+                    <h2>Timeline</h2>
+                </div>
+                <div class="timeline__milestone -t1">
+                    <div class="no -t1 lazyload"></div>
+                    <h3>2018 June</h3>
+                    <p class="par">
+                        it amet, consectet dolor
+                        sit amet, consectet
+                    </p>
+                </div>
+                <div class="timeline__milestone -t2">
+                    <div class="no -t2 lazyload"></div>
+                    <h3>2018 April</h3>
+                    <p class="par">
+                        it amet, consectet dolor
+                        sit amet, consectet
+                    </p>
+                </div>
+                <div class="timeline__milestone -t3">
+                    <div class="no -t3 lazyload"></div>
+                    <h3>2018 September</h3>
+                    <p class="par">
+                        it amet, consectet dolor
+                        sit amet, consectet
+                    </p>
+                </div>
+                <div class="timeline__milestone -t4">
+                    <div class="no -t4 lazyload"></div>
+                    <h3>2018 November</h3>
+                    <p class="par">
+                        it amet, consectet dolor
+                        sit amet, consectet
+                    </p>
+                </div>
+                <div class="timeline__milestone -t5">
+                    <div class="no -t5 lazyload"></div>
+                    <h3>2019 June</h3>
+                    <p class="par">
+                        it amet, consectet dolor
+                        sit amet, consectet
+                    </p>
+                </div>
+                <div class="timeline__milestone -t6">
+                    <div class="no -t6 lazyload"></div>
+                    <h3>2019 September</h3>
+                    <p class="par">
+                        it amet, consectet dolor
+                        sit amet, consectet
+                    </p>
+                </div>
+                <div class="timeline__milestone -t7">
+                    <div class="no -t7 lazyload"></div>
+                    <h3>2019 November</h3>
+                    <p class="par">
+                        it amet, consectet dolor
+                        sit amet, consectet
+                    </p>
+                </div>
+                <div class="timeline__milestone -t8">
+                    <div class="no -t8 lazyload"></div>
+                    <h3>2019 October</h3>
+                    <p class="par">
+                        it amet, consectet dolor
+                        sit amet, consectet
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section section-8" id="team-section">
+        <div class="section__divider"></div>
+        <div class="section__content">
+            <h2>Team</h2>
+            <div class="divider -primary"></div>
+            <div class="container-fluid container-primary">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="person">
+                            <div class="person__img-hold">
+                                <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                            </div>
+                            <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
+                            <div class="person__name">
+                                Anne Anders
+                            </div>
+                            <div class="person__sub">
+                                    <span>
+                                    Full Stack Engineer
+                                    </span>
+                                <a href="">
+                                    <svg class="icon-in">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="par">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                            </p>
+                            <div class="person__socials">
+                                <a href="">
+                                    <svg class="icon-in">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="person">
+                            <div class="person__img-hold">
+                                <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                            </div>
+                            <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
+                            <div class="person__name">
+                                Anne Anders
+                            </div>
+                            <div class="person__sub">
+                                    <span>
+                                    Full Stack Engineer
+                                    </span>
+                                <a href="">
+                                    <svg class="icon-in">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="par">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                            </p>
+                            <div class="person__socials">
+                                <a href="">
+                                    <svg class="icon-in">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="person">
+                            <div class="person__img-hold">
+                                <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                            </div>
+                            <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
+                            <div class="person__name">
+                                Anne Anders
+                            </div>
+                            <div class="person__sub">
+                                    <span>
+                                    Full Stack Engineer
+                                    </span>
+                                <a href="">
+                                    <svg class="icon-in">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="par">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                            </p>
+                            <div class="person__socials">
+                                <a href="">
+                                    <svg class="icon-in">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="person">
+                            <div class="person__img-hold">
+                                <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                            </div>
+                            <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
+                            <div class="person__name">
+                                Anne Anders
+                            </div>
+                            <div class="person__sub">
+                                    <span>
+                                    Full Stack Engineer
+                                    </span>
+                                <a href="">
+                                    <svg class="icon-in">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="par">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                            </p>
+                            <div class="person__socials">
+                                <a href="">
+                                    <svg class="icon-in">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="person">
+                            <div class="person__img-hold">
+                                <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                            </div>
+                            <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
+                            <div class="person__name">
+                                Anne Anders
+                            </div>
+                            <div class="person__sub">
+                                    <span>
+                                    Full Stack Engineer
+                                    </span>
+                                <a href="">
+                                    <svg class="icon-in">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="par">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                            </p>
+                            <div class="person__socials">
+                                <a href="">
+                                    <svg class="icon-in">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="person">
+                            <div class="person__img-hold">
+                                <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                            </div>
+                            <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
+                            <div class="person__name">
+                                Anne Anders
+                            </div>
+                            <div class="person__sub">
+                                    <span>
+                                    Full Stack Engineer
+                                    </span>
+                                <a href="">
+                                    <svg class="icon-in">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="par">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                            </p>
+                            <div class="person__socials">
+                                <a href="">
+                                    <svg class="icon-in">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="person">
+                            <div class="person__img-hold">
+                                <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                            </div>
+                            <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
+                            <div class="person__name">
+                                Anne Anders
+                            </div>
+                            <div class="person__sub">
+                                    <span>
+                                    Full Stack Engineer
+                                    </span>
+                                <a href="">
+                                    <svg class="icon-in">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="par">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                            </p>
+                            <div class="person__socials">
+                                <a href="">
+                                    <svg class="icon-in">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="person">
+                            <div class="person__img-hold">
+                                <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                            </div>
+                            <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
+                            <div class="person__name">
+                                Anne Anders
+                            </div>
+                            <div class="person__sub">
+                                    <span>
+                                    Full Stack Engineer
+                                    </span>
+                                <a href="">
+                                    <svg class="icon-in">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="par">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                            </p>
+                            <div class="person__socials">
+                                <a href="">
+                                    <svg class="icon-in">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="advisors">Advisors</h2>
+                <div class="divider -primary"></div>
+
+                <div class="container-fluid container-primary">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="person">
+                                <div class="person__img-hold">
+                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                                </div>
+                                <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
+                                <div class="person__name">
+                                    Anne Anders
+                                </div>
+                                <div class="person__sub">
+                                    <span>
+                                    Full Stack Engineer
+                                    </span>
+                                    <a href="">
+                                        <svg class="icon-in">
+                                            <use xlink:href="#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <p class="par">
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                                </p>
+                                <div class="person__socials">
+                                    <a href="">
+                                        <svg class="icon-in">
+                                            <use xlink:href="#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="person">
+                                <div class="person__img-hold">
+                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                                </div>
+                                <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
+                                <div class="person__name">
+                                    Anne Anders
+                                </div>
+                                <div class="person__sub">
+                                    <span>
+                                    Full Stack Engineer
+                                    </span>
+                                    <a href="">
+                                        <svg class="icon-in">
+                                            <use xlink:href="#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <p class="par">
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                                </p>
+                                <div class="person__socials">
+                                    <a href="">
+                                        <svg class="icon-in">
+                                            <use xlink:href="#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="person">
+                                <div class="person__img-hold">
+                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                                </div>
+                                <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
+                                <div class="person__name">
+                                    Anne Anders
+                                </div>
+                                <div class="person__sub">
+                                    <span>
+                                    Full Stack Engineer
+                                    </span>
+                                    <a href="">
+                                        <svg class="icon-in">
+                                            <use xlink:href="#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <p class="par">
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                                </p>
+                                <div class="person__socials">
+                                    <a href="">
+                                        <svg class="icon-in">
+                                            <use xlink:href="#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="person">
+                                <div class="person__img-hold">
+                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                                </div>
+                                <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
+                                <div class="person__name">
+                                    Anne Anders
+                                </div>
+                                <div class="person__sub">
+                                    <span>
+                                    Full Stack Engineer
+                                    </span>
+                                    <a href="">
+                                        <svg class="icon-in">
+                                            <use xlink:href="#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <p class="par">
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                                </p>
+                                <div class="person__socials">
+                                    <a href="">
+                                        <svg class="icon-in">
+                                            <use xlink:href="#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-9" id="blog-section">
+        <div class="section__divider"></div>
+        <div class="section__content">
+            <h2 class="h-text-center">Blog</h2>
+            <div class="divider -primary -push"></div>
+            <div class="blog">
+                <div class="container-fluid container-primary">
+                    <div class="row ">
+                        <div class=" col-lg-8  order-lg-2">
+                            <div class="blog__main-img" style="background-image:url(assets/img/bl1.jpg);"></div>
+                        </div>
+                        <div class="col-lg-4 order-lg-1">
+                            <div class="blog__card">
+                                <div class="blog__text">
+                                    <h3>
+                                        Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit
+                                    </h3>
+                                    <p class="par">
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremq auda
+                                        tium, totam rem aperiam, eaque ipsa accus.
+                                    </p>
+                                    <p class="par blog__date">
+                                        January 2, 2018
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list container-fluid container-primary">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="blog__card">
+                                <div class="blog__img" style="background-image:url(assets/img/bl2.jpg);"></div>
+                                <div class="blog__text">
+                                    <h3>
+                                        Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit
+                                    </h3>
+                                    <p class="par">
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremq auda
+                                        tium, totam rem aperiam, eaque ipsa accus.
+                                    </p>
+                                    <p class="par blog__date">
+                                        January 2, 2018
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="blog__card">
+                                <div class="blog__img" style="background-image:url(assets/img/bl2.jpg);"></div>
+                                <div class="blog__text">
+                                    <h3>
+                                        Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit
+                                    </h3>
+                                    <p class="par">
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremq auda
+                                        tium, totam rem aperiam, eaque ipsa accus.
+                                    </p>
+                                    <p class="par blog__date">
+                                        January 2, 2018
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="blog__card">
+                                <div class="blog__img" style="background-image:url(assets/img/bl2.jpg);"></div>
+                                <div class="blog__text">
+                                    <h3>
+                                        Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit
+                                    </h3>
+                                    <p class="par">
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremq auda
+                                        tium, totam rem aperiam, eaque ipsa accus.
+                                    </p>
+                                    <p class="par blog__date">
+                                        January 2, 2018
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-10">
+        <div class="section__divider"></div>
+        <div class="section__content">
+            <h3 class="h-text-center">
+                Get your exclusive news and updates
+                about NotForPussies
+            </h3>
+            <div class="subscribe">
+                <input type="text" placeholder="Subscribe to get latest news">
+                <button>Join now</button>
+            </div>
+
+            <p class="par">
+                You can find us on:
+            </p>
+            <div class="social">
+                <a href="" class="button -circle">
+                    <svg class="icon-tw">
+                        <use xlink:href="#twitter"></use>
+                    </svg>
+                </a>
+                <a href="" class="button -circle">
+                    <svg class="icon-fb">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                </a>
+                <a href="" class="button -circle">
+                    <svg class="icon-ln">
+                        <use xlink:href="#linkedin"></use>
+                    </svg>
+                </a>
+                <a href="" class="button -circle">
+                    <svg class="icon-insta">
+                        <use xlink:href="#instagram"></use>
+                    </svg>
+                </a>
+                <a href="" class="button -circle">
+                    <svg class="icon-btc">
+                        <use xlink:href="#bitcoin"></use>
+                    </svg>
+                </a>
+                <a href="" class="button -circle">
+                    <svg class="icon-telegram">
+                        <use xlink:href="#telegram"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container-primary">
+            <nav>
+                <a href="">
+                    FAQ
+                </a>
+                <a href="">Token Model </a>
+                <a href="">Privacy Policy</a>
+                <a href="mailto:info@nor4pussies.com">info@nor4pussies.com</a>
+            </nav>
+            <div class="footer__c">
+                © Not For Pussies. 2018 All rights reserved.
+            </div>
+        </div>
+    </footer>
 
 </div>
-
-
-<!--<script  src="assets/vendor/vendor.min.js"></script>-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
 <script>
     window.lazySizesConfig = window.lazySizesConfig || {};
@@ -961,9 +1087,16 @@
     lazySizesConfig.expFactor = 2;
     lazySizesConfig.preloadAfterLoad = false;
 </script>
+
+<!--<script  src="assets/vendor/vendor.min.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.3/pixi.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
 <script src="./assets/vendor/vendor.min.js"></script>
-
-
 <script src="./assets/js/front.js"></script>
 <script src="./assets/js/app.min.js"></script>
 

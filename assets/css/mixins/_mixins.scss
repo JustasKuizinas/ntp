@@ -1,29 +1,61 @@
 $break-tablet: 768px;
 $break-desktop: 1024px;
 
-@mixin media($media) { 
-	@if $media == mobile-only {
+$break-xs:0;
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1200px;
+
+@mixin media($breakpoint) { 
+	@if $breakpoint == mobile-only {
 		@media only screen and (max-width:  $break-desktop - 1) { @content; }
 	}
-	@else if $media == phone-only {
+	@else if $breakpoint == sm-only {
 		@media only screen and (max-width:  $break-tablet - 1) { @content; }
 	}
-	@else if $media == tablet {
-		@media only screen and (min-width: $break-tablet ) { @content; }
-	}
-	@else if $media == tablet-land {
-		@media only screen and (min-width: 1024px ) { @content; }
-	}
-	@else if $media == tablet-only {
+	@else if $breakpoint == tablet-only {
 		@media only screen and (min-width: $break-tablet ) and (max-width: $break-desktop - 1) { @content; }
 	}
-	@else if $media == desktop {
-		@media only screen and (min-width: $break-desktop) { @content; }
+
+	@else if $breakpoint == sm-max {
+		@media only screen and (max-width: $break-sm - 1 ) { @content; }
+	}
+	@else if $breakpoint == md-max {
+		@media only screen and (max-width: $break-md - 1 ) { @content; }
+	}
+	@else if $breakpoint == lg-max {
+		@media only screen and (max-width: $break-lg - 1 ) { @content; }
+	}
+	@else if $breakpoint == xl-max {
+		@media only screen and (max-width: $break-xl - 1 ) { @content; }
+	}
+
+	@else if $breakpoint == sm {
+		@media only screen and (min-width: $break-sm ) { @content; }
+	}
+	@else if $breakpoint == md {
+		@media only screen and (min-width: $break-md) { @content; }
+	}
+	@else if $breakpoint == lg {
+		@media only screen and (min-width: $break-lg) { @content; }
+	}
+	@else if $breakpoint == xl {
+		@media only screen and (min-width: $break-xl) { @content; }
 	}
 	@else{
-		@media only screen and (min-width: $media) { @content; }
+		@media only screen and (min-width: $breakpoint) { @content; }
 	}
 }
+
+
+
+
+
+
+
+
+
 
 @mixin img-retina($file, $width, $height) {
 	background-image: url("../img/" + $file + ".png");

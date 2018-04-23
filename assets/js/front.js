@@ -26,6 +26,9 @@
             return !f.detect.isMobile();
         }
     }
+    f.hasScrollBar = function (el) {
+        return el.scrollHeight > el.offsetHeight;
+    };
     f.debounce = function (func, wait, immediate) {
         var timeout;
         return function () {
