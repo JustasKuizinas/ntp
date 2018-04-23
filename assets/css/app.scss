@@ -192,6 +192,7 @@ button {
 .container-primary {
     width: 100%;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 .row {
@@ -1315,6 +1316,7 @@ button {
     }
 
     .container-primary {
+        margin: 0 auto;
         @include media(md) {
             display: flex;
             justify-content: space-between;
