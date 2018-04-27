@@ -272,7 +272,7 @@
         var addWidth = 500;
         // var cvWidth = $section.outerWidth() + addWidth;
         // var cvHeight = $section.outerHeight();
-        var cvWidth = 1000;
+        var cvWidth = 2000;
         var cvHeight = 1000;
 
         /*

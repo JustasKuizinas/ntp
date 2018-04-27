@@ -85,7 +85,8 @@ button {
         height: 48px;
         padding: 0 20px;
         background-image: url('../img/btn-bg@2x.png');
-        background-size: contain;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -158,6 +159,8 @@ button {
 
     &__left-icon {
         margin-right: 5px;
+        position: relative;
+        bottom: 2px;
     }
 
 }
@@ -1065,6 +1068,7 @@ button {
 }
 
 .section-3 {
+    overflow: hidden;
     &__text {
         padding: 65px 0 60px;
 
