@@ -82,8 +82,8 @@ button {
         text-transform: uppercase;
         font-family: $font-astoria;
         color: #d9d9d9;
-        width: 163px;
         height: 48px;
+        padding: 0 20px;
         background-image: url('../img/btn-bg@2x.png');
         background-size: contain;
         display: flex;
@@ -92,8 +92,11 @@ button {
         font-size: 14px;
         font-weight: 400;
 
-        &:hover {
-            color: #fff;
+        @include hover() {
+            color: #ffc731;
+            svg {
+                fill: #ffc731;
+            }
         }
     }
     &.-circle {
@@ -153,10 +156,15 @@ button {
 
     }
 
+    &__left-icon {
+        margin-right: 5px;
+    }
+
 }
 
 [class^=icon-] {
     fill: #d9d9d9;
+    display: inline-block;
 }
 
 .icon-btc {
@@ -185,8 +193,26 @@ button {
 }
 
 .icon-ln {
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
+}
+
+.icon-drive {
+    width: 14px;
+    height: 12px;
+    background-image: url(../img/icon-drive@2x.png);
+    background-size: contain;
+    background-repeat: no-repeat;;
+}
+
+.icon-yt-btn {
+    width: 20px;
+    height: 15px;
+}
+
+.icon-yt-vertical {
+    width: 20px;
+    height: 20px;
 }
 
 .container-primary {
@@ -238,14 +264,15 @@ button {
     button {
         height: 60px;
         width: 100%;
-        background-color: #0c0c0c;
+        background-color: #ffc731;
         font-family: $font-astoria;
-        color: #ffc731;
+        color: #0c0c0c;
         font-size: 18px;
         font-weight: 700;
         text-transform: uppercase;
-        &:hover {
-            color: #fccb49;
+        @include hover() {
+            color: #ffc731;
+            background-color: #0c0c0c;
         }
 
         @include media(sm-max) {
@@ -260,10 +287,24 @@ button {
 .social {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     .button {
-        margin-right: 10px;
+        margin-right: 12px;
+        margin-left: 12px;
         margin-bottom: 15px;
+        vertical-align: middle;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+    .par {
+        margin-bottom: 5px;
+        font-size: 1.4rem;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
 }
 
 .menu-vertical {
@@ -279,7 +320,7 @@ button {
         padding-left: 30px;
         background: url(../img/menu-sep.png) no-repeat 12px 1px;
 
-        &.active, &:hover {
+        @include hover() {
             color: #fff;
         }
     }
@@ -301,9 +342,48 @@ button {
         height: 57px;
     }
 
+    &.is-sticky {
+        @include media(xl) {
+            width: 100%;
+            height: 57px;
+            background-color: #000;
+            background-image: none;
+            left: 0;
+            top: 0;
+            margin-left: 0px;
+
+            .menu {
+                &__left {
+                    position: absolute;
+                    left: 15px;
+                    top: 21px;
+                }
+
+                &__right {
+                    position: absolute;
+                    right: 15px;
+                    top: 22px;
+                }
+            }
+
+            .logo {
+                position: absolute;
+                left: 50%;
+                top: 5px;
+                width: 100px;
+                margin-left: -50px;
+
+                @include media(xl) {
+
+                }
+            }
+        }
+
+    }
+
     &__left {
         position: absolute;
-        left: 14px;
+        left: 40px;
         top: 21px;
         display: none;
         align-items: center;
@@ -335,9 +415,10 @@ button {
         background: url(../img/menu-sep.png) no-repeat 12px 1px;
         &:first-child {
             background: none;
+            padding-left: 0;
         }
-        &.active, &:hover {
-            color: #fff;
+        @include hover() {
+            color: #ffc731;
         }
     }
 
@@ -349,8 +430,8 @@ button {
         width: 100px;
 
         @include media(xl) {
-            margin-left: -85px;
-            width: 157px;
+            margin-left: -80px;
+            width: 160px;
             top: -50px;
         }
     }
@@ -393,11 +474,20 @@ button {
 .orc {
     &__orcy {
         width: 100%;
+        position: relative;
+        z-index: 30;
     }
     &__smoke {
         position: absolute;
         bottom: 0px;
         left: -25px;
+        z-index: 10;
+    }
+    canvas {
+        @extend .h-center-y;
+        position: absolute;
+        right: 0;
+        z-index: 20;
     }
 }
 
@@ -411,6 +501,12 @@ button {
         @extend .h-center-x;
         bottom: 0px;
         z-index: 10;
+    }
+    canvas {
+        @extend .h-center-x;
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
     }
 }
 
@@ -451,7 +547,7 @@ button {
 
 .par {
     font-family: $font-roboto;
-    color: #a1a1a1;
+    color: #d7d7d7;
     font-size: 1.5rem;
     line-height: 1.5;
     display: block;
@@ -533,11 +629,64 @@ button {
 .shield {
     display: inline-block;
     background-image: url(../img/rune-shield@2x.png);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 170px;
     height: 170px;
+}
 
+.shield-1 {
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 170px;
+    height: 170px;
+    &.lazyloaded {
+        background-image: url(../img/shield-1.png);
+    }
+}
+
+.shield-2 {
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 170px;
+    height: 170px;
+    &.lazyloaded {
+        background-image: url(../img/shield-2.png);
+    }
+}
+
+.shield-3 {
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 170px;
+    height: 170px;
+    &.lazyloaded{
+        background-image: url(../img/shield-3.png);
+    }
+}
+
+.shield-minus {
+    display: inline-block;
+    background-image: url(../img/shield-minus@2x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 81px;
+    height: 82px;
+    &.lazyloaded {
+
+    }
+}
+
+.shield-plus {
+    display: inline-block;
+    background-image: url(../img/shield-plus@2x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 81px;
+    height: 82px;
 }
 
 .no {
@@ -620,7 +769,7 @@ button {
     text-align: center;
     &__img-hold {
         max-width: 230px;
-        margin: 0 auto;
+        margin: 0 auto 15px;
     }
     &__img {
         background-size: cover;
@@ -635,6 +784,21 @@ button {
         mask-image: url("../img/masker.png");
         mask-size: 100%;
     }
+    &__desc {
+        margin-top: 19px;
+        font-size: 1.5rem;
+        color: #d7d7d7;
+        line-height: 1.5;
+
+        P + P {
+            margin-top: 12px;
+        }
+    }
+    &__company {
+        text-align: center;
+        font-size: 1.5rem;
+        color: #d7d7d7;
+    }
     &__socials {
         display: none;
         text-align: center;
@@ -647,11 +811,11 @@ button {
     &__name {
         font-size: 2.4rem;
         color: #ffc731;
+        margin-bottom: 3px;
     }
     &__sub {
         font-size: 1.5rem;
-        margin-bottom: 15px;
-        color: #a1a1a1;
+        color: #d7d7d7;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -660,18 +824,14 @@ button {
         }
         a {
             display: inline-block;
-            margin-right: 5px;
-            margin-top: 3px;
         }
-        .icon-in {
-            width: 20px;
-            height: 20px;
+        .icon-ln {
+            width: 12px;
+            height: 12px;
             fill: #ffc731;
         }
     }
-    p {
-        font-size: 1.5rem;
-    }
+
 }
 
 .blog {
@@ -772,9 +932,14 @@ button {
 .section-1 {
     overflow: hidden;
     &__about {
-
+        text-align: center;
         h1 {
             margin-bottom: 17px;
+        }
+        h3 {
+            font-family: $font-roboto;
+            margin-bottom: 20px;
+            color: #a1a1a1;
         }
         p {
             font-family: $font-roboto;
@@ -884,6 +1049,19 @@ button {
         }
     }
 
+    .divider {
+        &.-secondary {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .text-slider {
+        max-width: 440px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
 }
 
 .section-3 {
@@ -978,6 +1156,13 @@ button {
 
 .section-6 {
 
+    &__sub {
+        max-width: 680px;
+        display: block;
+        color: #d7d7d7;
+        margin: 0 auto 30px;
+        text-align: center;
+    }
     .divider {
         margin-top: 19px;
         margin-bottom: 30px;
@@ -1004,6 +1189,10 @@ button {
 
     .swiper-slide {
         text-align: center;
+
+        .par {
+            color: #d7d7d7;
+        }
     }
 
     &:not(.swiper-container-horizontal) {
@@ -1033,10 +1222,16 @@ button {
     position: relative;
     &__circle {
         position: relative;
-        background-image: url(../img/big-circle-clean.png);
         background-repeat: no-repeat;
         background-size: contain;
         width: 100%;
+
+        &.lazyloaded{
+            background-image: url(../img/big-circle-clean.png);
+            @include media(lg) {
+                background-image: url(../img/big-circle.png);
+            }
+        }
 
         @include media(lg-max) {
             width: 250px;
@@ -1044,7 +1239,6 @@ button {
             margin: 0 auto;
         }
         @include media(lg) {
-            background-image: url(../img/big-circle.png);
             padding-bottom: 97.6%;
         }
     }
@@ -1127,10 +1321,15 @@ button {
     h2 {
         @extend .h-center-xy;
         position: absolute;
+        font-size: 3.2rem;
 
         @include media(lg) {
+            font-size: 3.6rem;
             transform: translate(-49%, -6%);
         }
+    }
+    h3 {
+        margin-bottom: 5px;
     }
 }
 
@@ -1147,7 +1346,7 @@ button {
     .section {
         &__content {
             padding: 60px 0 60px;
-            @include media(sm) {
+            @include media(md) {
                 padding: 145px 0 130px;
             }
         }
@@ -1155,9 +1354,12 @@ button {
 }
 
 .section-8 {
-    background-image: url("../img/section-8.jpg");
     background-repeat: repeat;
     background-size: initial;
+
+    &.lazylaoded{
+        background-image: url("../img/section-8.jpg");
+    }
 
     @include media(md) {
         background-size: cover;
@@ -1231,9 +1433,8 @@ button {
 
 }
 
-.section-10 {
+.section-sub {
     @extend .h-center-bg-image;
-    background-image: url(../img/iron-wall.jpg);
 
     h3 {
         margin-bottom: 10px;
@@ -1247,12 +1448,6 @@ button {
             background-color: #c7c7c7;
         }
     }
-    .par {
-        margin-bottom: 5px;
-        font-size: 1.4rem;
-        display: block;
-        text-align: center;
-    }
     .social {
         justify-content: center;
         button {
@@ -1264,8 +1459,8 @@ button {
     .section {
         &__content {
             margin: 0 auto;
-            max-width: 510px;
-            padding: 50px 15px 25px;
+            max-width: 578px;
+            padding: 80px 15px 60px;
         }
     }
 }
@@ -1297,8 +1492,8 @@ button {
 
     a {
         margin-right: 15px;
-        &:hover {
-            color: #ffffff;
+        @include hover() {
+            color: #ffc731;
         }
         @include media(md-max) {
             display: block;
@@ -1471,6 +1666,99 @@ button {
     }
 }
 
+.section-cashflow {
+    .divider {
+        margin: 20px auto 50px;
+    }
+    .section {
+        &__content {
+            padding: 60px 0 0;
+            @include media(lg) {
+                padding: 140px 0;
+            }
+        }
+    }
+}
+
+.calc {
+    &__rows {
+        margin-bottom: 60px;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2rem;
+        font-family: $font-astoria;
+        div {
+            color: #d7d7d7;
+        }
+        span {
+            color: #ffc731;
+        }
+    }
+    &__divider {
+        width: 100%;
+        display: block;
+        margin: 17px 0;
+    }
+    &__range-slider {
+
+    }
+    &__grads {
+        display: block;
+        margin: 20px auto 10px;
+        width: 95%;
+    }
+    &__years {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        color: #d7d7d7;
+    }
+    .rangeslider {
+        background-color: transparent;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 10px;
+
+        .section-cashflow.lazyloaded &{
+            background-image: url(../img/range-slider-border@2x.png);
+        }
+        &__fill {
+            background-color: transparent;
+        }
+        &__handle {
+            top: -12px;
+            width: 32px;
+            height: 32px;
+            border: none;
+            background-image: url(../img/calc-btn@2x.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+}
+
+.horizont {
+    margin: 50px auto 0;
+    max-width: 100%;
+    @include media(lg) {
+        max-width: 750px;
+        margin: 0;
+        position: absolute;
+        width: 55%;
+        left: 45%;
+        bottom: 0;
+        z-index: 0;
+    }
+}
+
 .hamburger {
     z-index: 130;
     position: fixed;
@@ -1479,5 +1767,39 @@ button {
     display: block;
     @include media(xl) {
         display: none;
+    }
+}
+
+.section-mid-sub {
+    .section {
+        &__content {
+            padding: 80px 0;
+        }
+    }
+}
+
+.text-slider {
+
+    &__text {
+        font-size: 1.8rem;
+        color: #ffc731;
+        line-height: 1.5;
+        text-align: center;
+    }
+    .swiper-container {
+        padding-bottom: 25px;
+    }
+    .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: 0;
+    }
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        border: solid 2px #ffc731;
+        background: #ffc731;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+        background: none;
     }
 }

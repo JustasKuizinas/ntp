@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.2/rangeslider.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/app.css">
 </head>
@@ -33,22 +34,25 @@
                     <a class="nav-link" href="#intro-section">intro</a>
                 </li>
                 <li class="">
-                    <a class="nav-link" href="#game-section">the game</a>
-                </li>
-                <li class="">
                     <a class="nav-link" href="#solution-section"> solution</a>
                 </li>
                 <li class="">
-                    <a class="nav-link" href="#mechanics-section">game mechanics</a>
+                    <a class="nav-link" href="#game-section">the game</a>
+                </li>
+                <!--<li class="">-->
+                <!--<a class="nav-link" href="#mechanics-section">game mechanics</a>-->
+                <!--</li>-->
+                <li class="">
+                    <a class="nav-link" href="#model-section">MONETIZATION model</a>
                 </li>
                 <li class="">
-                    <a class="nav-link" href="#model-section">Business model</a>
+                    <a class="nav-link" href="#cashflow-section">Cash flow</a>
                 </li>
                 <li class="">
-                    <a class="nav-link" href="#timeline-section">Timeline</a>
+                    <a class="nav-link" href="#timeline-section">Roadmap</a>
                 </li>
                 <li class="">
-                    <a class="nav-link" href="#team-section">Team /Advisors</a>
+                    <a class="nav-link" href="#team-section">Team/Advisors</a>
                 </li>
                 <li class="">
                     <a class="nav-link" href="#blog-section">blog</a>
@@ -60,18 +64,21 @@
 
 
 <nav class="menu" id="main-menu">
-    <div class="menu__left">
-        <a class="nav-link" href="#intro-section">intro</a>
-        <a class="nav-link" href="#game-section">the game</a>
-        <a class="nav-link" href="#solution-section"> solution</a>
-        <a class="nav-link" href="#mechanics-section">game mechanics</a>
-    </div>
-    <img class="logo" src="assets/img/logo@2x.png" alt="">
-    <div class="menu__right">
-        <a class="nav-link" href="#model-section">Business model</a>
-        <a class="nav-link" href="#timeline-section">Timeline</a>
-        <a class="nav-link" href="#team-section">Team /Advisors</a>
-        <a class="nav-link" href="#blog-section">blog</a>
+    <div class="container-fluid container-primary h-rel">
+        <div class="menu__left">
+            <a class="nav-link" href="#intro-section">intro</a>
+            <a class="nav-link" href="#solution-section"> solution</a>
+            <a class="nav-link" href="#game-section">the game</a>
+            <!--<a class="nav-link" href="#mechanics-section">game mechanics</a>-->
+            <a class="nav-link" href="#model-section">MONETIZATION model</a>
+        </div>
+        <img class="logo" src="assets/img/logo@2x.png" alt="">
+        <div class="menu__right">
+            <a class="nav-link" href="#cashflow-section">Cash flow</a>
+            <a class="nav-link" href="#timeline-section">Roadmap</a>
+            <a class="nav-link" href="#team-section">Team/Advisors</a>
+            <a class="nav-link" href="#blog-section">blog</a>
+        </div>
     </div>
 </nav>
 
@@ -100,69 +107,76 @@
         <div class="section__content">
             <div class="container-fluid container-primary">
                 <div class="row no-gutters">
-                    <div class="col-lg-6 h-rel">
+                    <div class="col-lg-6 h-rel  h-z-0">
                         <div class="orc">
                             <img class="orc__smoke" src="assets/img/orc-bg.png" alt="">
                             <img class="orc__orcy" src="assets/img/orc@2x.png" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-6 h-rel">
+                    <div class="col-lg-6 h-rel h-z-1">
                         <div class="section-1__about">
                             <h1>
-                                Video game where distributed
-                                ledger finally makes sense
+                                A video game of infinite <br>
+                                tactics and strategies
                             </h1>
-                            <p>
-                                GET ADDICTED to Not for Pussies, turn-based tactical arena skirmish created for true gamers by true gamers.
-                            </p>
-                            <p>
-                                BE AMAZED by the post-apocalyptic world where engaging PvP battles go hand in hand with a great story and exclusively rich lore.
-                            </p>
-                            <p>
-                                EXPERIENCE how distributed ledger solves real gamers problems, including in-game assets ownership.
-                            </p>
-                            <div class="section-1__btns">
-                                <a href="" class="button -primary">
-                                    one-pager
-                                </a>
-                                <a href="" class="button -primary">
-                                    Whitepaper
-                                </a>
-                                <a href="" class="button -primary">
-                                    WATCH INTRO
-                                </a>
-                            </div>
+                            <h3>
+                                fighting the Trading Card Game business model
+                                by giving real power to the players
+                            </h3>
+
                             <div class="subscribe">
                                 <input type="text" placeholder="Subscribe to get latest news">
                                 <button>Join now</button>
                             </div>
+                            <div class="section-1__btns">
+                                <a href="" class="button -primary">
+                                    READ ONE PAGER
+                                </a>
+                                <a href="" class="button -primary">
+                                    READ WHITE PAPER
+                                </a>
+                                <a href="" class="button -primary"  data-toggle="modal" data-target="#videoModal">
+                                   <svg class="icon-yt-btn button__left-icon">
+                                       <use xlink:href="#yt-btn"></use>
+                                   </svg> WATCH INTRO
+                                </a>
+                            </div>
+ 
                             <div class="social">
-                                <a href="" class="button -circle">
+                                <p class="par">
+                                    You can find us on:
+                                </p>
+                                <a href="" target="_blank" class="button">
                                     <svg class="icon-tw">
                                         <use xlink:href="#twitter"></use>
                                     </svg>
                                 </a>
-                                <a href="" class="button -circle">
+                                <a href="" target="_blank"  class="button">
                                     <svg class="icon-fb">
                                         <use xlink:href="#facebook"></use>
                                     </svg>
                                 </a>
-                                <a href="" class="button -circle">
+                                <a href="" target="_blank"  class="button">
                                     <svg class="icon-ln">
                                         <use xlink:href="#linkedin"></use>
                                     </svg>
                                 </a>
-                                <a href="" class="button -circle">
+                                <a href="" target="_blank"  class="button">
                                     <svg class="icon-insta">
                                         <use xlink:href="#instagram"></use>
                                     </svg>
                                 </a>
-                                <a href="" class="button -circle">
+                                <a href="" target="_blank"  class="button">
+                                    <svg class="icon-yt-vertical">
+                                        <use xlink:href="#yt-vertical"></use>
+                                    </svg>
+                                </a>
+                                <a href="" target="_blank"  class="button">
                                     <svg class="icon-btc">
                                         <use xlink:href="#bitcoin"></use>
                                     </svg>
                                 </a>
-                                <a href="" class="button -circle">
+                                <a href="" target="_blank"  class="button ">
                                     <svg class="icon-telegram">
                                         <use xlink:href="#telegram"></use>
                                     </svg>
@@ -185,17 +199,48 @@
                             <h2>Intro</h2>
                             <div class="divider -primary -push"></div>
                             <p class="par">
-                                Enjoy the wildest threesome of video, card and miniature games, based on distributed ledger. Enter the world of permanent fights, primitive instincts, abuse of power and magic, wildest sex and impolite politics.
-                            </p>
+                                Enjoy the wildest threesome of video, card and miniature games, based on distributed ledger. </p>
                             <p class="par">
-                                Unleash your darkest side where only not pussies survive the night.
+                                Enter the world of permanent fights, primitive instincts, abuse of power and magic, wildest sex and impolite politics.
                             </p>
+                            <div class="par">
+                                Unleash your darkest side where only not pussies survive the night.
+                            </div>
+                            <div class="divider -secondary"></div>
+                        </div>
+                        <div class="text-slider">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="text-slider__text">
+                                            BE AMAZED by the post-apocalyptic world where
+                                            engaging PvP battles go hand in hand with a great story
+                                            and exclusively rich lore.
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="text-slider__text">
+                                            BE AMAZED by the post-apocalyptic world where
+                                            engaging PvP battles go hand in hand with a great story
+                                            and exclusively rich lore.
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="text-slider__text">
+                                            BE AMAZED by the post-apocalyptic world where
+                                            engaging PvP battles go hand in hand with a great story
+                                            and exclusively rich lore.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="section-2__yt">
-                            <img src="assets/img/youtube.jpg" alt="">
-                            <button class="button -play" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/f4uO7miigQw"></button>
+                            <img src="#" class="lazyload" data-src="assets/img/youtube.jpg" alt="">
+                            <button class="button -play" data-toggle="modal" data-target="#videoModal"></button>
                         </div>
                     </div>
                 </div>
@@ -205,56 +250,16 @@
         </div>
     </div>
 
-    <div class="section section-3" style="background-image:url(assets/img/fog-bg.jpg);" id="game-section">
-        <div class="section__divider"></div>
-        <div class="section__content">
-            <div class="container-fluid container-primary">
-                <div class="row align-items-end -no-gutters">
-
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="section-3__text">
-                            <h2>The GAME</h2>
-                            <div class="divider -primary -push"></div>
-                            <p class="par">
-                                In 2176, 150 years after the Merge, a post-apocalyptic Earth is slowly and chaotically recovering from the disaster that buried 21 century human civilization, erupted planet’s ecosystem and brought new inhabitants.
-                            </p>
-                            <p class="par">
-
-                                Scattered across the ruins of past glory four races battle for survival and dominance: Orcs, Dwarves, Elves and the remains of Humans. Magic and sword is the new law in the land where travel, communication and even social constructs are diminished to the levels of Dark Ages.
-                            </p>
-                            <div class="par">
-                                In the fragmented world full of empty spaces, new forms of wildlife and unknown monsters, new saviors appeared – the Immortals, who fight each other in the magic-fused battles.
-                            </div>
-                            <div class="par">
-                                Take the role of the Immortal, pick 5 various characters to your warband and fight your rivals in highly competitive 1v1 matches or measure your powers in the story driven single player campaign.
-                            </div>
-                            <div class="par">
-                                Enjoy the game created both by passionate geeks and most advanced technologies. Distributed ledger perfectly solves the problem of in-game properties ownership. Artificial intelligence analyzes already played battles data and balances the game. It is also employed for practice mode to train you for real battles.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="paladin">
-                            <img class="paladin__main" src="assets/img/palading@2x.png" alt="">
-                            <img class="paladin__aura" src="assets/img/red-aura.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
 
     <div class="section section-4" id="solution-section">
-        <div class="section__bg" style="background-image: url(assets/img/section-4.jpg)"></div>
+        <div class="section__bg lazyload" data-bg="assets/img/section-4.jpg"></div>
         <div class="section__divider"></div>
         <div class="section__content">
             <div class="container-fluid container-primary">
                 <div class="row -no-gutters">
-
                     <div class=" col-md-6">
                         <div class="section-4__left">
+                            <div class="shield-minus"></div>
                             <h2>Elsewhere problems</h2>
                             <div class="divider -primary -push"></div>
                             <div class="section-4__desc">
@@ -264,7 +269,7 @@
                                 <p class="par">
 
                                     In most cases, game terms of service forbid items, characters or
-                                    accounts sharing and trading. All in-game assets legall­­­­­­­­­­y belong to
+                                    accounts sharing and trading. All in-game assets legally belong to
                                     the game developer. Legally speaking, even when players pay real money for in-game items they still don’t become real owners.
                                 </p>
                                 <div class="divider -secondary"></div>
@@ -293,6 +298,7 @@
                     </div>
                     <div class="col-md-6 ">
                         <div class="section-4__right">
+                            <div class="shield-plus"></div>
                             <h2>Our solutions</h2>
                             <div class="divider -primary -push"></div>
                             <div class="section-4__desc">
@@ -326,10 +332,51 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+
+    <div class="section section-3" style="background-image:url(assets/img/fog-bg.jpg);" id="game-section">
+        <div class="section__divider"></div>
+        <div class="section__content">
+            <div class="container-fluid container-primary">
+                <div class="row align-items-end -no-gutters">
+
+                    <div class="col-lg-6 order-lg-2 h-rel h-z-3">
+                        <div class="section-3__text">
+                            <h2>The GAME</h2>
+                            <div class="divider -primary -push"></div>
+                            <p class="par">
+                                In 2176, 150 years after the Merge, <b>a post-apocalyptic Earth</b> is slowly and chaotically recovering from the disaster that buried 21 century human civilization, erupted planet’s ecosystem and brought new inhabitants.
+                            </p>
+                            <p class="par">
+
+                                Scattered across the ruins of past glory four races battle for survival and dominance: <b> Orcs, Dwarves, Elves and the remains of Humans</b>. Magic and sword is the new law in the land where travel, communication and even social constructs are diminished to the <b>levels of Dark Ages</b>.
+                            </p>
+                            <div class="par">
+                                In the fragmented world full of empty spaces, <b>new forms of wildlife and unknown monsters</b> , new saviors appeared – the Immortals, who fight each other in the magic-fused battles.
+                            </div>
+                            <div class="par">
+                                <b>Take the role of the Immortal</b>, pick 5 various characters to your warband and fight your rivals in <b>highly competitive 1v1 matches</b> or measure your powers in the <b>story driven single player campaign</b> .
+                            </div>
+                            <div class="par">
+                                Enjoy the game created both by passionate geeks and most advanced technologies. <b>Distributed ledger</b> perfectly solves the problem of in-game properties ownership. <b>Artificial intelligence </b>analyzes already played battles data and balances the game. It is also employed for practice mode to train you for real battles.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1  h-rel h-z-1">
+                        <div class="paladin">
+                            <img class="paladin__main lazyload" src="#" data-src="assets/img/palading@2x.png" alt="">
+                            <img class="paladin__aura lazyload" src="#" data-src="assets/img/red-aura.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
         </div>
     </div>
+
 
     <div class="section section-5" id="mechanics-section">
         <div class="section__divider"></div>
@@ -340,8 +387,8 @@
                     <div class="col-md-5">
                         <div class="accordion" id="accordion">
                             <div class="accordion__block">
-                                <img class="accordion__border d-none d-sm-block" src="assets/img/boarder-2@2x.png" alt="">
-                                <img class="accordion__border d-sm-none" src="assets/img/border-line.png" alt="">
+                                <img class="accordion__border d-none d-sm-block lazyload" src="#" data-src="assets/img/boarder-2@2x.png" alt="">
+                                <img class="accordion__border d-sm-none lazyload" src="#" data-src="assets/img/border-line.png" alt="">
                                 <div class="accordion__head collapsed" data-toggle="collapse" data-target="#collapse-1">
                                     <buttton class="button -iron-toggle"></buttton>
                                     <h3>Combine</h3>
@@ -349,13 +396,13 @@
                                 <div class="collapse accordion__body" id="collapse-1" data-parent="#accordion">
                                     <div class="accordion__inner">
                                         <p class="par">
-                                            Players get characters by combining 3 aspects: Class, Race and Element. For example, combining Rogue Class with Human Race and Wind Element the player gets Human Wind Rogue character as a result. Each aspect has its own min-max values which is randomized when combined, so each character has different stats and skill sets. Combining options are unlimited. You are able to combine already created characters and get even more powerful variations. Thus, the longer you play, the more options you have to create unique characters and new battle tactics.
+                                            <b> Players get characters by combining 3 aspects: Class, Race and Element</b>. For example, combining Rogue Class with Human Race and Wind Element the player gets Human Wind Rogue character as a result. Each aspect has its own min-max values which is randomized when combined, so each character has different stats and skill sets. <b> Combining options are unlimited</b>. You are able to combine already created characters and get even more powerful variations. Thus, the longer you play, the more options you have to create unique characters and new battle tactics.
                                         </p>
-                                        <img src="assets/img/combine.png" alt="">
+                                        <img class="lazyload"  src="#" data-src="assets/img/combine.png" alt="">
                                     </div>
                                 </div>
-                                <img class="accordion__border d-none d-sm-block" src="assets/img/boarder-2@2x.png" alt="">
-                                <img class="accordion__border d-sm-none" src="assets/img/border-line.png" alt="">
+                                <img class="accordion__border d-none d-sm-block lazyload" src="#" data-src="assets/img/boarder-2@2x.png" alt="">
+                                <img class="accordion__border d-sm-none lazyload" src="#" data-src="assets/img/border-line.png" alt="">
                             </div>
                             <div class="accordion__block">
                                 <div class="accordion__head collapsed" data-toggle="collapse" data-target="#collapse-2">
@@ -367,11 +414,11 @@
                                         <p class="par">
                                             Players get characters by combining 3 aspects: Class, Race and Element. For example, combining Rogue Class with Human Race and Wind Element the player gets Human Wind Rogue character as a result. Each aspect has its own min-max values which is randomized when combined, so each character has different stats and skill sets. Combining options are unlimited. You are able to combine already created characters and get even more powerful variations. Thus, the longer you play, the more options you have to create unique characters and new battle tactics.
                                         </p>
-                                        <img src="assets/img/bl1.jpg" alt="">
+                                        <img class="lazyload" src="#" data-src="assets/img/bl1.jpg" alt="">
                                     </div>
                                 </div>
-                                <img class="accordion__border d-none d-sm-block" src="assets/img/border-5@2x.png" alt="">
-                                <img class="accordion__border d-sm-none" src="assets/img/border-line.png" alt="">
+                                <img class="accordion__border d-none d-sm-block lazyload" src="#" data-src="assets/img/border-5@2x.png" alt="">
+                                <img class="accordion__border d-sm-none lazyload" src="#" data-src="assets/img/border-line.png" alt="">
                             </div>
                             <div class="accordion__block">
                                 <div class="accordion__head collapsed" data-toggle="collapse" data-target="#collapse-3">
@@ -381,22 +428,22 @@
                                 <div class="collapse accordion__body" id="collapse-3" data-parent="#accordion">
                                     <div class="accordion__inner">
                                         <p class="par">
-                                            Players get characters by combining 3 aspects: Class, Race and Element. For example, combining Rogue Class with Human Race and Wind Element the player gets Human Wind Rogue character as a result. Each aspect has its own min-max values which is randomized when combined, so each character has different stats and skill sets. Combining options are unlimited. You are able to combine already created characters and get even more powerful variations. Thus, the longer you play, the more options you have to create unique characters and new battle tactics.
+                                            Not for Pussies is a highly competitive game with high stakes in upper divisions. Mechanics of combining and map weaponization allow big varieties of different strategies. Leveling up players provides geometrical progression of combining and strategy possibilities. Researching, testing, tweaking and planning is a must if you want to be one of the best. On the other hand, game’s battle system involves you in a fast and fun game. For PvP mode there will be seasonal ladder. Each season will last for 3 months after which players will be rewarded with the limited-edition prizes, which will be designed for that particular season only.
                                         </p>
-                                        <img src="assets/img/combine.png" alt="">
+                                        <img class="lazyload" src="#" data-src="assets/img/board2.jpg" alt="">
                                     </div>
                                 </div>
-                                <img class="accordion__border d-none d-sm-block" src="assets/img/boarder-2@2x.png" alt="">
-                                <img class="accordion__border d-sm-none" src="assets/img/border-line.png" alt="">
+                                <img class="accordion__border d-none d-sm-block lazyload" src="#" data-src="assets/img/boarder-2@2x.png" alt="">
+                                <img class="accordion__border d-sm-none lazyload" src="#" data-src="assets/img/border-line.png" alt="">
                             </div>
                         </div>
 
                     </div>
                     <div class="col-md-7">
                         <div class="accordion-imgs">
-                            <img src="assets/img/combine.png" alt="">
-                            <img src="assets/img/bl1.jpg" alt="">
-                            <img src="assets/img/combine.png" alt="">
+                            <img class="lazyload"   src="#" data-src="assets/img/combine.png" alt="">
+                            <img class="lazyload"   src="#" data-src="assets/img/bl1.jpg" alt="">
+                            <img class="lazyload"   src="#" data-src="assets/img/board2.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -406,36 +453,95 @@
         </div>
     </div>
 
-    <div class="section section-6" style="background-image:url(assets/img/section-6.jpg);" id="model-section">
+    <div class="section section-sub lazyload" data-bg="assets/img/shadow-bg.jpg">
+        <div class="section__divider"></div>
+        <div class="section__content">
+            <h3 class="h-text-center">
+                Always be updated about NotForPussies!
+            </h3>
+            <div class="subscribe">
+                <input type="text" placeholder="Subscribe to get latest news">
+                <button>Join now</button>
+            </div>
+
+
+            <div class="social">
+                <p class="par">
+                    You can find us on:
+                </p>
+                <a href="" target="_blank" class="button">
+                    <svg class="icon-tw">
+                        <use xlink:href="#twitter"></use>
+                    </svg>
+                </a>
+                <a href="" target="_blank" class="button">
+                    <svg class="icon-fb">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                </a>
+                <a href="" target="_blank" class="button">
+                    <svg class="icon-ln">
+                        <use xlink:href="#linkedin"></use>
+                    </svg>
+                </a>
+                <a href="" target="_blank" class="button">
+                    <svg class="icon-insta">
+                        <use xlink:href="#instagram"></use>
+                    </svg>
+                </a>
+                <a href="" target="_blank"  class="button">
+                    <svg class="icon-yt-vertical">
+                        <use xlink:href="#yt-vertical"></use>
+                    </svg>
+                </a>
+                <a href="" target="_blank" class="button">
+                    <svg class="icon-btc">
+                        <use xlink:href="#bitcoin"></use>
+                    </svg>
+                </a>
+                <a href="" target="_blank" class="button">
+                    <svg class="icon-telegram">
+                        <use xlink:href="#telegram"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section section-6 lazyload" data-bg="assets/img/section-6.jpg" id="model-section">
         <div class="section__divider"></div>
         <div class="section__content">
             <div class="container-fluid container-primary">
-                <h2 class="h-text-center">Bussines model</h2>
+                <h2 class="h-text-center">Monetization model</h2>
                 <div class="divider -primary"></div>
+                <p class="section-6__sub par">
+                    Not for Pussies stands on the knife-edge of evolution from timeworn corporative game business practice to the <b>new financing philosophy which is brought by decentralization possibilities</b> and fresh approach to the modern economy.
+                </p>
 
                 <div class="shield-slider swiper-container">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
-                            <div class="shield"></div>
-                            <h3>Lorem ispum</h3>
+                            <div class="shield-1 lazyload"></div>
+                            <h3>Totally new approach</h3>
                             <p class="par">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua.
+                                We’ll <b> disrupt the traditional TCG business model</b> when game developers build wealth by selling to the players as much in-game asset licenses as possible. Not for Pussies <b> won’t sell any Character Cards nor Resources</b>. Instead, players will gain Resources by playing, and use them to craft unique Character Cards. Players will have the complete ownership of their items.
                             </p>
                         </div>
                         <div class="swiper-slide">
-                            <div class="shield"></div>
-                            <h3>Lorem ispum</h3>
+                            <div class="shield-2 lazyload"></div>
+                            <h3>Free market benefits</h3>
                             <p class="par">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua.
+                                <b>All in-game deals will be processed in our ORC Tokens</b>. No fiat currencies will be involved at launch. This will allow to create an in-game decentralized free market economy where <b>players will be free to trade</b> their in-game items. By not selling Cards and Characters ourselves, we won’t set their price. The Invisible hand of the free market will do.
                             </p>
                         </div>
                         <div class="swiper-slide">
-                            <div class="shield"></div>
-                            <h3>Lorem ispum</h3>
+                            <div class="shield-3 lazyload"></div>
+                            <h3>Broader usage of Tokens</h3>
                             <p class="par">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua.
+                                Not for Pussies will provide an <b>in-game Auction House</b>, where players will be able to sell their items for a small fee. Furthermore, <b> we’ll sell unique Character skins, visual effects and other cosmetic items</b>. Also there will be an <b> entrance fee for PvP ladder tournament</b> and you’ll be able to <b> pay the ransom for your character</b> if you lose it in a ladder fight.
                             </p>
                         </div>
                     </div>
@@ -447,76 +553,143 @@
         </div>
     </div>
 
+    <div class="section section-cashflow lazyload" id="cashflow-section">
+        <div class="section__divider"></div>
+        <div class="section__content">
+            <div class="container-fluid container-primary">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <h2 class="h-text-center">Cash Flow Projection</h2>
+                        <div class="divider -primary"></div>
+                        <div class="calc ">
+                            <div class="calc__rows">
+                                <div class="calc__row">
+                                    <div>
+                                        In game transaction cut
+                                    </div>
+                                    <span class="transaction-cut">
+                                        188990 €
+                                    </span>
+                                </div>
+                                <img class="calc__divider lazyload" src="#" data-src="assets/img/tiny-divider@2x.png" alt="">
+                                <div class="calc__row">
+                                    <div>
+                                        Cosmetics
+                                    </div>
+                                    <span class="cosmetics">
+                                        188990 €
+                                    </span>
+                                </div>
+                                <img class="calc__divider lazyload"   src="#" data-src="assets/img/tiny-divider@2x.png" alt="">
+                                <div class="calc__row">
+                                    <div>
+                                        Ladder entrance free
+                                    </div>
+                                    <span class="ladder-entrance">
+                                        188990 €
+                                    </span>
+                                </div>
+                                <img class="calc__divider lazyload"  src="#" data-src="assets/img/tiny-divider@2x.png" alt="">
+                                <div class="calc__row">
+                                    <div>
+                                        Ransom
+                                    </div>
+                                    <span class="ransom">
+                                        188990 €
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="calc__range-slider">
+                                <input
+                                        type="range"
+                                        min="2018"
+                                        max="2022"
+                                        step="1"
+                                        value="2018"
+                                        data-orientation="horizontal"
+                                >
+                                <img class="calc__grads lazyload" src="#" data-src="assets/img/grads@2x.png" alt="">
+                                <div class="calc__years">
+                                    <span>2018</span>
+                                    <span>2019</span>
+                                    <span>2020</span>
+                                    <span>2021</span>
+                                    <span>2022</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <img class="horizont lazyload" src="#" data-src="assets/img/horizont2.png" alt="">
+        </div>
+    </div>
+
 
     <div class="section section-7" id="timeline-section">
         <div class="section__divider"></div>
         <div class="section__content">
             <div class="timeline">
-                <div class="timeline__circle">
-                    <h2>Timeline</h2>
+                <div class="timeline__circle lazyload">
+                    <h2>Roadmap</h2>
                 </div>
                 <div class="timeline__milestone -t1">
                     <div class="no -t1 lazyload"></div>
-                    <h3>2018 June</h3>
+                    <h3>2017 October</h3>
                     <p class="par">
-                        it amet, consectet dolor
-                        sit amet, consectet
+                        Not for Pussies Idea
                     </p>
                 </div>
                 <div class="timeline__milestone -t2">
                     <div class="no -t2 lazyload"></div>
-                    <h3>2018 April</h3>
+                    <h3>2017 November </h3>
                     <p class="par">
-                        it amet, consectet dolor
-                        sit amet, consectet
+                        Secured 150k Eur Budget
                     </p>
                 </div>
                 <div class="timeline__milestone -t3">
                     <div class="no -t3 lazyload"></div>
-                    <h3>2018 September</h3>
+                    <h3>2017 / 2018 </h3>
                     <p class="par">
-                        it amet, consectet dolor
-                        sit amet, consectet
+                        Working on game design
+                        and prototyping
                     </p>
                 </div>
                 <div class="timeline__milestone -t4">
                     <div class="no -t4 lazyload"></div>
-                    <h3>2018 November</h3>
+                    <h3>2018 Q3</h3>
                     <p class="par">
-                        it amet, consectet dolor
-                        sit amet, consectet
+                        Crowdsale start
                     </p>
                 </div>
                 <div class="timeline__milestone -t5">
                     <div class="no -t5 lazyload"></div>
-                    <h3>2019 June</h3>
+                    <h3>2018 Q4 </h3>
                     <p class="par">
-                        it amet, consectet dolor
-                        sit amet, consectet
+                        Game Development
                     </p>
                 </div>
                 <div class="timeline__milestone -t6">
                     <div class="no -t6 lazyload"></div>
-                    <h3>2019 September</h3>
+                    <h3>2019 Q1</h3>
                     <p class="par">
-                        it amet, consectet dolor
-                        sit amet, consectet
+                        AI Development
                     </p>
                 </div>
                 <div class="timeline__milestone -t7">
                     <div class="no -t7 lazyload"></div>
-                    <h3>2019 November</h3>
+                    <h3>2019 Q3</h3>
                     <p class="par">
-                        it amet, consectet dolor
-                        sit amet, consectet
+                        Release of the game
                     </p>
                 </div>
                 <div class="timeline__milestone -t8">
                     <div class="no -t8 lazyload"></div>
-                    <h3>2019 October</h3>
+                    <h3>2019 Q4 and Beyond</h3>
                     <p class="par">
-                        it amet, consectet dolor
-                        sit amet, consectet
+                        2019 Q4 and Beyond
                     </p>
                 </div>
             </div>
@@ -524,131 +697,87 @@
     </div>
 
 
-    <div class="section section-8" id="team-section">
+    <div class="section section-8 lazyload" id="team-section">
         <div class="section__divider"></div>
         <div class="section__content">
             <h2>Team</h2>
             <div class="divider -primary"></div>
             <div class="container-fluid container-primary">
-                <div class="row">
-                    <div class="col-md-3">
+                <div class="row  justify-content-center">
+                    <div class="col-md-4">
                         <div class="person">
                             <div class="person__img-hold">
-                                <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                                <img class="lazyload" src="#" data-src="assets/img/m1.png"  alt="">
                             </div>
                             <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
                             <div class="person__name">
-                                Anne Anders
+                                Justas Gatelis
                             </div>
                             <div class="person__sub">
                                     <span>
-                                    Full Stack Engineer
+                                    Concept/Character Artist
                                     </span>
-                                <a href="">
-                                    <svg class="icon-in">
-                                        <use xlink:href="#linkedin"></use>
-                                    </svg>
-                                </a>
+                                <a href="" class="icon-drive"></a>
                             </div>
-                            <p class="par">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                            <p class="person__desc par">
+                                A brilliant artist with a passion for fantasy/sci-fi illustrations, whose talented pencil has drawn such popular games as Battle Towers, Shrek’s Craze Party Games, Barbie as the Island Princess, Falling Stars and even illustrations for IQ Economist. Working in entertainment industry for more than decade, Justas has learned subtleties and skills necessary for game development, movies and various other media. 
                             </p>
                             <div class="person__socials">
-                                <a href="">
-                                    <svg class="icon-in">
-                                        <use xlink:href="#linkedin"></use>
-                                    </svg>
-                                </a>
+                                <a href="" class="icon-drive"></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+
+                    <div class="col-md-4">
                         <div class="person">
                             <div class="person__img-hold">
-                                <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                                <img class="lazyload" src="#" data-src="assets/img/m2.png"  alt="">
+
                             </div>
-                            <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
                             <div class="person__name">
-                                Anne Anders
+                                Jonas Petrauskas
                             </div>
                             <div class="person__sub">
                                     <span>
-                                    Full Stack Engineer
+                                   Concept/Character Artist
                                     </span>
-                                <a href="">
-                                    <svg class="icon-in">
-                                        <use xlink:href="#linkedin"></use>
-                                    </svg>
-                                </a>
+                                <a href="" class="icon-drive"></a>
                             </div>
-                            <p class="par">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                            <p class="person__desc par">
+                                A gifted artist and a passionate game lover, has chosen gaming industry as a way of life. In his more than 5 years experience of making game art, Jonas has worked in various companies with a large handful of different games: from small niche projects to those played by millions
+                                around the globe.
                             </p>
                             <div class="person__socials">
-                                <a href="">
-                                    <svg class="icon-in">
-                                        <use xlink:href="#linkedin"></use>
-                                    </svg>
-                                </a>
+                                <a href="" class="icon-drive"></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+
+                    <div class="col-md-4">
                         <div class="person">
                             <div class="person__img-hold">
-                                <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                                <img class="lazyload" src="#" data-src="assets/img/m3.png"  alt="">
+
                             </div>
-                            <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
                             <div class="person__name">
-                                Anne Anders
+                                Justas Brazauskas
                             </div>
                             <div class="person__sub">
                                     <span>
-                                    Full Stack Engineer
+                                    Co-founder. CEO/Game designer
                                     </span>
                                 <a href="">
-                                    <svg class="icon-in">
+                                    <svg class="icon-ln">
                                         <use xlink:href="#linkedin"></use>
                                     </svg>
                                 </a>
                             </div>
-                            <p class="par">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                            <p class="person__desc par">
+                                From data analyst to UI/UX specialist, from project manager to the lead person - Justas knows it all in IT industry. But his heart was always beating to the rhythm of gaming industry. Justas was a co-founder of Coil Gaming, pan-European tournament organiser based for variety of esports titles including Hearthstone and Overwatch. Also Justas had taken the role of project manager for illustrated text-based RPG “Book of Secrets”, which was widely admired among Lithuanian geeks.
                             </p>
                             <div class="person__socials">
                                 <a href="">
-                                    <svg class="icon-in">
-                                        <use xlink:href="#linkedin"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="person">
-                            <div class="person__img-hold">
-                                <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
-                            </div>
-                            <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
-                            <div class="person__name">
-                                Anne Anders
-                            </div>
-                            <div class="person__sub">
-                                    <span>
-                                    Full Stack Engineer
-                                    </span>
-                                <a href="">
-                                    <svg class="icon-in">
-                                        <use xlink:href="#linkedin"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                            <p class="par">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                            </p>
-                            <div class="person__socials">
-                                <a href="">
-                                    <svg class="icon-in">
+                                    <svg class="icon-ln">
                                         <use xlink:href="#linkedin"></use>
                                     </svg>
                                 </a>
@@ -656,263 +785,375 @@
                         </div>
                     </div>
 
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="person">
                             <div class="person__img-hold">
-                                <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                                <img class="lazyload" src="#" data-src="assets/img/m4.png"  alt="">
+
                             </div>
-                            <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
                             <div class="person__name">
-                                Anne Anders
+                                Simonas Jatkonis
                             </div>
                             <div class="person__sub">
                                     <span>
-                                    Full Stack Engineer
+                                    Co-founder. Narrative designer
                                     </span>
                                 <a href="">
-                                    <svg class="icon-in">
+                                    <svg class="icon-ln">
                                         <use xlink:href="#linkedin"></use>
                                     </svg>
                                 </a>
                             </div>
-                            <p class="par">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                            <p class="person__desc par">
+                                Cinema scriptwriter and freelance assistant director, Simonas has a long trail of storytelling experience. He has a clear vision how stories are born on the piece of paper and get mature enough to appear on the screen. Author of illustrated text-based RPG “Book of Secrets”, well-known experimental project in
+                                Lithuanian geeks
                             </p>
                             <div class="person__socials">
                                 <a href="">
-                                    <svg class="icon-in">
+                                    <svg class="icon-ln">
                                         <use xlink:href="#linkedin"></use>
                                     </svg>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+
+                    <div class="col-md-4">
                         <div class="person">
                             <div class="person__img-hold">
-                                <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                                <img class="lazyload" src="#" data-src="assets/img/m5.png"  alt="">
+
                             </div>
-                            <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
                             <div class="person__name">
-                                Anne Anders
+                                Laurynas Jurgila
                             </div>
                             <div class="person__sub">
                                     <span>
-                                    Full Stack Engineer
+                                   3D/Character artist
+                                    </span>
+                                <a href="" class="icon-drive"></a>
+                            </div>
+                            <p class="person__desc par">
+                                Started creating 3D graphics with Blender software 8 years ago, now Laurynas can also call himself a master when it comes to Zbrush and 3D Coat. An artist specializes in hand painted style models. First clients noticed his talent on his Youtube channel and this boosted his career. Since those days, Laurynas has been working with various desktop and mobile games.
+                            </p>
+                            <div class="person__socials">
+                                <a href="" class="icon-drive"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="person">
+                            <div class="person__img-hold">
+                                <img class="lazyload" src="#" data-src="assets/img/m6.png"  alt="">
+
+                            </div>
+                            <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
+                            <div class="person__name">
+                                Gediminas Cibulskis
+                            </div>
+                            <div class="person__sub">
+                                    <span>
+                                   Creative
                                     </span>
                                 <a href="">
-                                    <svg class="icon-in">
+                                    <svg class="icon-ln">
                                         <use xlink:href="#linkedin"></use>
                                     </svg>
                                 </a>
                             </div>
-                            <p class="par">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                            <p class="person__desc par">
+                                Storyteller at work and in real life, Gediminas has 15 years experience in advertising and communications. With Master’s degree in philology, he is a tough one to beat when it comes to written or visual stories. Has an abundant collection of trophies, including Cannes Young Lions. The author of popular interactive tale in Lithuania which was awarded in LOGIN festival. A team member of carVertical, successful automotive industry startup which raised more than 20 million US dollars.
                             </p>
                             <div class="person__socials">
                                 <a href="">
-                                    <svg class="icon-in">
+                                    <svg class="icon-ln">
                                         <use xlink:href="#linkedin"></use>
                                     </svg>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+
+                    <div class="col-md-4">
                         <div class="person">
                             <div class="person__img-hold">
-                                <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                                <img class="lazyload" src="#" data-src="assets/img/m7.png"  alt="">
+
                             </div>
-                            <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
                             <div class="person__name">
-                                Anne Anders
+                                Arnas Purlys
                             </div>
                             <div class="person__sub">
                                     <span>
-                                    Full Stack Engineer
+                                    UI/UX, Graphic designer
                                     </span>
                                 <a href="">
-                                    <svg class="icon-in">
+                                    <svg class="icon-ln">
                                         <use xlink:href="#linkedin"></use>
                                     </svg>
                                 </a>
                             </div>
-                            <p class="par">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                            <p class="person__desc par">
+                                A skilful design master has created numerous web and apps designs, including appearance of a few most popular web portals in Baltics. Web design, UI/UX, branding and art direction expert can boast more than 10 years of experience in the field. Was two times awarded in LOGIN, technologies and innovation festival.
                             </p>
                             <div class="person__socials">
                                 <a href="">
-                                    <svg class="icon-in">
+                                    <svg class="icon-ln">
                                         <use xlink:href="#linkedin"></use>
                                     </svg>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+
+                    <div class="col-md-4">
                         <div class="person">
                             <div class="person__img-hold">
-                                <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                                <img class="lazyload" src="#" data-src="assets/img/m8.png"  alt="">
+
                             </div>
-                            <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
                             <div class="person__name">
-                                Anne Anders
+                                Aleksandras Gaška
                             </div>
                             <div class="person__sub">
                                     <span>
-                                    Full Stack Engineer
+                                    Partnerships
                                     </span>
                                 <a href="">
-                                    <svg class="icon-in">
+                                    <svg class="icon-ln">
                                         <use xlink:href="#linkedin"></use>
                                     </svg>
                                 </a>
                             </div>
-                            <p class="par">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
+                            <p class="person__desc par">
+                                If you want a successful project, it’s obligatory to have Aleksandras in team.
+                                He served as a community relations manager and jack-of-all-trades at Monetha (raised $37 million US dollars), as a community relations / blog writer at Mysterium Network (raised 14 million US dollars) and as a business developer at carVertical (raised 20 million US dollars).
                             </p>
                             <div class="person__socials">
                                 <a href="">
-                                    <svg class="icon-in">
+                                    <svg class="icon-ln">
                                         <use xlink:href="#linkedin"></use>
                                     </svg>
                                 </a>
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-md-4">
+                        <div class="person">
+                            <div class="person__img-hold">
+                                <img class="lazyload" src="#" data-src="assets/img/m9.png"  alt="">
+
+                            </div>
+                            <div class="person__name">
+                                Adomas Baltagalvis
+                            </div>
+                            <div class="person__sub">
+                                    <span>
+                                   Performance Marketing Specialist
+                                    </span>
+                                <a href="">
+                                    <svg class="icon-ln">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="person__desc par">
+                                A fantastic ROI channels performance marketer with more than 6 years experience full of success stories. Globally famous in digital marketing for a bunch of outstanding projects. Adomas was the primary advertiser of seven multi-million crowdfunding campaigns, including ZeTime, Filippo Loreti and Superscreen. Also a marketer and investor at carVertical.
+                            </p>
+                            <div class="person__socials">
+                                <a href="">
+                                    <svg class="icon-ln">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
 
                 <h2 class="advisors">Advisors</h2>
                 <div class="divider -primary"></div>
 
                 <div class="container-fluid container-primary">
-                    <div class="row">
-                        <div class="col-md-3">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
                             <div class="person">
                                 <div class="person__img-hold">
-                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                                    <img class="lazyload" src="#" data-src="assets/img/m10.png"  alt="">
+
                                 </div>
-                                <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
                                 <div class="person__name">
-                                    Anne Anders
+                                    Renaldas Zioma
                                 </div>
                                 <div class="person__sub">
                                     <span>
-                                    Full Stack Engineer
+                                   Shepherd
                                     </span>
                                     <a href="">
-                                        <svg class="icon-in">
+                                        <svg class="icon-ln">
                                             <use xlink:href="#linkedin"></use>
                                         </svg>
                                     </a>
                                 </div>
-                                <p class="par">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                                </p>
+                                <div class="person__company">
+                                    Unity Technologies
+                                </div>
+                                <div class="person__desc">
+                                    <p>
+                                        A gaming industry guru, a wizard
+                                        of AI and ML.
+                                    </p>
+                                    <p>
+                                        Corporate experience: Unity Technologies (Shepherd), Electronic Arts (Graphics programer), DICE (Senior Graphics Programmer), Wireframe Dreams (Lead Programmer), Ivolgamus
+                                        (Console Programmer).
+                                    </p>
+                                    <p>
+                                        Areas of expertise: ML development, AI development, technical leadership.
+                                    </p>
+                                </div>
                                 <div class="person__socials">
                                     <a href="">
-                                        <svg class="icon-in">
+                                        <svg class="icon-ln">
                                             <use xlink:href="#linkedin"></use>
                                         </svg>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+
+                        <div class="col-md-4">
                             <div class="person">
                                 <div class="person__img-hold">
-                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                                    <img class="lazyload" src="#" data-src="assets/img/m11.png"  alt="">
+
                                 </div>
-                                <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
                                 <div class="person__name">
-                                    Anne Anders
+                                    Rokas Medonis
                                 </div>
                                 <div class="person__sub">
                                     <span>
-                                    Full Stack Engineer
+                                  Co-founder&CEO
                                     </span>
                                     <a href="">
-                                        <svg class="icon-in">
+                                        <svg class="icon-ln">
                                             <use xlink:href="#linkedin"></use>
                                         </svg>
                                     </a>
                                 </div>
-                                <p class="par">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                                </p>
+                                <div class="person__company">
+                                    CarVertical
+                                </div>
+                                <div class="person__desc ">
+                                    <p>
+                                        Business development superstar, Mr. Let’s-Make-It-Our-Own-Way.
+                                    </p>
+                                    <p>
+                                        Corporate experience: carVertical (Co-Owner&CEO); StartupHighway (Board Member); KeuleRuke (Managing Director), Nabaka LLC (CMO), Kosmetikos DNR (Business Developer).
+                                    </p>
+                                    <p>
+                                        Areas of expertise: online and offline marketing, business development, business strategy, startup acceleration, team management.
+                                    </p>
+                                </div>
                                 <div class="person__socials">
                                     <a href="">
-                                        <svg class="icon-in">
+                                        <svg class="icon-ln">
                                             <use xlink:href="#linkedin"></use>
                                         </svg>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+
+                        <div class="col-md-4">
                             <div class="person">
                                 <div class="person__img-hold">
-                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                                    <img class="lazyload" src="#" data-src="assets/img/m12.png"  alt="">
+
                                 </div>
-                                <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
                                 <div class="person__name">
-                                    Anne Anders
+                                    Audrius Kučinskas
                                 </div>
                                 <div class="person__sub">
                                     <span>
-                                    Full Stack Engineer
+                                   Co-Founder&CTO
                                     </span>
                                     <a href="">
-                                        <svg class="icon-in">
+                                        <svg class="icon-ln">
                                             <use xlink:href="#linkedin"></use>
                                         </svg>
                                     </a>
                                 </div>
-                                <p class="par">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                                </p>
+                                <div class="person__company">
+                                    CarVertical
+                                </div>
+                                <div class="person__desc">
+                                    <p>
+                                        Full Stack Engineer, the tech visionary.
+                                    </p>
+                                    <p>
+                                        Corporate experience: carVertical (Co-Owner&CTO), Showaround (iOS Developer, DevOps Engineer), Nabaka LLC (DevOps Engineer).
+                                    </p>
+                                    <p>
+                                        Areas of expertise: distributed ledger technology, iOS development, DevOps engineering.
+                                    </p>
+                                </div>
                                 <div class="person__socials">
                                     <a href="">
-                                        <svg class="icon-in">
+                                        <svg class="icon-ln">
                                             <use xlink:href="#linkedin"></use>
                                         </svg>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+
+                        <div class="col-md-4">
                             <div class="person">
                                 <div class="person__img-hold">
-                                    <div class="person__img" style="background-image:url(assets/img/mst.png);"></div>
+                                    <img class="lazyload" src="#" data-src="assets/img/m13.png"  alt="">
+
                                 </div>
-                                <!--<img src="assets/img/mst.png" alt="" class="person__img">-->
                                 <div class="person__name">
-                                    Anne Anders
+                                    Robertas Boravskis
                                 </div>
                                 <div class="person__sub">
                                     <span>
-                                    Full Stack Engineer
+                                   Co-Owner&CMO
                                     </span>
                                     <a href="">
-                                        <svg class="icon-in">
+                                        <svg class="icon-ln">
                                             <use xlink:href="#linkedin"></use>
                                         </svg>
                                     </a>
                                 </div>
-                                <p class="par">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqaudatium, totam rem aperiam, eaque ipsa.
-                                </p>
+                                <div class="person__company">
+                                    CarVertical
+                                </div>
+                                <div class="person__desc">
+                                    <p>
+                                        Digital marketing and communication guru.
+                                    </p>
+                                    <p>
+                                        Corporate experience: carVertical (Co-Owner), GPSWOX (Co-Owner), Draudimogidas.lt (Co-Owner).
+                                    </p>
+                                    <p>
+                                        Areas of expertise: digital marketing, entrepreneurship, startup acceleration.
+                                    </p>
+                                </div>
                                 <div class="person__socials">
                                     <a href="">
-                                        <svg class="icon-in">
+                                        <svg class="icon-ln">
                                             <use xlink:href="#linkedin"></use>
                                         </svg>
                                     </a>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -928,7 +1169,7 @@
                 <div class="container-fluid container-primary">
                     <div class="row ">
                         <div class=" col-lg-8  order-lg-2">
-                            <div class="blog__main-img" style="background-image:url(assets/img/bl1.jpg);"></div>
+                            <div class="blog__main-img lazyload" data-bg="assets/img/bl1.jpg"></div>
                         </div>
                         <div class="col-lg-4 order-lg-1">
                             <div class="blog__card">
@@ -953,7 +1194,7 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="blog__card">
-                                <div class="blog__img" style="background-image:url(assets/img/bl2.jpg);"></div>
+                                <div class="blog__img lazyload" data-bg="assets/img/bl2.jpg"></div>
                                 <div class="blog__text">
                                     <h3>
                                         Lorem ipsum dolor sit amet,
@@ -972,7 +1213,7 @@
 
                         <div class="col-lg-4">
                             <div class="blog__card">
-                                <div class="blog__img" style="background-image:url(assets/img/bl2.jpg);"></div>
+                                <div class="blog__img lazyload" data-bg="assets/img/bl2.jpg"></div>
                                 <div class="blog__text">
                                     <h3>
                                         Lorem ipsum dolor sit amet,
@@ -991,7 +1232,7 @@
 
                         <div class="col-lg-4">
                             <div class="blog__card">
-                                <div class="blog__img" style="background-image:url(assets/img/bl2.jpg);"></div>
+                                <div class="blog__img lazyload" data-bg="assets/img/bl2.jpg"></div>
                                 <div class="blog__text">
                                     <h3>
                                         Lorem ipsum dolor sit amet,
@@ -1013,7 +1254,7 @@
         </div>
     </div>
 
-    <div class="section section-10">
+    <div class="section section-sub lazyload"  data-bg="assets/img/iron-wall.jpg">
         <div class="section__divider"></div>
         <div class="section__content">
             <h3 class="h-text-center">
@@ -1025,36 +1266,42 @@
                 <button>Join now</button>
             </div>
 
-            <p class="par">
-                You can find us on:
-            </p>
+
             <div class="social">
-                <a href="" class="button -circle">
+                <p class="par">
+                    You can find us on:
+                </p>
+                <a href="" target="_blank" class="button">
                     <svg class="icon-tw">
                         <use xlink:href="#twitter"></use>
                     </svg>
                 </a>
-                <a href="" class="button -circle">
+                <a href="" target="_blank" class="button">
                     <svg class="icon-fb">
                         <use xlink:href="#facebook"></use>
                     </svg>
                 </a>
-                <a href="" class="button -circle">
+                <a href="" target="_blank" class="button">
                     <svg class="icon-ln">
                         <use xlink:href="#linkedin"></use>
                     </svg>
                 </a>
-                <a href="" class="button -circle">
+                <a href="" target="_blank" class="button">
                     <svg class="icon-insta">
                         <use xlink:href="#instagram"></use>
                     </svg>
                 </a>
-                <a href="" class="button -circle">
+                <a href="" target="_blank"  class="button">
+                    <svg class="icon-yt-vertical">
+                        <use xlink:href="#yt-vertical"></use>
+                    </svg>
+                </a>
+                <a href="" target="_blank" class="button">
                     <svg class="icon-btc">
                         <use xlink:href="#bitcoin"></use>
                     </svg>
                 </a>
-                <a href="" class="button -circle">
+                <a href="" target="_blank" class="button">
                     <svg class="icon-telegram">
                         <use xlink:href="#telegram"></use>
                     </svg>
@@ -1092,6 +1339,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.3/pixi.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.2/rangeslider.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
@@ -1100,28 +1348,21 @@
 <script src="./assets/js/front.js"></script>
 <script src="./assets/js/app.min.js"></script>
 
-<svg style="width: 0;height: 0;overflow: hidden;display: block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <symbol id="bitcoin" viewBox="0 0 128 128">
-        <style type="text/css"/>
-        <path class="st0" d="M109.8 75.7c-.8-5.7-3.6-10.1-8.6-13-2.3-1.3-4.8-2.2-7.4-3.3.3-.2.5-.4.7-.5 12.5-6.4 11.4-25.7 2.3-32.3-3.7-2.7-7.8-4.4-12.1-5.4-3.1-.7-6.2-1.2-9.4-1.7 0-5.6.1-13.3.1-19.5H63.7c-.1 6.1-.1 13.6-.2 19.1h-9.4c0-5.5.1-13 .1-19.1H42.6c-.1 6.2-.1 13.9-.2 19.4-8-.1-15.7-.1-23.7-.2 0 4.3-.1 8.3-.1 12.5 1.7 0 3.2 0 4.6.1 1.5 0 3 0 4.4.1 4.1.3 6.2 2.6 6.2 6.6-.2 16.7-.4 33.5-.5 50.2 0 3.7-1.6 5.1-5.2 5.1h-7.8c-.8 4.7-1.6 9.2-2.4 13.9 7.9.1 15.7.2 23.7.3 0 6-.1 13.6-.1 19.9h11.7c.1-6.3.1-13.7.2-19.6 3.3.1 6.3.2 9.4.3 0 6-.1 13.3-.1 19.4h11.7c.1-6.3.1-13.7.2-19.5.4-.1.7-.1 1-.2 5.6-.9 11.3-1.4 16.7-2.7 7.1-1.8 12.7-5.9 15.7-12.9 2.1-5.4 2.6-11.1 1.8-17zM54.3 32.9c7.3 0 14.4-.6 21 2.4 4.4 1.9 6.6 5.5 6.3 9.8-.3 4.6-2.9 7.9-7.6 9.4-6.4 2.1-13.1 2-20 1.7.1-7.6.2-15.2.3-23.3zm25.5 58.4c-6.5 2.9-13.3 2.9-20.2 3-1.9 0-3.8-.1-5.9-.1l.3-25.9c8.9 0 17.7-.7 26 3 4.3 1.9 6.8 5.2 6.8 10.1-.1 4.9-2.7 8-7 9.9z"/>
-    </symbol>
-    <symbol id="facebook" viewBox="0 0 512 512">
-        <path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"/>
-    </symbol>
-    <symbol id="instagram" viewBox="0 0 24 24">
-        <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
-    </symbol>
-    <symbol id="linkedin" viewBox="0 0 512 512">
-        <path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/>
-    </symbol>
-    <symbol id="telegram" viewBox="0 0 24 24">
-        <path d="M9.028 20.837c-.714 0-.593-.271-.839-.949l-2.103-6.92L22.263 3.37"/>
-        <path d="M9.028 20.837c.552 0 .795-.252 1.105-.553l2.941-2.857-3.671-2.214"/>
-        <path d="M9.403 15.213l8.89 6.568c1.015.56 1.748.271 2-.942l3.62-17.053c.372-1.487-.564-2.159-1.534-1.72L1.125 10.263c-1.45.582-1.443 1.392-.264 1.753l5.455 1.7L18.94 5.753c.595-.36 1.143-.167.694.232"/>
-    </symbol>
-    <symbol id="twitter" viewBox="0 0 24 24">
-        <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/>
-    </symbol>
-</svg>
+
+<div  style="width: 0;height: 0;overflow: hidden;display: block">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="bitcoin" viewBox="0 0 128 128"><style type="text/css"/><path class="st0" d="M109.8 75.7c-.8-5.7-3.6-10.1-8.6-13-2.3-1.3-4.8-2.2-7.4-3.3.3-.2.5-.4.7-.5 12.5-6.4 11.4-25.7 2.3-32.3-3.7-2.7-7.8-4.4-12.1-5.4-3.1-.7-6.2-1.2-9.4-1.7 0-5.6.1-13.3.1-19.5H63.7c-.1 6.1-.1 13.6-.2 19.1h-9.4c0-5.5.1-13 .1-19.1H42.6c-.1 6.2-.1 13.9-.2 19.4-8-.1-15.7-.1-23.7-.2 0 4.3-.1 8.3-.1 12.5 1.7 0 3.2 0 4.6.1 1.5 0 3 0 4.4.1 4.1.3 6.2 2.6 6.2 6.6-.2 16.7-.4 33.5-.5 50.2 0 3.7-1.6 5.1-5.2 5.1h-7.8c-.8 4.7-1.6 9.2-2.4 13.9 7.9.1 15.7.2 23.7.3 0 6-.1 13.6-.1 19.9h11.7c.1-6.3.1-13.7.2-19.6 3.3.1 6.3.2 9.4.3 0 6-.1 13.3-.1 19.4h11.7c.1-6.3.1-13.7.2-19.5.4-.1.7-.1 1-.2 5.6-.9 11.3-1.4 16.7-2.7 7.1-1.8 12.7-5.9 15.7-12.9 2.1-5.4 2.6-11.1 1.8-17zM54.3 32.9c7.3 0 14.4-.6 21 2.4 4.4 1.9 6.6 5.5 6.3 9.8-.3 4.6-2.9 7.9-7.6 9.4-6.4 2.1-13.1 2-20 1.7.1-7.6.2-15.2.3-23.3zm25.5 58.4c-6.5 2.9-13.3 2.9-20.2 3-1.9 0-3.8-.1-5.9-.1l.3-25.9c8.9 0 17.7-.7 26 3 4.3 1.9 6.8 5.2 6.8 10.1-.1 4.9-2.7 8-7 9.9z"/></symbol><symbol id="facebook" viewBox="0 0 512 512"><path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"/></symbol><symbol id="instagram" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></symbol><symbol id="linkedin" viewBox="0 0 512 512"><g><path d="M173.6,508.7c0-2.4,0-4.7,0-7c0-107.7,0-215.3,0-323c0-3-0.2-5.4,4.2-5.4c31.8,0.2,63.7,0.1,95.5,0.1   c0.8,0,1.6,0.2,2.9,0.4c0,14,0,27.8,0,41.7c0.4,0.1,0.7,0.3,1.1,0.4c4-5.2,7.8-10.6,12-15.7c12.2-15,27.5-26,45.5-32.6   c9.8-3.6,20.5-5.8,30.8-6.3c14.2-0.6,28.7-0.4,42.7,2c23,3.9,43.3,14.1,60.1,30.8c15.9,15.7,26.4,34.6,32.1,55.9   c3,11.3,4.9,22.9,6.7,34.4c1.2,8,1.8,16.2,1.8,24.2c0.1,65,0.1,130,0.1,195c0,1.6-0.1,3.2-0.2,5.3c-1.9,0-3.5,0-5.1,0   c-30.7,0-61.3-0.1-92,0.1c-5.1,0-6-1.7-6-6.3c0.1-59.8,0.3-119.7-0.1-179.5c-0.1-10.5-1.1-21.4-3.8-31.5   c-4.9-17.7-16.1-30.5-33.9-37c-15-5.5-30.2-6.5-45.6-2.6c-17,4.3-28.7,15.6-37.5,30.5c-6.8,11.5-8.1,24.2-8.2,36.9   c-0.4,60.7-0.2,121.3-0.2,182c0,2.3,0,4.6,0,7.1C241.9,508.7,208,508.7,173.5,508.7z"/><path d=" M109.1,342.6c0,53.3-0.1,106.6,0.1,159.9c0,4.8-1,6.6-6.3,6.5c-30.5-0.3-61-0.3-91.5,0c-5,0-6.1-1.7-6.1-6.3   c0.1-107.1,0.1-214.3,0-321.4c0-4.3,1.2-5.8,5.6-5.8c30.8,0.2,61.6,0.2,92.5,0c4.8,0,5.7,1.8,5.7,6.1   C109.1,235.3,109.1,289,109.1,342.6z"/><path d="M56.1,4.8C89,4,108.7,27.9,108.8,57.2c0.1,30-20.9,52.4-53.9,52.3c-30.7,0-52.4-22-52.3-53.1C2.7,27.3,23.8,3.8,56.1,4.8z"/></g></symbol><symbol id="telegram" viewBox="0 0 24 24"><path d="M9.028 20.837c-.714 0-.593-.271-.839-.949l-2.103-6.92L22.263 3.37"/><path d="M9.028 20.837c.552 0 .795-.252 1.105-.553l2.941-2.857-3.671-2.214"/><path d="M9.403 15.213l8.89 6.568c1.015.56 1.748.271 2-.942l3.62-17.053c.372-1.487-.564-2.159-1.534-1.72L1.125 10.263c-1.45.582-1.443 1.392-.264 1.753l5.455 1.7L18.94 5.753c.595-.36 1.143-.167.694.232"/></symbol><symbol id="twitter" viewBox="0 0 24 24"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></symbol><symbol id="yt-btn" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" class=""/></symbol><symbol id="yt-vertical" viewBox="0 0 511.627 511.627">
+        <g>
+            <path d="M459.955,264.377c-2.471-11.233-7.949-20.653-16.416-28.264c-8.474-7.611-18.227-12.085-29.27-13.418    c-35.02-3.806-87.837-5.708-158.457-5.708c-70.618,0-123.341,1.903-158.174,5.708c-11.227,1.333-21.029,5.807-29.407,13.418    c-8.376,7.614-13.896,17.035-16.562,28.264c-4.948,22.083-7.423,55.391-7.423,99.931c0,45.299,2.475,78.61,7.423,99.93    c2.478,11.225,7.951,20.653,16.421,28.261c8.47,7.614,18.225,11.991,29.263,13.134c35.026,3.997,87.847,5.996,158.461,5.996    c70.609,0,123.44-1.999,158.453-5.996c11.043-1.143,20.748-5.52,29.126-13.134c8.377-7.607,13.897-17.036,16.56-28.261    c4.948-22.083,7.426-55.391,7.426-99.93C467.377,319.007,464.899,285.695,459.954,264.376z M165.025,293.218h-30.549v162.45    h-28.549v-162.45h-29.98v-26.837h89.079V293.218z M242.11,455.668H216.7v-15.421c-10.278,11.615-19.989,17.419-29.125,17.419    c-8.754,0-14.275-3.524-16.556-10.564c-1.521-4.568-2.286-11.519-2.286-20.844V314.627h25.41v103.924    c0,6.088,0.096,9.421,0.288,9.993c0.571,3.997,2.568,5.995,5.996,5.995c5.138,0,10.566-3.997,16.274-11.991V314.627h25.41V455.668    z M339.183,413.411c0,13.894-0.855,23.417-2.56,28.558c-3.244,10.462-9.996,15.697-20.273,15.697    c-9.137,0-17.986-5.235-26.556-15.697v13.702h-25.406v-189.29h25.406v61.955c8.189-10.273,17.036-15.413,26.556-15.413    c10.277,0,17.029,5.331,20.273,15.988c1.704,4.948,2.56,14.369,2.56,28.264V413.411z M435.685,390.003h-51.104v24.839    c0,13.134,4.374,19.697,13.131,19.697c6.279,0,10.089-3.422,11.42-10.28c0.376-1.902,0.571-7.706,0.571-17.412h25.981v3.71    c0,9.329-0.195,14.846-0.572,16.563c-0.567,5.133-2.56,10.273-5.995,15.413c-6.852,10.089-17.139,15.133-30.841,15.133    c-13.127,0-23.407-4.855-30.833-14.558c-5.517-7.043-8.275-18.083-8.275-33.12v-49.396c0-15.036,2.662-26.076,7.987-33.119    c7.427-9.705,17.61-14.558,30.557-14.558c12.755,0,22.85,4.853,30.263,14.558c5.146,7.043,7.71,18.083,7.71,33.119V390.003    L435.685,390.003z"/>
+            <path d="M302.634,336.043c-4.38,0-8.658,2.101-12.847,6.283v85.934c4.188,4.186,8.467,6.279,12.847,6.279    c7.419,0,11.14-6.372,11.14-19.13v-60.236C313.773,342.418,310.061,336.043,302.634,336.043z"/>
+            <path d="M397.428,336.043c-8.565,0-12.847,6.475-12.847,19.41v13.134h25.693v-13.134    C410.274,342.511,405.99,336.043,397.428,336.043z"/>
+            <path d="M148.473,113.917v77.375h28.549v-77.375L211.563,0h-29.121l-19.41,75.089L142.759,0h-30.262    c5.33,15.99,11.516,33.785,18.559,53.391C140.003,79.656,145.805,99.835,148.473,113.917z"/>
+            <path d="M249.82,193.291c13.134,0,23.219-4.854,30.262-14.561c5.332-7.043,7.994-18.274,7.994-33.689V95.075    c0-15.225-2.669-26.363-7.994-33.406c-7.043-9.707-17.128-14.561-30.262-14.561c-12.756,0-22.75,4.854-29.98,14.561    c-5.327,7.043-7.992,18.181-7.992,33.406v49.965c0,15.225,2.662,26.457,7.992,33.689    C227.073,188.437,237.063,193.291,249.82,193.291z M237.541,89.935c0-13.134,4.093-19.701,12.279-19.701    s12.275,6.567,12.275,19.701v59.955c0,13.328-4.089,19.985-12.275,19.985s-12.279-6.661-12.279-19.985V89.935z"/>
+            <path d="M328.328,193.291c9.523,0,19.328-5.901,29.413-17.705v15.703h25.981V48.822h-25.981v108.777    c-5.712,8.186-11.133,12.275-16.279,12.275c-3.429,0-5.428-2.093-5.996-6.28c-0.191-0.381-0.287-3.715-0.287-9.994V48.822h-25.981    v112.492c0,9.705,0.767,16.84,2.286,21.411C313.961,189.768,319.574,193.291,328.328,193.291z"/>
+        </g>
+    </symbol></svg>
+</div>
+
+
+
 </body>
 </html>
