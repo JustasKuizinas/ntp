@@ -7,13 +7,50 @@
         initBussinesSwiper();
         initYT();
         initOffCanvas();
-        initOrcParticles();
-        initPaladinParticles();
+        // initOrcParticles();
+        // initPaladinParticles();
         initAccodron();
         initRangeSlider()
         initTextSlider();
         initSticky();
+        if (f.detect.isDesktop()) {
+            initMouseParallax();
+            initScrollMagic();
+        }
     });
+
+
+    function initScrollMagic() {
+        var controller = new ScrollMagic.Controller();
+        var duration = parseInt($('.section-3').outerHeight()) / 2;
+
+        var paladinSmokeScene = new ScrollMagic.Scene({triggerElement: ".section-3", duration: duration * 1.7})
+            .setTween("#paladinSmoke", 0.5, {y: 0})
+            .addTo(controller);
+
+        var paladinSkirmaScene = new ScrollMagic.Scene({triggerElement: ".section-3",  duration: duration})
+            .setTween("#paladinSkirma", 0.5, {y: 0})
+            .addTo(controller);
+
+    // .setTween(new TweenLite.to('#paladinSkirma', 1, {css: {y: 0}}))
+        // setTween(new TweenLite.to('#paladinSkirma', 700, {css: {transform: 'translate3d(0, 0, 0)'}}))
+        // .setTween("#animate2", {borderTop: "30px solid white", backgroundColor: "blue", scale: 0.7})
+        // .addIndicators({name: "2 (duration: 300)"}) // add indicators (requires plugin)
+
+    }
+
+    function initMouseParallax() {
+        var orcParallax = document.getElementById('orcParallax');
+        var parallaxInstance = new Parallax(orcParallax, {
+            relativeInput: true,
+            hoverOnly: true,
+            calibrateX: true,
+            invertX: false,
+            invertY: false,
+            frictionX: 0.07,
+            frictionY: 0.07
+        });
+    }
 
     function initSticky() {
         var $menu = $('.menu');
@@ -55,7 +92,7 @@
         var $cosmetics = $('.calc .cosmetics');
         var $ladderEntrance = $('.calc .ladder-entrance');
         var $ransom = $('.calc .ransom');
-        var $horizont = $('.horizont');
+        var $horizontView = $('.js-horizont-view');
 
         var vals = {
             2018: {
@@ -115,8 +152,8 @@
         });
 
         function changeProjection(year) {
-            var opacity = (1 / Object.keys(vals).length) * (Object.keys(vals).indexOf(String(year)) + 1);
-            $horizont.css('opacity', opacity);
+            var blur = (2 * (Object.keys(vals).length - 1)) - (Object.keys(vals).indexOf(String(year)) * 2);
+            $horizontView.css('filter', 'blur(' + blur + 'px)');
 
             $transactionCut.html(vals[year].transactionCut + ' €');
             $cosmetics.html(vals[year].cosmetics + ' €');
@@ -131,8 +168,8 @@
         $accordion.on('shown.bs.collapse', function () {
             var index = $accordion.find('.accordion__body.show').parent('.accordion__block').index();
             console.log($accordionImgs[index]);
-            $accordionImgs.hide();
-            $($accordionImgs[index]).show();
+            $accordionImgs.removeClass('h-opacity-1').addClass('h-opacity-0');
+            $($accordionImgs[index]).removeClass('h-opacity-0').addClass('h-opacity-1');
         })
 
     }

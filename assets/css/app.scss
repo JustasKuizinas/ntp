@@ -33,7 +33,8 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
     line-height: 1.3;
     color: #ffc731;
     font-weight: 400;
@@ -57,12 +58,19 @@ h2 {
 
 h3 {
     font-size: 24px;
-    @include media(sm) {
+    @include media(md) {
         font-size: 30px;
     }
 }
 
 h4 {
+    font-size: 18px;
+    @include media(md) {
+        font-size: 24px;
+    }
+}
+
+h5 {
     font-size: 18px;
 
 }
@@ -191,8 +199,16 @@ button {
 }
 
 .icon-telegram {
-    width: 18px;
-    height: 17px;
+    //width: 18px;
+    //height: 17px;
+
+    width: 27px;
+    height: 25px;
+}
+
+.icon-discord{
+    width: 22px;
+    height: 16px;
 }
 
 .icon-ln {
@@ -257,10 +273,13 @@ button {
         font-family: $font-roboto;
         color: #000000;
         font-size: 18px;
-        padding: 0 25px;
+        padding: 0 20px;
 
         @include media(sm-max) {
             text-align: center;
+        }
+        @include media(sm) {
+            padding: 0 25px;
         }
 
     }
@@ -324,7 +343,7 @@ button {
         background: url(../img/menu-sep.png) no-repeat 12px 1px;
 
         @include hover() {
-            color: #fff;
+            color: #ffc731;
         }
     }
 }
@@ -333,7 +352,7 @@ button {
     width: 1170px;
     height: 65px;
     background-image: url('../img/menu-back.png');
-    background-size: cover;
+    background-size: contain;
     position: fixed;
     left: 50%;
     margin-left: -585px;
@@ -343,9 +362,17 @@ button {
     @include media(xl) {
         top: 100px;
         height: 57px;
+        position: absolute;
+    }
+
+    .is-desktop.modal-open &:not(.is-sticky) {
+        margin-left: -593px;
     }
 
     &.is-sticky {
+        .is-desktop.modal-open & {
+            padding-right: 17px;
+        }
         @include media(xl) {
             width: 100%;
             height: 57px;
@@ -354,6 +381,7 @@ button {
             left: 0;
             top: 0;
             margin-left: 0px;
+            position: fixed;
 
             .menu {
                 &__left {
@@ -420,6 +448,9 @@ button {
             background: none;
             padding-left: 0;
         }
+        &.active {
+            color: #ffc731;
+        }
         @include hover() {
             color: #ffc731;
         }
@@ -475,35 +506,82 @@ button {
 }
 
 .orc {
+    max-width: 100%;
+    width: 650px;
+    position: relative;
+
+    &__s1 {
+        position: absolute;
+        left: -20% !important;
+        top: 6% !important;
+    }
+    &__s2 {
+        position: absolute;
+        left: -42% !important;
+        top: 5% !important;
+    }
+    &__s3 {
+        position: absolute;
+        left: -5% !important;
+        top: 4% !important;
+    }
     &__orcy {
+        position: absolute;
         width: 100%;
-        position: relative;
         z-index: 30;
+        left: 0px;
+        bottom: 0px;
     }
     &__smoke {
         position: absolute;
-        bottom: 0px;
-        left: -25px;
+        bottom: 0px !important;
+        left: -25px !important;
         z-index: 10;
+        display: none;
+        @include media(lg) {
+            display: block;
+        }
     }
+    &__hdl {
+        left: 0;
+        top: 0;
+        height: 0;
+        position: relative;
+        width: 100%;
+        padding-bottom: 119%;
+    }
+
     canvas {
         @extend .h-center-y;
         position: absolute;
         right: 0;
         z-index: 20;
     }
+
 }
 
 .paladin {
+    position: relative;
+    &__bg {
+        width: 130%;
+        max-width: 1500px;
+        position: relative;
+        left: -15%;
+        bottom: -20px;
+    }
     &__main {
         position: relative;
         z-index: 5;
+        width: 90%;
+        left: 5%;
+        bottom: 0;
     }
     &__aura {
         position: absolute;
-        @extend .h-center-x;
         bottom: 0px;
+        left: 0;
         z-index: 10;
+        width: 100%;
     }
     canvas {
         @extend .h-center-x;
@@ -566,24 +644,26 @@ button {
 
 .accordion-imgs {
     display: none;
+    position: relative;
     @include media(md) {
         display: block;
     }
     img {
-        display: none;
+        @extend .h-center-xy;
+        position: absolute;
+        max-height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s;
         &:first-child {
             @include media(md) {
-                display: block;
+                opacity: 1;
             }
         }
     }
 
     @include media(md) {
         height: 600px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px 80px 20px 80px;
+        margin: 20px 80px 20px 80px;
 
     }
 }
@@ -666,7 +746,7 @@ button {
     background-repeat: no-repeat;
     width: 170px;
     height: 170px;
-    &.lazyloaded{
+    &.lazyloaded {
         background-image: url(../img/shield-3.png);
     }
 }
@@ -805,9 +885,19 @@ button {
     &__socials {
         display: none;
         text-align: center;
+        margin-top: 5px;
+
+        @include media(md-max) {
+            display: block;
+        }
+
         .icon-in {
             width: 25px;
             height: 25px;
+            fill: #ffc731;
+        }
+
+        svg {
             fill: #ffc731;
         }
     }
@@ -822,11 +912,15 @@ button {
         display: flex;
         align-items: center;
         justify-content: center;
+
         span {
             margin-right: 5px;
         }
         a {
             display: inline-block;
+            @include media(md-max) {
+                display: none;
+            }
         }
         .icon-ln {
             width: 12px;
@@ -853,8 +947,8 @@ button {
         }
     }
     &__card {
-        background-image: url(../img/bg-2.jpg);
-        background-size: cover;
+        background-image: url(../img/texture-1.jpg);
+        background-repeat: repeat;
     }
     &__img {
         width: 100%;
@@ -934,15 +1028,19 @@ button {
 
 .section-1 {
     overflow: hidden;
+    background-color: #0a0a0a;
     &__about {
         text-align: center;
+        @include media(lg) {
+            margin-left: 60px;
+        }
         h1 {
             margin-bottom: 17px;
         }
-        h3 {
+        h4 {
             font-family: $font-roboto;
             margin-bottom: 20px;
-            color: #a1a1a1;
+            color: #d9d9d9;
         }
         p {
             font-family: $font-roboto;
@@ -980,11 +1078,28 @@ button {
             justify-content: space-between;
         }
     }
+    &__orc-hdl {
+        @extend .h-full-abs;
+    }
+    &__shadow {
+        @extend .h-full-abs;
 
-    .orc {
-        @include media(lg) {
-            width: 648px;
-            height: 773px;
+        background-image: url(../img/shadow-top.png);
+        background-size: cover;
+        background-position: center center;
+
+        &.-t1 {
+            display: none;
+            height: 103%;
+            @include media(lg) {
+                display: block;
+            }
+        }
+    }
+    &__texts {
+        @include media(lg-max) {
+            position: relative;
+            top: -70px;
         }
     }
 
@@ -994,15 +1109,16 @@ button {
 
     .section {
         &__bg {
-            background-image: url('../img/wood3.jpg');
+            @include media(lg) {
+                background-image: url('../img/main-cover.jpg');
+            }
         }
         &__divider {
             bottom: -4px;
         }
         &__content {
             @include media(lg-max) {
-                margin-top: 100px;
-                margin-bottom: 60px;
+                padding-top: 50px;
             }
         }
     }
@@ -1013,11 +1129,47 @@ button {
         }
     }
 
+    .orc-container {
+
+        @include media(lg-max) {
+            position: relative;
+            padding-top: 100px;
+            background-image: url('../img/main-cover.jpg');
+            background-size: cover;
+            background-position: center center;
+        }
+        .section-1 {
+            &__shadow {
+                display: none;
+                @include media(lg-max) {
+                    display: block;
+                }
+            }
+        }
+    }
+
     .orc {
+
         @include media(lg) {
             position: absolute;
-            bottom: -109px;
-            left: 44px;
+            bottom: -30%;
+            left: 50%;
+            transform: translate3d(-80%, 0px, 0px) !important;
+        }
+        @include media(xl) {
+            bottom: -15%;
+        }
+        &__hdl {
+            @include media(lg-max) {
+                position: relative;
+            }
+        }
+    }
+
+    .fog {
+        display: none;
+        @include media(lg) {
+            display: block;
         }
     }
 
@@ -1069,6 +1221,7 @@ button {
 
 .section-3 {
     overflow: hidden;
+    background-color: #0b0e12;
     &__text {
         padding: 65px 0 60px;
 
@@ -1076,7 +1229,7 @@ button {
             text-align: center;
         }
         @include media(lg) {
-            padding: 120px 0 109px 50px;
+            padding: 100px 0 109px 50px;
         }
         h2 {
             text-align: center;
@@ -1087,11 +1240,108 @@ button {
         margin-top: 21px;
         margin-bottom: 25px;
     }
+    
+    .fog{
+        display: none;
+        @include media(lg){
+            display: block;
+        }
+    }
 
+    .paladin {
+        max-width: 700px;
+        position: absolute;
+        bottom: 0;
+        transform: translate3d(0%, 100%, 0);
+
+    }
+    #paladinSmoke{
+        position: absolute;
+        @include media(lg){
+            right: 50%;
+        }
+    }
+    #paladinSkirma{
+        position: relative;
+        @include media(lg){
+            position: absolute;
+            right: 50%;
+        }
+    }
+
+
+}
+
+@keyframes fog {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+@keyframes smoke1 {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -30%;
+    }
+}
+
+@keyframes smoke2 {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -40%;
+    }
+}
+
+.fog {
+    @extend .h-full-abs;
+
+    &.lazyloaded {
+        .fog {
+            &__s3 {
+                background-image: url(../img/smoke-bg.png);
+            }
+        }
+    }
+
+    &__s1 {
+        width: 30%;
+        top: 20%;
+        animation: smoke1 30s linear 0s infinite normal;
+        transform: translateZ(0);
+    }
+
+    &__s2 {
+        width: 40%;
+        top: 50%;
+        animation: smoke2 20s linear 0s infinite normal;
+        transform: translateZ(0);
+    }
+    &__s3 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 200%;
+        background-position: 0 bottom;
+        background-size: 50% 100%;
+        animation: fog 80s linear 0s infinite normal;
+    }
+
+    img {
+        position: absolute;
+    }
 }
 
 .section-4 {
     text-align: center;
+    background-color: #151515;
 
     @include media(md-max) {
         [class*="col-"] + [class*="col-"] {
@@ -1111,9 +1361,12 @@ button {
     }
     .section {
         &__bg {
+            .is-desktop &{
+                background-attachment: fixed;
+            }
             @include media(md-max) {
                 height: auto;
-                padding-bottom: 70%;
+                padding-bottom: 100%;
                 box-shadow: inset 0px -48px 71px -20px #151515;
             }
         }
@@ -1159,6 +1412,10 @@ button {
 }
 
 .section-6 {
+
+    .is-desktop &{
+        background-attachment: fixed;
+    }
 
     &__sub {
         max-width: 680px;
@@ -1230,7 +1487,7 @@ button {
         background-size: contain;
         width: 100%;
 
-        &.lazyloaded{
+        &.lazyloaded {
             background-image: url(../img/big-circle-clean.png);
             @include media(lg) {
                 background-image: url(../img/big-circle.png);
@@ -1361,12 +1618,8 @@ button {
     background-repeat: repeat;
     background-size: initial;
 
-    &.lazylaoded{
-        background-image: url("../img/section-8.jpg");
-    }
-
-    @include media(md) {
-        background-size: cover;
+    &.lazyloaded {
+        background-image: url("../img/texture-1.jpg");
     }
 
     .section {
@@ -1387,17 +1640,6 @@ button {
     }
     .person {
         margin-bottom: 40px;
-
-        &__sub {
-            @include media(md-max) {
-                display: none;
-            }
-        }
-        &__socials {
-            @include media(md-max) {
-                display: block;
-            }
-        }
     }
     .advisors {
         margin-top: 20px;
@@ -1439,6 +1681,9 @@ button {
 
 .section-sub {
     @extend .h-center-bg-image;
+    background-size: initial;
+    background-position: center center;
+    background-repeat: repeat;
 
     h3 {
         margin-bottom: 10px;
@@ -1602,8 +1847,8 @@ button {
 }
 
 .hamburger {
-    $button-height: 20px;
-    $button-width: 32px;
+    $button-height: 22px;
+    $button-width: 30px;
     $line-height: 3px;
     $line-color: #868686;
     $transition: .5s;
@@ -1616,11 +1861,13 @@ button {
     z-index: 160;
     color: #868686;
     @mixin line {
-        background-color: currentColor;
         display: block;
         height: $line-height;
         transition: width $transition, height $transition, transform $transition;
         width: $button-width;
+        background-image: url(../img/menu-line.png);
+        background-size: contain;
+        background-position: center center;
     }
 
     .off-canvas-side-menu-is-active & {
@@ -1671,8 +1918,16 @@ button {
 }
 
 .section-cashflow {
+    overflow: hidden;
+
+    &__shadow {
+        height: 105%;
+        background-size: cover;
+    }
+
     .divider {
         margin: 20px auto 50px;
+
     }
     .section {
         &__content {
@@ -1680,6 +1935,24 @@ button {
             @include media(lg) {
                 padding: 140px 0;
             }
+            @include media(lg-max) {
+                padding-bottom: 95%;
+            }
+        }
+        &__divider {
+            bottom: -4px;
+        }
+    }
+    .horizont {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        @include media(lg) {
+            position: absolute;
+            width: 700px;
+            left: 48%;
+            bottom: 0;
         }
     }
 }
@@ -1727,7 +2000,7 @@ button {
         background-position: center center;
         height: 10px;
 
-        .section-cashflow.lazyloaded &{
+        .section-cashflow.lazyloaded & {
             background-image: url(../img/range-slider-border@2x.png);
         }
         &__fill {
@@ -1749,17 +2022,43 @@ button {
 
 }
 
+.js-horizont-view {
+    transition: filter 0.3s;
+}
+
 .horizont {
-    margin: 50px auto 0;
-    max-width: 100%;
-    @include media(lg) {
-        max-width: 750px;
-        margin: 0;
+
+    &__hdl {
+        padding-bottom: 90%;
+    }
+    &__s1 {
+        top: 63%;
+        left: -4%;
+        width: 90%;
+    }
+    &__s2 {
+        top: 57%;
+        left: 37%;
+        width: 80%;
+    }
+    &__view {
+        left: 5%;
+        top: 0;
+        width: 100%;
+    }
+    &__paladin {
+        width: 100%;
+        left: 0;
+        top: 27%;
+    }
+    &__s4 {
+        top: 79%;
+        left: 3%;
+        width: 70%;
+    }
+
+    img {
         position: absolute;
-        width: 55%;
-        left: 45%;
-        bottom: 0;
-        z-index: 0;
     }
 }
 
