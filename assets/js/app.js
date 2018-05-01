@@ -24,12 +24,12 @@
         var controller = new ScrollMagic.Controller();
         var duration = parseInt($('.section-3').outerHeight()) / 2;
 
-        var paladinSmokeScene = new ScrollMagic.Scene({triggerElement: ".section-3", duration: duration * 1.7})
-            .setTween("#paladinSmoke", 0.5, {y: 0})
+        var paladinSmokeScene = new ScrollMagic.Scene({triggerElement: ".section-3", duration: duration * 1.2})
+            .setTween("#paladinSmoke", 1, {y: 0})
             .addTo(controller);
 
         var paladinSkirmaScene = new ScrollMagic.Scene({triggerElement: ".section-3",  duration: duration})
-            .setTween("#paladinSkirma", 0.5, {y: 0})
+            .setTween("#paladinSkirma", 1, {y: 0})
             .addTo(controller);
 
     // .setTween(new TweenLite.to('#paladinSkirma', 1, {css: {y: 0}}))
@@ -42,8 +42,8 @@
     function initMouseParallax() {
         var orcParallax = document.getElementById('orcParallax');
         var parallaxInstance = new Parallax(orcParallax, {
-            relativeInput: true,
-            hoverOnly: true,
+            relativeInput: false,
+            hoverOnly: false,
             calibrateX: true,
             invertX: false,
             invertY: false,

@@ -327,6 +327,12 @@ button {
         width: 100%;
     }
 
+    svg{
+        @include hover(){
+            fill:#ffc731;
+        }
+    }
+
 }
 
 .menu-vertical {
