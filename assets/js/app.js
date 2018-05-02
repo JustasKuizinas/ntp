@@ -526,7 +526,7 @@
 
     function initYT() {
         var theModal = '#videoModal';
-        var videoSRC = 'https://www.youtube.com/watch?v=JkeDMRe18wM' + "?autoplay=1";
+        var videoSRC = 'https://www.youtube.com/embed/JkeDMRe18wM' + "?autoplay=1";
 
 
         $('#videoModal').on('hidden.bs.modal', function (e) {
