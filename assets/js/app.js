@@ -14,13 +14,64 @@
         initTextSlider();
         initSticky();
         if (f.detect.isDesktop()) {
-            initMouseParallax();
-            initScrollMagic();
+            initMainCoverParallax();
+            initPaladinParallax();
         }
+        // initMedium();
     });
 
 
-    function initScrollMagic() {
+    function initMedium() {
+        var mediumRSSFeed = 'https://medium.com/feed/@aprofita_co';
+        var mediumJSON = 'https://api.rss2json.com/v1/api.json?rss_url=' + mediumRSSFeed;
+        var blogFirstPosthtml = '';
+        var blogPostshtml = '';
+
+        $.get(mediumJSON, {}, function (response) {
+            console.log(response);
+
+            for (var i = 0; i < response.items.length; i++) {
+                var item = response.items[i];
+                var content = $('<span></span>').html(item.content).find('p:first').text();
+                console.log(content)
+
+                if (i == 0) {
+                    blogFirstPosthtml = '<div class=" col-lg-8  order-lg-2">\n\
+                        <div class="blog__main-img lazyload" data-bg="' + f.escape(item.thumbnail) + '"></div>\n\
+                        </div>\n\
+                        <div class="col-lg-4 order-lg-1">\n\
+                        <div class="blog__card">\n\
+                        <div class="blog__text">\n\
+                        <h3>' + f.escape(item.title) + '</h3>\n\
+                    <p class="par">' + f.escape(content) + '</p>\n\
+                    <p class="par blog__date">' + f.escape(item.pubDate) + '</p>\n\
+                    </div>\n\
+                    </div>\n\
+                    </div>';
+                } else {
+                    blogPostshtml += '<div class="col-lg-4">\n\
+                        <div class="blog__card">\n\
+                        <div class="blog__img lazyload" data-bg="' + f.escape(item.thumbnail) + '"></div>\n\
+                        <div class="blog__text">\n\
+                        <h3>' + f.escape(item.title) + '</h3>\n\
+                    <p class="par">' + f.escape(content) + '</p>\n\
+                    <p class="par blog__date">' + f.escape(item.pubDate) + '</p>\n\
+                    </div>\n\
+                    </div>\n\
+                    </div>'
+                }
+            }
+
+            $('#blog-first-post').html(blogFirstPosthtml)
+            $('#blog-posts').html(blogPostshtml);
+
+        });
+
+    }
+
+    function initPaladinParallax() {
+        if (!document.getElementById('paladinSkirma')) return;
+
         var controller = new ScrollMagic.Controller();
         var duration = parseInt($('.section-3').outerHeight()) / 2;
 
@@ -28,19 +79,24 @@
             .setTween("#paladinSmoke", 1, {y: 0})
             .addTo(controller);
 
-        var paladinSkirmaScene = new ScrollMagic.Scene({triggerElement: ".section-3",  duration: duration})
+        var paladinSkirmaScene = new ScrollMagic.Scene({triggerElement: ".section-3", duration: duration})
             .setTween("#paladinSkirma", 1, {y: 0})
             .addTo(controller);
 
-    // .setTween(new TweenLite.to('#paladinSkirma', 1, {css: {y: 0}}))
+        // .setTween(new TweenLite.to('#paladinSkirma', 1, {css: {y: 0}}))
         // setTween(new TweenLite.to('#paladinSkirma', 700, {css: {transform: 'translate3d(0, 0, 0)'}}))
         // .setTween("#animate2", {borderTop: "30px solid white", backgroundColor: "blue", scale: 0.7})
         // .addIndicators({name: "2 (duration: 300)"}) // add indicators (requires plugin)
 
     }
 
-    function initMouseParallax() {
+    function initMainCoverParallax() {
         var orcParallax = document.getElementById('orcParallax');
+        if (!orcParallax) return;
+
+        var $body = $("body");
+        var $sectionBg = $('.section-1 .section__bg');
+
         var parallaxInstance = new Parallax(orcParallax, {
             relativeInput: false,
             hoverOnly: false,
@@ -50,6 +106,20 @@
             frictionX: 0.07,
             frictionY: 0.07
         });
+
+
+        TweenLite.set($sectionBg, {transformStyle: 'preserve-3d'});
+
+        $body.mousemove(function (e) {
+
+            var sxPos = e.pageX / $body.width() * 100 - 50;
+            var syPos = e.pageY / $body.height() * 100 - 50;
+            // console.log("x:" + sxPos + ", y:" + syPos);
+            TweenLite.to($sectionBg, 0.55, {rotationY: 0.05 * sxPos, rotationX: 0.02 * syPos, rotationZ: '-0.1', transformPerspective: 650, transformOrigin: 'center center'});
+
+        });
+
+
     }
 
     function initSticky() {
@@ -456,7 +526,7 @@
 
     function initYT() {
         var theModal = '#videoModal';
-        var videoSRC = 'https://www.youtube.com/embed/f4uO7miigQw' + "?autoplay=1";
+        var videoSRC = 'https://www.youtube.com/watch?v=JkeDMRe18wM' + "?autoplay=1";
 
 
         $('#videoModal').on('hidden.bs.modal', function (e) {
@@ -477,6 +547,18 @@
         } else {
             $("body").addClass("is-desktop");
         }
+
+
+        var browser = 'browser-latest';
+        if (f.detect.isIEEdge()) {
+            browser += ' ie-edge';
+        }
+        if (f.detect.isIE() && !f.detect.isIEEdge()) {
+            browser = 'ie-old';
+        }
+
+        $("body").addClass(browser);
+
     }
 
     function initOffCanvas() {

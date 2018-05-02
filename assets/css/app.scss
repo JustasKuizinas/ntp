@@ -9,6 +9,13 @@
 .page-wrapper {
     position: relative;
     z-index: 10;
+
+    &.-push{
+        padding-top: 150px;
+        @include media(xl){
+            padding-top: 250px;
+        }
+    }
 }
 
 body {
@@ -206,7 +213,7 @@ button {
     height: 25px;
 }
 
-.icon-discord{
+.icon-discord {
     width: 22px;
     height: 16px;
 }
@@ -232,6 +239,13 @@ button {
 .icon-yt-vertical {
     width: 20px;
     height: 20px;
+}
+.icon-check{
+    width: 13px;
+    height: 11px;
+    background-image: url(../img/green-check.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .container-primary {
@@ -327,9 +341,9 @@ button {
         width: 100%;
     }
 
-    svg{
-        @include hover(){
-            fill:#ffc731;
+    svg {
+        @include hover() {
+            fill: #ffc731;
         }
     }
 
@@ -357,7 +371,6 @@ button {
 .menu {
     width: 1170px;
     height: 65px;
-    background-image: url('../img/menu-back.png');
     background-size: contain;
     position: fixed;
     left: 50%;
@@ -365,10 +378,15 @@ button {
     z-index: 110;
     top: -10px;
 
+    @include media(xl-max) {
+        background-color: #000;
+    }
     @include media(xl) {
         top: 100px;
         height: 57px;
         position: absolute;
+        background-image: url('../img/menu-back.png');
+        background-repeat: no-repeat;
     }
 
     .is-desktop.modal-open &:not(.is-sticky) {
@@ -1108,12 +1126,23 @@ button {
             top: -70px;
         }
     }
+    &__bg-hdl {
+        @extend .h-full-abs;
+        z-index: 1;
+
+        .is-desktop & {
+            @extend .h-center-xy;
+            width: 125%;
+            height: 125%;
+        }
+    }
 
     .subscribe {
         margin-bottom: 28px;
     }
 
     .section {
+
         &__bg {
             @include media(lg) {
                 background-image: url('../img/main-cover.jpg');
@@ -1246,10 +1275,10 @@ button {
         margin-top: 21px;
         margin-bottom: 25px;
     }
-    
-    .fog{
+
+    .fog {
         display: none;
-        @include media(lg){
+        @include media(lg) {
             display: block;
         }
     }
@@ -1258,23 +1287,25 @@ button {
         max-width: 700px;
         position: absolute;
         bottom: 0;
-        transform: translate3d(0%, 100%, 0);
+
+        .is-desktop & {
+            transform: translate3d(0%, 100%, 0);
+        }
 
     }
-    #paladinSmoke{
+    #paladinSmoke {
         position: absolute;
-        @include media(lg){
+        @include media(lg) {
             right: 50%;
         }
     }
-    #paladinSkirma{
+    #paladinSkirma {
         position: relative;
-        @include media(lg){
+        @include media(lg) {
             position: absolute;
             right: 50%;
         }
     }
-
 
 }
 
@@ -1337,7 +1368,10 @@ button {
         width: 200%;
         background-position: 0 bottom;
         background-size: 50% 100%;
-        animation: fog 80s linear 0s infinite normal;
+
+        .browser-latest & {
+            animation: fog 150s linear 0s infinite normal;
+        }
     }
 
     img {
@@ -1367,7 +1401,7 @@ button {
     }
     .section {
         &__bg {
-            .is-desktop &{
+            .is-desktop:not(.ie-old) & {
                 background-attachment: fixed;
             }
             @include media(md-max) {
@@ -1419,7 +1453,7 @@ button {
 
 .section-6 {
 
-    .is-desktop &{
+    .is-desktop:not(.ie-old) & {
         background-attachment: fixed;
     }
 
@@ -1507,6 +1541,16 @@ button {
         }
         @include media(lg) {
             padding-bottom: 97.6%;
+        }
+    }
+    &__check{
+        margin-top: 3px;
+        text-align: center;
+        font-size: 1.2rem;
+        color: #b3d17d;
+
+        .icon-check{
+            margin-right: 1px;
         }
     }
     &__milestone {
@@ -1622,7 +1666,7 @@ button {
 
 .section-8 {
     background-repeat: repeat;
-    background-size: initial;
+    background-size: auto;
 
     &.lazyloaded {
         background-image: url("../img/texture-1.jpg");
@@ -1675,19 +1719,22 @@ button {
     }
 
     .list {
-        .blog {
-            &__card {
-                margin-top: 30px;
-            }
+        .row > div {
+            margin-top: 30px;
         }
+    }
 
+    .blog {
+        &__card {
+            min-height: 100%;
+        }
     }
 
 }
 
 .section-sub {
     @extend .h-center-bg-image;
-    background-size: initial;
+    background-size: auto;
     background-position: center center;
     background-repeat: repeat;
 
@@ -1854,8 +1901,8 @@ button {
 
 .hamburger {
     $button-height: 22px;
-    $button-width: 30px;
-    $line-height: 3px;
+    $button-width: 31px;
+    $line-height: 4px;
     $line-color: #868686;
     $transition: .5s;
 
@@ -1874,6 +1921,7 @@ button {
         background-image: url(../img/menu-line.png);
         background-size: contain;
         background-position: center center;
+        background-repeat: no-repeat;
     }
 
     .off-canvas-side-menu-is-active & {
@@ -2110,5 +2158,22 @@ button {
     }
     .swiper-pagination-bullet-active {
         background: none;
+    }
+}
+
+.privacy-section{
+    padding-bottom: 100px;
+    @include media(xl){
+
+    }
+    h1{
+        margin-bottom: 30px;
+    }
+    h3{
+        margin-bottom: 15px;
+        margin-top: 20px;
+    }
+    .par{
+        margin-top: 20px;
     }
 }

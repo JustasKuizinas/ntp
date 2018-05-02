@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.2/rangeslider.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/app.css?fileVersion=2">
 </head>
 
@@ -54,9 +54,9 @@
                 <li class="">
                     <a class="nav-link" href="#team-section">Team/Advisors</a>
                 </li>
-                <li class="">
-                    <a class="nav-link" href="#blog-section">blog</a>
-                </li>
+                <!--<li class="">-->
+                <!--<a class="nav-link" href="#blog-section">blog</a>-->
+                <!--</li>-->
             </ul>
         </div>
     </div>
@@ -72,12 +72,14 @@
             <!--<a class="nav-link" href="#mechanics-section">game mechanics</a>-->
             <a class="nav-link" href="#model-section">MONETIZATION model</a>
         </div>
-        <img class="logo" src="assets/img/logo@2x.png" alt="">
+        <a href="/">
+            <img class="logo" src="assets/img/logo@2x.png" alt="">
+        </a>
         <div class="menu__right">
             <a class="nav-link" href="#cashflow-section">Cash flow</a>
             <a class="nav-link" href="#timeline-section">Roadmap</a>
             <a class="nav-link" href="#team-section">Team/Advisors</a>
-            <a class="nav-link" href="#blog-section">blog</a>
+            <!--<a class="nav-link" href="#blog-section">blog</a>-->
         </div>
     </div>
 </nav>
@@ -102,7 +104,9 @@
 <div class="page-wrapper">
 
     <div class="section section-1" id="section-1">
-        <div class="section__bg"></div>
+        <div class="section-1__bg-hdl">
+            <div class="section__bg"></div>
+        </div>
         <div class="section__divider"></div>
         <div class="section__content">
 
@@ -113,16 +117,23 @@
             </div>
             <div class="orc-container">
                 <div class="orc  h-z-4 ">
-                    <div class="orc__hdl" >
-                        <div  id="orcParallax">
+                    <div class="orc__hdl">
+                        <div id="orcParallax">
                             <img class="orc__s2" src="assets/img/spark-2.png" data-depth="0.2" alt="">
                             <img class="orc__s3" src="assets/img/spark-3.png" data-depth="0.3" alt="">
                             <img class="orc__s1" src="assets/img/spark-1.png" data-depth="0.4" alt="">
                         </div>
-
-
                         <img class="orc__smoke" src="assets/img/orc-bg2.png" data-depth="0.5" alt="">
-                        <img class="orc__orcy" src="assets/img/orc@2x.png" data-depth="0.7" alt="">
+
+                        <img
+                                class="orc__orcy"
+                                data-sizes="auto"
+                                srcset="assets/img/orc.png 600w,
+                                assets/img/orc@2x.png 1200w"
+                                src="assets/img/orc@2x.png"
+                                data-depth="0.7"
+                                alt=""
+                        >
                     </div>
                 </div>
                 <div class="section-1__shadow -t2 h-rel  h-z-6"></div>
@@ -134,23 +145,21 @@
                     <div class="col-lg-7  offset-lg-5 col-xl-6  offset-xl-6">
                         <div class="section-1__about">
                             <h1 id="">
-                                A video game of infinite <br>
-                                tactics and strategies
+                                A rebellious video game fighting pay-to- win and loot boxes.
                             </h1>
                             <h4>
-                                fighting the Trading Card Game business model
-                                by giving real power to the players
+                                Become a real owner of your in-game property and trade freely.
                             </h4>
 
                             <div class="subscribe">
-                                <input type="text" placeholder="Subscribe to get latest news">
-                                <button>Join now</button>
+                                <input type="text" placeholder="Join rebel forces to get the latest news">
+                                <button>Enlist now</button>
                             </div>
                             <div class="section-1__btns">
-                                <a href="" class="button -primary">
+                                <a href="assets/nfp-one-pager-v1.pdf" class="button -primary">
                                     READ ONE PAGER
                                 </a>
-                                <a href="" class="button -primary">
+                                <a href="assets/not_for_pussies_white_paper_v09.pdf" class="button -primary">
                                     READ WHITE PAPER
                                 </a>
                                 <a href="" class="button -primary" data-toggle="modal" data-target="#videoModal">
@@ -167,46 +176,46 @@
                                 <p class="par">
                                     You can find us on:
                                 </p>
-                                <a href="" target="_blank" class="button ">
+                                <a href="https://t.me/notforpussies" target="_blank" class="button ">
                                     <svg class="icon-telegram">
                                         <use xlink:href="#icon-telegram"></use>
                                     </svg>
                                 </a>
-                                <a href="" target="_blank" class="button ">
+                                <a href="https://discord.gg/QUCwKPJ" target="_blank" class="button ">
                                     <svg class="icon-discord">
                                         <use xlink:href="#icon-discord"></use>
                                     </svg>
                                 </a>
-                                <a href="" target="_blank" class="button">
+                                <a href="https://twitter.com/notforp" target="_blank" class="button">
                                     <svg class="icon-tw">
                                         <use xlink:href="#icon-twitter"></use>
                                     </svg>
                                 </a>
-                                <a href="" target="_blank" class="button">
+                                <a href="https://www.facebook.com/notforp" target="_blank" class="button">
                                     <svg class="icon-fb">
                                         <use xlink:href="#icon-facebook"></use>
                                     </svg>
                                 </a>
-                                <a href="" target="_blank" class="button">
+                                <a href="https://www.linkedin.com/company/not-for-pussies/" target="_blank" class="button">
                                     <svg class="icon-ln">
                                         <use xlink:href="#icon-linkedin"></use>
                                     </svg>
                                 </a>
-                                <a href="" target="_blank" class="button">
+                                <a href="https://www.instagram.com/notforp_com/" target="_blank" class="button">
                                     <svg class="icon-insta">
                                         <use xlink:href="#icon-instagram"></use>
                                     </svg>
                                 </a>
-                                <a href="" target="_blank" class="button">
+                                <a href="https://www.youtube.com/channel/UCaCWJcXPcu3Guql8blVpm0A" target="_blank" class="button">
                                     <svg class="icon-yt-vertical">
                                         <use xlink:href="#icon-yt-vertical"></use>
                                     </svg>
                                 </a>
-                                <a href="" target="_blank" class="button">
-                                    <svg class="icon-btc">
-                                        <use xlink:href="#icon-bitcoin"></use>
-                                    </svg>
-                                </a>
+                                <!--<a href="" target="_blank" class="button">-->
+                                <!--<svg class="icon-btc">-->
+                                <!--<use xlink:href="#icon-bitcoin"></use>-->
+                                <!--</svg>-->
+                                <!--</a>-->
                             </div>
                         </div>
                     </div>
@@ -225,12 +234,12 @@
                             <h2 id="tst">Intro</h2>
                             <div class="divider -primary -push"></div>
                             <p class="par">
-                                Enjoy the wildest threesome of video, card and miniature games, based on distributed ledger. </p>
+                                Enter the world of brutal fights, impolite politics, and powerful magic. A world generous to the strong and unforgiving to the weak. </p>
                             <p class="par">
-                                Enter the world of permanent fights, primitive instincts, abuse of power and magic, wildest sex and impolite politics.
+                                Enjoy the wildest threesome of video, card and miniature games, based on distributed ledger.
                             </p>
                             <div class="par">
-                                Unleash your darkest side where only not pussies survive the night.
+                                Unleash your darkest side to survive the night.
                             </div>
                             <div class="divider -secondary"></div>
                         </div>
@@ -293,10 +302,9 @@
                                     Developer usurps in-game assets
                                 </h5>
                                 <p class="par">
-
-                                    In most cases, game terms of service forbid items, characters or
-                                    accounts sharing and trading. All in-game assets legally belong to
-                                    the game developer. Legally speaking, even when players pay real money for in-game items they still don’t become real owners.
+                                    In most cases, game terms of service forbid items, characters or accounts sharing and
+                                    trading. Even when players pay real money, all in-game assets legally belong to the game
+                                    developer.
                                 </p>
                                 <div class="divider -secondary"></div>
                             </div>
@@ -305,19 +313,21 @@
                                     Dangers of the grey market
                                 </h5>
                                 <p class="par">
-                                    Nowadays players are forced to trade in-game assets in the grey
-                                    market and in many occasions become victims of scammers and swindlers. Not mentioning that if they are caught by the game developer they get a life ban fortrading offsite.
+                                    Nowadays players are forced to trade in the grey market and in many occasions become
+                                    victims of scammers and swindlers. Not mentioning that if they are caught by the game
+                                    developer they get a life ban for trading offsite.
+
                                 </p>
                                 <div class="divider -secondary"></div>
                             </div>
 
                             <div class="section-4__desc">
                                 <h5>
-                                    Only a boredom of collecting
+                                    Exploitation of distributed ledger
                                 </h5>
                                 <p class="par">
-                                    Distributed ledger is in fashion these days, so the technology is quickly gaining popularity in gaming industry, too. However, recent explosion of cryptopet games seems like a greedy misuse of decentralization possibilities. True geeks find mostf them only fruitless attempts without imagination, mainly using a single aspectof digital
-                                    gaming - collecting.
+                                    Recent explosion of cryptopet games seems like a greedy misuse of decentralization
+                                    possibilities. An obvious money-grab pretending to be a game.
                                 </p>
                             </div>
                         </div>
@@ -332,16 +342,18 @@
                                     You are the property owner
                                 </h5>
                                 <p class="par">
-                                    All Not for Pussies in-game items and characters are stored on distributedledger. Therefore, players maintain complete ownership of their assets and arefree to trade them as they wish. Players’ accounts also fully belong to them,so they can handle them as they please.
+                                    All NotForPussies in-game items and characters are stored on distributed ledger. Therefore,
+                                    players maintain complete ownership of their assets and are free to trade them as they wish.
                                 </p>
                                 <div class="divider -secondary"></div>
                             </div>
                             <div class="section-4__desc">
                                 <h5>
-                                    No risk for passionate gamers
+                                    Trade freely and safe
                                 </h5>
                                 <p class="par">
-                                    Free trade based on distributed ledger solves all mentioned problems. Not for Pussies allows you to sell or buy assets inside the game. Legalization of trade eliminates risks for gamers and sweeps out the scammers.
+                                    NotForPussies allows you to sell or buy assets inside and outside the game. Legalization of
+                                    trade eliminates risks for gamers and sweeps out the scammers.
                                 </p>
                                 <div class="divider -secondary"></div>
                             </div>
@@ -351,7 +363,9 @@
                                     Thrilling full-blooded game
                                 </h5>
                                 <p class="par">
-                                    Not for Pussies offers you a full-blooded highly competitive gamewith 3D models, animations and, most importantly, strong gameplay. A game withthe aspects geeks love in various games: card trading, miniature collecting, puzzles,objectives, trap avoidance, and a well written background story. Distributedledger also brings its benefits, because all the data becomes open, trusted anddecentralized.
+                                    NotForPussies offers you a full gaming experience. It is a highly competitive video game
+                                    based on distributed ledger. With stunning 3D models, marvellous animations and most
+                                    importantly, strong gameplay.
                                 </p>
                             </div>
                         </div>
@@ -372,21 +386,16 @@
                             <h2>The GAME</h2>
                             <div class="divider -primary -push"></div>
                             <p class="par">
-                                In 2176, 150 years after the Merge, <b>a post-apocalyptic Earth</b> is slowly and chaotically recovering from the disaster that buried 21 century human civilization, erupted planet’s ecosystem and brought new inhabitants.
+                                Take a role of Immortal in post-apocalyptic magical Earth. An Earth where Humans, Orcs,
+                                Dwarves and Elves struggle to establish their dominance. A world where new forms of
+                                wildlife rule the land and unknown monsters roam the seas, while civilization is scarce and
+                                scattered around the globe.
                             </p>
                             <p class="par">
-
-                                Scattered across the ruins of past glory four races battle for survival and dominance: <b> Orcs, Dwarves, Elves and the remains of Humans</b>. Magic and sword is the new law in the land where travel, communication and even social constructs are diminished to the <b>levels of Dark Ages</b>.
+                                Control a warband of 5 characters and fight other Immortals in PvP battles. Experience
+                                wonders of magical Earth via deep storytelling and rich lore in continuous single player
+                                campaigns.
                             </p>
-                            <div class="par">
-                                In the fragmented world full of empty spaces, <b>new forms of wildlife and unknown monsters</b> , new saviors appeared – the Immortals, who fight each other in the magic-fused battles.
-                            </div>
-                            <div class="par">
-                                <b>Take the role of the Immortal</b>, pick 5 various characters to your warband and fight your rivals in <b>highly competitive 1v1 matches</b> or measure your powers in the <b>story driven single player campaign</b> .
-                            </div>
-                            <div class="par">
-                                Enjoy the game created both by passionate geeks and most advanced technologies. <b>Distributed ledger</b> perfectly solves the problem of in-game properties ownership. <b>Artificial intelligence </b>analyzes already played battles data and balances the game. It is also employed for practice mode to train you for real battles.
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -400,7 +409,13 @@
                     <!--<img class="fog__s2 lazyload" src="#" data-src="assets/img/smoke-4.png" alt="">-->
                 </div>
                 <div class="paladin h-z-6" id="paladinSkirma">
-                    <img class="paladin__main lazyload lazypreload" src="#" data-src="assets/img/palading@2x.png" alt="">
+                    <img
+                            class="paladin__main lazyload lazypreload"
+                            data-srcset="assets/img/palading.png 600w,
+                            assets/img/palading@2x.png 1100w"
+                            data-src="assets/img/palading@2x.png"
+                            alt=""
+                    >
                     <img class="paladin__aura lazyload lazypreload" src="#" data-src="assets/img/red-aura.png" alt="">
                 </div>
             </div>
@@ -428,7 +443,15 @@
                                 <div class="collapse accordion__body collapse show" id="collapse-1" data-parent="#accordion">
                                     <div class="accordion__inner">
                                         <p class="par">
-                                            <b> Players get characters by combining 3 aspects: Class, Race and Element</b>. For example, combining Rogue Class with Human Race and Wind Element the player gets Human Wind Rogue character as a result. Each aspect has its own min-max values which is randomized when combined, so each character has different stats and skill sets. <b> Combining options are unlimited</b>. You are able to combine already created characters and get even more powerful variations. Thus, the longer you play, the more options you have to create unique characters and new battle tactics.
+                                            You get characters by combining 3 aspects: Class, Race and Element. For example,
+                                            combining Rogue Class with Human Race and Wind Element you will get Human Wind
+                                            Rogue character as a result. Each aspect has its own min-max values which are randomized
+                                            when combined, so each character will have different stats and skill sets.
+                                        </p>
+                                        <p class="par">
+                                            You will also combine already created characters to get more powerful variations. Combining
+                                            options are infinite. Therefor it opens boundless possibilities for unique characters and battle
+                                            tactics.
                                         </p>
                                         <img class="lazyload lazypreload" src="#" data-src="assets/img/combine-5.png" alt="">
                                     </div>
@@ -444,10 +467,12 @@
                                 <div class="collapse accordion__body" id="collapse-2" data-parent="#accordion">
                                     <div class="accordion__inner">
                                         <p class="par">
-                                            Players fight each other in 1v1 match with their <b>warband of 5 characters</b>. Battle takes place on the hex grid. The grid is divided into three parts: the middle, which is neutral and two equal parts for each player.
+                                            You will control a warband of 5 characters and fight your opponents in turned-based tactical
+                                            battles.
                                         </p>
                                         <p class="par">
-                                            While all other games provide only maps predesigned by developer, NotForPussies allows players to create their own parts of the map in accordance with their battle tactics. Such mechanics open new level of strategy and planning in the game. However, player is able to have a limited amount of predesigned map sides.
+                                            Action takes place on custom battleground created by both players. Establish your
+                                            dominance inventing unique tactics and strategies.
                                         </p>
                                         <img class="lazyload lazypreload" src="#" data-src="assets/img/vs.jpg" alt="">
                                     </div>
@@ -458,12 +483,16 @@
                             <div class="accordion__block">
                                 <div class="accordion__head collapsed" data-toggle="collapse" data-target="#collapse-3">
                                     <buttton class="button -iron-toggle"></buttton>
-                                    <h3>Compare</h3>
+                                    <h3>Compete</h3>
                                 </div>
                                 <div class="collapse accordion__body" id="collapse-3" data-parent="#accordion">
                                     <div class="accordion__inner">
                                         <p class="par">
-                                            Not for Pussies is a highly competitive game with high stakes in upper divisions. Mechanics of combining and map weaponization allow big varieties of different strategies. Leveling up players provides geometrical progression of combining and strategy possibilities. Researching, testing, tweaking and planning is a must if you want to be one of the best. On the other hand, game’s battle system involves you in a fast and fun game. For PvP mode there will be seasonal ladder. Each season will last for 3 months after which players will be rewarded with the limited-edition prizes, which will be designed for that particular season only.
+                                            Compete in two seasonal ladders (normal and hardcore) and win unique prizes.
+                                        </p>
+                                        <p class="par">
+                                            Each season will last for 3 months and will have trophies, designed for that particular season
+                                            only.
                                         </p>
                                         <img class="lazyload lazypreload" src="#" data-src="assets/img/board2.jpg" alt="">
                                     </div>
@@ -493,11 +522,11 @@
         <div class="section__bg lazyload" data-bg="assets/img/shadow-long.png"></div>
         <div class="section__content">
             <h3 class="h-text-center">
-                Always be updated about NotForPussies!
+                Always be updated about NotForPussies! JOIN NOW
             </h3>
             <div class="subscribe">
-                <input type="text" placeholder="Subscribe to get latest news">
-                <button>Join now</button>
+                <input type="text" placeholder="Join rebel forces to get the latest news">
+                <button>Enlist now</button>
             </div>
 
 
@@ -505,46 +534,46 @@
                 <p class="par">
                     You can find us on:
                 </p>
-                <a href="" target="_blank" class="button">
+                <a href="https://t.me/notforpussies" target="_blank" class="button ">
                     <svg class="icon-telegram">
                         <use xlink:href="#icon-telegram"></use>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="button ">
+                <a href="https://discord.gg/QUCwKPJ" target="_blank" class="button ">
                     <svg class="icon-discord">
                         <use xlink:href="#icon-discord"></use>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="button">
+                <a href="https://twitter.com/notforp" target="_blank" class="button">
                     <svg class="icon-tw">
                         <use xlink:href="#icon-twitter"></use>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="button">
+                <a href="https://www.facebook.com/notforp" target="_blank" class="button">
                     <svg class="icon-fb">
                         <use xlink:href="#icon-facebook"></use>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="button">
+                <a href="https://www.linkedin.com/company/not-for-pussies/" target="_blank" class="button">
                     <svg class="icon-ln">
                         <use xlink:href="#icon-linkedin"></use>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="button">
+                <a href="https://www.instagram.com/notforp_com/" target="_blank" class="button">
                     <svg class="icon-insta">
                         <use xlink:href="#icon-instagram"></use>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="button">
+                <a href="https://www.youtube.com/channel/UCaCWJcXPcu3Guql8blVpm0A" target="_blank" class="button">
                     <svg class="icon-yt-vertical">
                         <use xlink:href="#icon-yt-vertical"></use>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="button">
-                    <svg class="icon-btc">
-                        <use xlink:href="#icon-bitcoin"></use>
-                    </svg>
-                </a>
+                <!--<a href="" target="_blank" class="button">-->
+                <!--<svg class="icon-btc">-->
+                <!--<use xlink:href="#icon-bitcoin"></use>-->
+                <!--</svg>-->
+                <!--</a>-->
             </div>
         </div>
     </div>
@@ -557,7 +586,9 @@
                 <h2 class="h-text-center">Monetization model</h2>
                 <div class="divider -primary"></div>
                 <p class="section-6__sub par">
-                    Not for Pussies stands on the knife-edge of evolution from timeworn corporative game business practice to the <b>new financing philosophy which is brought by decentralization possibilities</b> and fresh approach to the modern economy.
+                    Distributed Ledger technology allow us to disrupt the traditional Trading Card Game
+                    business model. And introduce new financing philosophy with fresh approach to the modern
+                    economy.
                 </p>
 
                 <div class="shield-slider swiper-container">
@@ -568,21 +599,27 @@
                             <div class="shield-1 lazyload"></div>
                             <h3>Totally new approach</h3>
                             <p class="par">
-                                We’ll <b> disrupt the traditional TCG business model</b> when game developers build wealth by selling to the players as much in-game asset licenses as possible. Not for Pussies <b> won’t sell any Character Cards nor Resources</b>. Instead, players will gain Resources by playing, and use them to craft unique Character Cards. Players will have the complete ownership of their items.
+                                Traditional TCG business model build wealth by selling as much cards as possible.
+                                NotForPussies won’t sell any cards. Instead players will get the cards by playing and enjoy
+                                full gaming experience for free.
                             </p>
                         </div>
                         <div class="swiper-slide">
                             <div class="shield-2 lazyload"></div>
                             <h3>Free market benefits</h3>
                             <p class="par">
-                                <b>All in-game deals will be processed in our ORC Tokens</b>. No fiat currencies will be involved at launch. This will allow to create an in-game decentralized free market economy where <b>players will be free to trade</b> their in-game items. By not selling Cards and Characters ourselves, we won’t set their price. The Invisible hand of the free market will do.
+                                All in-game deals will be processed in our Tokens. Players will trade in-game items in a
+                                decentralized free market. By not selling cards ourselves, we are not setting their price. The
+                                Invisible hand of the free market will take care of that.
                             </p>
                         </div>
                         <div class="swiper-slide">
                             <div class="shield-3 lazyload"></div>
-                            <h3>Broader usage of Tokens</h3>
+                            <h3>Monetization</h3>
                             <p class="par">
-                                Not for Pussies will provide an <b>in-game Auction House</b>, where players will be able to sell their items for a small fee. Furthermore, <b> we’ll sell unique Character skins, visual effects and other cosmetic items</b>. Also there will be an <b> entrance fee for PvP ladder tournament</b> and you’ll be able to <b> pay the ransom for your character</b> if you lose it in a ladder fight.
+                                NotForPussies will provide an in-game Auction House, where players will be able to sell their
+                                items for a small fee. Furthermore, we’ll sell unique cosmetic items and various services,
+                                which will not affect gameplay.
                             </p>
                         </div>
                     </div>
@@ -699,6 +736,10 @@
                     <p class="par">
                         Not for Pussies Idea
                     </p>
+                    <div class="timeline__check">
+                        <span class="icon-check"></span>
+                        <span>Completed</span>
+                    </div>
                 </div>
                 <div class="timeline__milestone -t2">
                     <div class="no -t2 lazyload"></div>
@@ -706,10 +747,17 @@
                     <p class="par">
                         Secured 150k Eur Budget
                     </p>
+                    <div class="timeline__check">
+                        <span class="icon-check"></span>
+                        <span>Completed</span>
+                    </div>
                 </div>
                 <div class="timeline__milestone -t3">
                     <div class="no -t3 lazyload"></div>
-                    <h3>2017 / 2018 </h3>
+                    <h3>
+                        2017 December -
+                        2018 March
+                    </h3>
                     <p class="par">
                         Working on game design
                         and prototyping
@@ -747,7 +795,8 @@
                     <div class="no -t8 lazyload"></div>
                     <h3>2019 Q4 and Beyond</h3>
                     <p class="par">
-                        2019 Q4 and Beyond
+                        Working on game design
+                        and prototyping
                     </p>
                 </div>
             </div>
@@ -1218,99 +1267,25 @@
         </div>
     </div>
 
-    <div class="section section-9" id="blog-section">
-        <div class="section__divider"></div>
-        <div class="section__content">
-            <h2 class="h-text-center">Blog</h2>
-            <div class="divider -primary -push"></div>
-            <div class="blog">
-                <div class="container-fluid container-primary">
-                    <div class="row ">
-                        <div class=" col-lg-8  order-lg-2">
-                            <div class="blog__main-img lazyload" data-bg="assets/img/bl1.jpg"></div>
-                        </div>
-                        <div class="col-lg-4 order-lg-1">
-                            <div class="blog__card">
-                                <div class="blog__text">
-                                    <h3>
-                                        Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit
-                                    </h3>
-                                    <p class="par">
-                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremq auda
-                                        tium, totam rem aperiam, eaque ipsa accus.
-                                    </p>
-                                    <p class="par blog__date">
-                                        January 2, 2018
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="list container-fluid container-primary">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="blog__card">
-                                <div class="blog__img lazyload" data-bg="assets/img/bl2.jpg"></div>
-                                <div class="blog__text">
-                                    <h3>
-                                        Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit
-                                    </h3>
-                                    <p class="par">
-                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremq auda
-                                        tium, totam rem aperiam, eaque ipsa accus.
-                                    </p>
-                                    <p class="par blog__date">
-                                        January 2, 2018
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+    <!--<div class="section section-9" id="blog-section">-->
+    <!--<div class="section__divider"></div>-->
+    <!--<div class="section__content">-->
+    <!--<h2 class="h-text-center">Blog</h2>-->
+    <!--<div class="divider -primary -push"></div>-->
+    <!--<div class="blog">-->
+    <!--<div class="container-fluid container-primary">-->
+    <!--<div class="row " id="blog-first-post">-->
 
-                        <div class="col-lg-4">
-                            <div class="blog__card">
-                                <div class="blog__img lazyload" data-bg="assets/img/bl2.jpg"></div>
-                                <div class="blog__text">
-                                    <h3>
-                                        Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit
-                                    </h3>
-                                    <p class="par">
-                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremq auda
-                                        tium, totam rem aperiam, eaque ipsa accus.
-                                    </p>
-                                    <p class="par blog__date">
-                                        January 2, 2018
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <div class="blog__card">
-                                <div class="blog__img lazyload" data-bg="assets/img/bl2.jpg"></div>
-                                <div class="blog__text">
-                                    <h3>
-                                        Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit
-                                    </h3>
-                                    <p class="par">
-                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremq auda
-                                        tium, totam rem aperiam, eaque ipsa accus.
-                                    </p>
-                                    <p class="par blog__date">
-                                        January 2, 2018
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="list container-fluid container-primary">-->
+    <!--<div class="row" id="blog-posts">-->
+    <!---->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
 
     <div class="section section-sub lazyload" data-bg="assets/img/texture-2.jpg">
         <div class="section__divider"></div>
@@ -1321,8 +1296,8 @@
                 about NotForPussies
             </h3>
             <div class="subscribe">
-                <input type="text" placeholder="Subscribe to get latest news">
-                <button>Join now</button>
+                <input type="text" placeholder="Join rebel forces to get the latest news">
+                <button>Enlist now</button>
             </div>
 
 
@@ -1330,47 +1305,46 @@
                 <p class="par">
                     You can find us on:
                 </p>
-                <a href="" target="_blank" class="button">
+                <a href="https://t.me/notforpussies" target="_blank" class="button ">
                     <svg class="icon-telegram">
                         <use xlink:href="#icon-telegram"></use>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="button ">
+                <a href="https://discord.gg/QUCwKPJ" target="_blank" class="button ">
                     <svg class="icon-discord">
                         <use xlink:href="#icon-discord"></use>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="button">
+                <a href="https://twitter.com/notforp" target="_blank" class="button">
                     <svg class="icon-tw">
                         <use xlink:href="#icon-twitter"></use>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="button">
+                <a href="https://www.facebook.com/notforp" target="_blank" class="button">
                     <svg class="icon-fb">
                         <use xlink:href="#icon-facebook"></use>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="button">
+                <a href="https://www.linkedin.com/company/not-for-pussies/" target="_blank" class="button">
                     <svg class="icon-ln">
                         <use xlink:href="#icon-linkedin"></use>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="button">
+                <a href="https://www.instagram.com/notforp_com/" target="_blank" class="button">
                     <svg class="icon-insta">
                         <use xlink:href="#icon-instagram"></use>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="button">
+                <a href="https://www.youtube.com/channel/UCaCWJcXPcu3Guql8blVpm0A" target="_blank" class="button">
                     <svg class="icon-yt-vertical">
                         <use xlink:href="#icon-yt-vertical"></use>
                     </svg>
                 </a>
-                <a href="" target="_blank" class="button">
-                    <svg class="icon-btc">
-                        <use xlink:href="#icon-bitcoin"></use>
-                    </svg>
-                </a>
-
+                <!--<a href="" target="_blank" class="button">-->
+                <!--<svg class="icon-btc">-->
+                <!--<use xlink:href="#icon-bitcoin"></use>-->
+                <!--</svg>-->
+                <!--</a>-->
             </div>
         </div>
     </div>
@@ -1378,12 +1352,12 @@
     <footer class="footer">
         <div class="container-primary">
             <nav>
-                <a href="">
-                    FAQ
-                </a>
-                <a href="">Token Model </a>
-                <a href="">Privacy Policy</a>
-                <a href="mailto:info@nor4pussies.com">info@nor4pussies.com</a>
+                <!--<a href="">-->
+                <!--FAQ-->
+                <!--</a>-->
+                <!--<a href="">Token Model </a>-->
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="mailto:info@notforp.com">info@notforp.com</a>
             </nav>
             <div class="footer__c">
                 © Not For Pussies. 2018 All rights reserved.
@@ -1395,8 +1369,8 @@
 
 <script>
     window.lazySizesConfig = window.lazySizesConfig || {};
-    lazySizesConfig.expand = 800;
-    lazySizesConfig.expFactor = 2.5;
+    lazySizesConfig.expand = 700;
+    lazySizesConfig.expFactor = 1.2;
     lazySizesConfig.preloadAfterLoad = false;
 </script>
 
@@ -1405,19 +1379,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/easing/EasePack.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js"></script>
 
-<!--<script  src="assets/vendor/vendor.min.js"></script>-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
 
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.3/pixi.min.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.2/rangeslider.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 
-
- 
 
 <script src="./assets/vendor/vendor.min.js?fileVersion=2"></script>
 <script src="./assets/js/front.js?fileVersion=2"></script>
@@ -1425,29 +1402,61 @@
 
 
 <div style="width: 0;height: 0;overflow: hidden;display: block">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"><symbol id="icon-bitcoin" viewBox="0 0 128 128"><style type="text/css"/><path class="st0" d="M109.8 75.7c-.8-5.7-3.6-10.1-8.6-13-2.3-1.3-4.8-2.2-7.4-3.3.3-.2.5-.4.7-.5 12.5-6.4 11.4-25.7 2.3-32.3-3.7-2.7-7.8-4.4-12.1-5.4-3.1-.7-6.2-1.2-9.4-1.7 0-5.6.1-13.3.1-19.5H63.7c-.1 6.1-.1 13.6-.2 19.1h-9.4c0-5.5.1-13 .1-19.1H42.6c-.1 6.2-.1 13.9-.2 19.4-8-.1-15.7-.1-23.7-.2 0 4.3-.1 8.3-.1 12.5 1.7 0 3.2 0 4.6.1 1.5 0 3 0 4.4.1 4.1.3 6.2 2.6 6.2 6.6-.2 16.7-.4 33.5-.5 50.2 0 3.7-1.6 5.1-5.2 5.1h-7.8c-.8 4.7-1.6 9.2-2.4 13.9 7.9.1 15.7.2 23.7.3 0 6-.1 13.6-.1 19.9h11.7c.1-6.3.1-13.7.2-19.6 3.3.1 6.3.2 9.4.3 0 6-.1 13.3-.1 19.4h11.7c.1-6.3.1-13.7.2-19.5.4-.1.7-.1 1-.2 5.6-.9 11.3-1.4 16.7-2.7 7.1-1.8 12.7-5.9 15.7-12.9 2.1-5.4 2.6-11.1 1.8-17zM54.3 32.9c7.3 0 14.4-.6 21 2.4 4.4 1.9 6.6 5.5 6.3 9.8-.3 4.6-2.9 7.9-7.6 9.4-6.4 2.1-13.1 2-20 1.7.1-7.6.2-15.2.3-23.3zm25.5 58.4c-6.5 2.9-13.3 2.9-20.2 3-1.9 0-3.8-.1-5.9-.1l.3-25.9c8.9 0 17.7-.7 26 3 4.3 1.9 6.8 5.2 6.8 10.1-.1 4.9-2.7 8-7 9.9z"/></symbol><symbol id="icon-discord" viewBox="0 0 1000 713.80402">
-    <metadata id="metadata14">
-        <rdf:RDF>
-            <cc:Work rdf:about="">
-                <dc:format>image/svg+xml</dc:format>
-                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-                <dc:title/>
-            </cc:Work>
-        </rdf:RDF>
-    </metadata>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+        <symbol id="icon-bitcoin" viewBox="0 0 128 128">
+            <style type="text/css"/>
+            <path class="st0" d="M109.8 75.7c-.8-5.7-3.6-10.1-8.6-13-2.3-1.3-4.8-2.2-7.4-3.3.3-.2.5-.4.7-.5 12.5-6.4 11.4-25.7 2.3-32.3-3.7-2.7-7.8-4.4-12.1-5.4-3.1-.7-6.2-1.2-9.4-1.7 0-5.6.1-13.3.1-19.5H63.7c-.1 6.1-.1 13.6-.2 19.1h-9.4c0-5.5.1-13 .1-19.1H42.6c-.1 6.2-.1 13.9-.2 19.4-8-.1-15.7-.1-23.7-.2 0 4.3-.1 8.3-.1 12.5 1.7 0 3.2 0 4.6.1 1.5 0 3 0 4.4.1 4.1.3 6.2 2.6 6.2 6.6-.2 16.7-.4 33.5-.5 50.2 0 3.7-1.6 5.1-5.2 5.1h-7.8c-.8 4.7-1.6 9.2-2.4 13.9 7.9.1 15.7.2 23.7.3 0 6-.1 13.6-.1 19.9h11.7c.1-6.3.1-13.7.2-19.6 3.3.1 6.3.2 9.4.3 0 6-.1 13.3-.1 19.4h11.7c.1-6.3.1-13.7.2-19.5.4-.1.7-.1 1-.2 5.6-.9 11.3-1.4 16.7-2.7 7.1-1.8 12.7-5.9 15.7-12.9 2.1-5.4 2.6-11.1 1.8-17zM54.3 32.9c7.3 0 14.4-.6 21 2.4 4.4 1.9 6.6 5.5 6.3 9.8-.3 4.6-2.9 7.9-7.6 9.4-6.4 2.1-13.1 2-20 1.7.1-7.6.2-15.2.3-23.3zm25.5 58.4c-6.5 2.9-13.3 2.9-20.2 3-1.9 0-3.8-.1-5.9-.1l.3-25.9c8.9 0 17.7-.7 26 3 4.3 1.9 6.8 5.2 6.8 10.1-.1 4.9-2.7 8-7 9.9z"/>
+        </symbol>
+        <symbol id="icon-discord" viewBox="0 0 1000 713.80402">
+            <metadata id="metadata14">
+                <rdf:RDF>
+                    <cc:Work rdf:about="">
+                        <dc:format>image/svg+xml</dc:format>
+                        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+                        <dc:title/>
+                    </cc:Work>
+                </rdf:RDF>
+            </metadata>
 
-    <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1366" inkscape:window-height="705" id="namedview10" showgrid="false" inkscape:zoom="0.43741403" inkscape:cx="279.29273" inkscape:cy="458.68978" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="svg2"/>
-    <path d="M 361.9857,0.00138389 C 348.73055,0.05478389 239.07459,3.1670339 123.39327,89.124664 123.39327,89.124664 0,311.06297 0,584.4136 c 0,0 71.978249,123.39208 261.35281,129.39038 0,0 31.70511,-37.7037 57.41206,-70.26582 C 209.93876,610.97599 168.80785,543.28361 168.80785,543.28361 c 0,0 8.5708,5.99726 23.99498,14.56626 0.85689,0 1.71122,0.85558 3.42502,1.7125 2.57069,1.71377 5.1422,2.57081 7.7129,4.28459 21.42246,11.99658 42.84423,21.42368 62.5529,29.13581 35.13283,14.56729 77.12215,27.41951 125.96536,36.84541 64.26736,11.9966 139.67306,16.28044 221.93532,0.85625 40.27424,-7.71208 81.40794,-18.85053 124.25286,-36.84541 29.99142,-11.13969 63.40925,-27.41914 98.54205,-50.55541 0,0 -42.84417,69.40888 -155.09786,101.11413 25.70697,31.70521 56.55581,68.54998 56.55581,68.54998 C 928.02173,706.94949 1000,583.55668 1000,584.4136 1000,311.06297 876.60671,89.124664 876.60671,89.124664 754.07028,-2.5634661 636.67349,0.00803389 636.67349,0.00803389 L 624.67932,13.718014 C 770.35209,57.419834 838.04548,121.6888 838.04548,121.6888 748.92802,73.702484 661.52634,49.707644 580.121,40.281764 c -61.69669,-6.85519 -120.82499,-5.13937 -173.09576,1.71581 -5.14137,0 -9.42484,0.85563 -14.56623,1.7125 -29.99144,3.42762 -102.82721,13.70953 -194.51535,53.98375 -31.70523,13.710366 -50.55871,23.994976 -50.55871,23.994976 0,0 70.26568,-67.697276 224.50739,-111.399106 L 363.32318,0.00803389 c 0,0 -0.4538,-0.0102 -1.33748,-0.007 z M 340.18778,316.20414 c 48.8432,0 88.26098,41.98669 87.40413,94.25746 0,52.27084 -38.56093,94.2608 -87.40413,94.2608 -47.98632,0 -87.40413,-41.98996 -87.40413,-94.2608 0,-52.27077 38.56091,-94.25746 87.40413,-94.25746 z m 312.76778,0 c 47.98631,0 87.40413,41.98669 87.40413,94.25746 0,52.27084 -38.56089,94.2608 -87.40413,94.2608 -47.9863,0 -87.40413,-41.98996 -87.40413,-94.2608 0,-52.27077 38.56091,-94.25746 87.40413,-94.25746 z" id="path8" inkscape:connector-curvature="0"/>
-</symbol><symbol id="icon-facebook" viewBox="0 0 512 512"><path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"/></symbol><symbol id="icon-instagram" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></symbol><symbol id="icon-linkedin" viewBox="0 0 512 512"><g><path d="M173.6,508.7c0-2.4,0-4.7,0-7c0-107.7,0-215.3,0-323c0-3-0.2-5.4,4.2-5.4c31.8,0.2,63.7,0.1,95.5,0.1   c0.8,0,1.6,0.2,2.9,0.4c0,14,0,27.8,0,41.7c0.4,0.1,0.7,0.3,1.1,0.4c4-5.2,7.8-10.6,12-15.7c12.2-15,27.5-26,45.5-32.6   c9.8-3.6,20.5-5.8,30.8-6.3c14.2-0.6,28.7-0.4,42.7,2c23,3.9,43.3,14.1,60.1,30.8c15.9,15.7,26.4,34.6,32.1,55.9   c3,11.3,4.9,22.9,6.7,34.4c1.2,8,1.8,16.2,1.8,24.2c0.1,65,0.1,130,0.1,195c0,1.6-0.1,3.2-0.2,5.3c-1.9,0-3.5,0-5.1,0   c-30.7,0-61.3-0.1-92,0.1c-5.1,0-6-1.7-6-6.3c0.1-59.8,0.3-119.7-0.1-179.5c-0.1-10.5-1.1-21.4-3.8-31.5   c-4.9-17.7-16.1-30.5-33.9-37c-15-5.5-30.2-6.5-45.6-2.6c-17,4.3-28.7,15.6-37.5,30.5c-6.8,11.5-8.1,24.2-8.2,36.9   c-0.4,60.7-0.2,121.3-0.2,182c0,2.3,0,4.6,0,7.1C241.9,508.7,208,508.7,173.5,508.7z"/><path d=" M109.1,342.6c0,53.3-0.1,106.6,0.1,159.9c0,4.8-1,6.6-6.3,6.5c-30.5-0.3-61-0.3-91.5,0c-5,0-6.1-1.7-6.1-6.3   c0.1-107.1,0.1-214.3,0-321.4c0-4.3,1.2-5.8,5.6-5.8c30.8,0.2,61.6,0.2,92.5,0c4.8,0,5.7,1.8,5.7,6.1   C109.1,235.3,109.1,289,109.1,342.6z"/><path d="M56.1,4.8C89,4,108.7,27.9,108.8,57.2c0.1,30-20.9,52.4-53.9,52.3c-30.7,0-52.4-22-52.3-53.1C2.7,27.3,23.8,3.8,56.1,4.8z"/></g></symbol><symbol id="icon-telegram" viewBox="0 0 24 24"><path d="M9.028 20.837c-.714 0-.593-.271-.839-.949l-2.103-6.92L22.263 3.37"/><path d="M9.028 20.837c.552 0 .795-.252 1.105-.553l2.941-2.857-3.671-2.214"/><path d="M9.403 15.213l8.89 6.568c1.015.56 1.748.271 2-.942l3.62-17.053c.372-1.487-.564-2.159-1.534-1.72L1.125 10.263c-1.45.582-1.443 1.392-.264 1.753l5.455 1.7L18.94 5.753c.595-.36 1.143-.167.694.232"/></symbol><symbol id="icon-twitter" viewBox="0 0 24 24"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></symbol><symbol id="icon-yt-btn" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" class=""/></symbol><symbol id="icon-yt-vertical" viewBox="0 0 511.627 511.627">
-    <g>
-        <path d="M459.955,264.377c-2.471-11.233-7.949-20.653-16.416-28.264c-8.474-7.611-18.227-12.085-29.27-13.418    c-35.02-3.806-87.837-5.708-158.457-5.708c-70.618,0-123.341,1.903-158.174,5.708c-11.227,1.333-21.029,5.807-29.407,13.418    c-8.376,7.614-13.896,17.035-16.562,28.264c-4.948,22.083-7.423,55.391-7.423,99.931c0,45.299,2.475,78.61,7.423,99.93    c2.478,11.225,7.951,20.653,16.421,28.261c8.47,7.614,18.225,11.991,29.263,13.134c35.026,3.997,87.847,5.996,158.461,5.996    c70.609,0,123.44-1.999,158.453-5.996c11.043-1.143,20.748-5.52,29.126-13.134c8.377-7.607,13.897-17.036,16.56-28.261    c4.948-22.083,7.426-55.391,7.426-99.93C467.377,319.007,464.899,285.695,459.954,264.376z M165.025,293.218h-30.549v162.45    h-28.549v-162.45h-29.98v-26.837h89.079V293.218z M242.11,455.668H216.7v-15.421c-10.278,11.615-19.989,17.419-29.125,17.419    c-8.754,0-14.275-3.524-16.556-10.564c-1.521-4.568-2.286-11.519-2.286-20.844V314.627h25.41v103.924    c0,6.088,0.096,9.421,0.288,9.993c0.571,3.997,2.568,5.995,5.996,5.995c5.138,0,10.566-3.997,16.274-11.991V314.627h25.41V455.668    z M339.183,413.411c0,13.894-0.855,23.417-2.56,28.558c-3.244,10.462-9.996,15.697-20.273,15.697    c-9.137,0-17.986-5.235-26.556-15.697v13.702h-25.406v-189.29h25.406v61.955c8.189-10.273,17.036-15.413,26.556-15.413    c10.277,0,17.029,5.331,20.273,15.988c1.704,4.948,2.56,14.369,2.56,28.264V413.411z M435.685,390.003h-51.104v24.839    c0,13.134,4.374,19.697,13.131,19.697c6.279,0,10.089-3.422,11.42-10.28c0.376-1.902,0.571-7.706,0.571-17.412h25.981v3.71    c0,9.329-0.195,14.846-0.572,16.563c-0.567,5.133-2.56,10.273-5.995,15.413c-6.852,10.089-17.139,15.133-30.841,15.133    c-13.127,0-23.407-4.855-30.833-14.558c-5.517-7.043-8.275-18.083-8.275-33.12v-49.396c0-15.036,2.662-26.076,7.987-33.119    c7.427-9.705,17.61-14.558,30.557-14.558c12.755,0,22.85,4.853,30.263,14.558c5.146,7.043,7.71,18.083,7.71,33.119V390.003    L435.685,390.003z"/>
-        <path d="M302.634,336.043c-4.38,0-8.658,2.101-12.847,6.283v85.934c4.188,4.186,8.467,6.279,12.847,6.279    c7.419,0,11.14-6.372,11.14-19.13v-60.236C313.773,342.418,310.061,336.043,302.634,336.043z"/>
-        <path d="M397.428,336.043c-8.565,0-12.847,6.475-12.847,19.41v13.134h25.693v-13.134    C410.274,342.511,405.99,336.043,397.428,336.043z"/>
-        <path d="M148.473,113.917v77.375h28.549v-77.375L211.563,0h-29.121l-19.41,75.089L142.759,0h-30.262    c5.33,15.99,11.516,33.785,18.559,53.391C140.003,79.656,145.805,99.835,148.473,113.917z"/>
-        <path d="M249.82,193.291c13.134,0,23.219-4.854,30.262-14.561c5.332-7.043,7.994-18.274,7.994-33.689V95.075    c0-15.225-2.669-26.363-7.994-33.406c-7.043-9.707-17.128-14.561-30.262-14.561c-12.756,0-22.75,4.854-29.98,14.561    c-5.327,7.043-7.992,18.181-7.992,33.406v49.965c0,15.225,2.662,26.457,7.992,33.689    C227.073,188.437,237.063,193.291,249.82,193.291z M237.541,89.935c0-13.134,4.093-19.701,12.279-19.701    s12.275,6.567,12.275,19.701v59.955c0,13.328-4.089,19.985-12.275,19.985s-12.279-6.661-12.279-19.985V89.935z"/>
-        <path d="M328.328,193.291c9.523,0,19.328-5.901,29.413-17.705v15.703h25.981V48.822h-25.981v108.777    c-5.712,8.186-11.133,12.275-16.279,12.275c-3.429,0-5.428-2.093-5.996-6.28c-0.191-0.381-0.287-3.715-0.287-9.994V48.822h-25.981    v112.492c0,9.705,0.767,16.84,2.286,21.411C313.961,189.768,319.574,193.291,328.328,193.291z"/>
-    </g>
-</symbol></svg>
+            <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1366" inkscape:window-height="705" id="namedview10" showgrid="false" inkscape:zoom="0.43741403" inkscape:cx="279.29273" inkscape:cy="458.68978" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="svg2"/>
+            <path d="M 361.9857,0.00138389 C 348.73055,0.05478389 239.07459,3.1670339 123.39327,89.124664 123.39327,89.124664 0,311.06297 0,584.4136 c 0,0 71.978249,123.39208 261.35281,129.39038 0,0 31.70511,-37.7037 57.41206,-70.26582 C 209.93876,610.97599 168.80785,543.28361 168.80785,543.28361 c 0,0 8.5708,5.99726 23.99498,14.56626 0.85689,0 1.71122,0.85558 3.42502,1.7125 2.57069,1.71377 5.1422,2.57081 7.7129,4.28459 21.42246,11.99658 42.84423,21.42368 62.5529,29.13581 35.13283,14.56729 77.12215,27.41951 125.96536,36.84541 64.26736,11.9966 139.67306,16.28044 221.93532,0.85625 40.27424,-7.71208 81.40794,-18.85053 124.25286,-36.84541 29.99142,-11.13969 63.40925,-27.41914 98.54205,-50.55541 0,0 -42.84417,69.40888 -155.09786,101.11413 25.70697,31.70521 56.55581,68.54998 56.55581,68.54998 C 928.02173,706.94949 1000,583.55668 1000,584.4136 1000,311.06297 876.60671,89.124664 876.60671,89.124664 754.07028,-2.5634661 636.67349,0.00803389 636.67349,0.00803389 L 624.67932,13.718014 C 770.35209,57.419834 838.04548,121.6888 838.04548,121.6888 748.92802,73.702484 661.52634,49.707644 580.121,40.281764 c -61.69669,-6.85519 -120.82499,-5.13937 -173.09576,1.71581 -5.14137,0 -9.42484,0.85563 -14.56623,1.7125 -29.99144,3.42762 -102.82721,13.70953 -194.51535,53.98375 -31.70523,13.710366 -50.55871,23.994976 -50.55871,23.994976 0,0 70.26568,-67.697276 224.50739,-111.399106 L 363.32318,0.00803389 c 0,0 -0.4538,-0.0102 -1.33748,-0.007 z M 340.18778,316.20414 c 48.8432,0 88.26098,41.98669 87.40413,94.25746 0,52.27084 -38.56093,94.2608 -87.40413,94.2608 -47.98632,0 -87.40413,-41.98996 -87.40413,-94.2608 0,-52.27077 38.56091,-94.25746 87.40413,-94.25746 z m 312.76778,0 c 47.98631,0 87.40413,41.98669 87.40413,94.25746 0,52.27084 -38.56089,94.2608 -87.40413,94.2608 -47.9863,0 -87.40413,-41.98996 -87.40413,-94.2608 0,-52.27077 38.56091,-94.25746 87.40413,-94.25746 z"
+                  id="path8" inkscape:connector-curvature="0"/>
+        </symbol>
+        <symbol id="icon-facebook" viewBox="0 0 512 512">
+            <path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"/>
+        </symbol>
+        <symbol id="icon-instagram" viewBox="0 0 24 24">
+            <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+        </symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 512 512">
+            <g>
+                <path d="M173.6,508.7c0-2.4,0-4.7,0-7c0-107.7,0-215.3,0-323c0-3-0.2-5.4,4.2-5.4c31.8,0.2,63.7,0.1,95.5,0.1   c0.8,0,1.6,0.2,2.9,0.4c0,14,0,27.8,0,41.7c0.4,0.1,0.7,0.3,1.1,0.4c4-5.2,7.8-10.6,12-15.7c12.2-15,27.5-26,45.5-32.6   c9.8-3.6,20.5-5.8,30.8-6.3c14.2-0.6,28.7-0.4,42.7,2c23,3.9,43.3,14.1,60.1,30.8c15.9,15.7,26.4,34.6,32.1,55.9   c3,11.3,4.9,22.9,6.7,34.4c1.2,8,1.8,16.2,1.8,24.2c0.1,65,0.1,130,0.1,195c0,1.6-0.1,3.2-0.2,5.3c-1.9,0-3.5,0-5.1,0   c-30.7,0-61.3-0.1-92,0.1c-5.1,0-6-1.7-6-6.3c0.1-59.8,0.3-119.7-0.1-179.5c-0.1-10.5-1.1-21.4-3.8-31.5   c-4.9-17.7-16.1-30.5-33.9-37c-15-5.5-30.2-6.5-45.6-2.6c-17,4.3-28.7,15.6-37.5,30.5c-6.8,11.5-8.1,24.2-8.2,36.9   c-0.4,60.7-0.2,121.3-0.2,182c0,2.3,0,4.6,0,7.1C241.9,508.7,208,508.7,173.5,508.7z"/>
+                <path d=" M109.1,342.6c0,53.3-0.1,106.6,0.1,159.9c0,4.8-1,6.6-6.3,6.5c-30.5-0.3-61-0.3-91.5,0c-5,0-6.1-1.7-6.1-6.3   c0.1-107.1,0.1-214.3,0-321.4c0-4.3,1.2-5.8,5.6-5.8c30.8,0.2,61.6,0.2,92.5,0c4.8,0,5.7,1.8,5.7,6.1   C109.1,235.3,109.1,289,109.1,342.6z"/>
+                <path d="M56.1,4.8C89,4,108.7,27.9,108.8,57.2c0.1,30-20.9,52.4-53.9,52.3c-30.7,0-52.4-22-52.3-53.1C2.7,27.3,23.8,3.8,56.1,4.8z"/>
+            </g>
+        </symbol>
+        <symbol id="icon-telegram" viewBox="0 0 24 24">
+            <path d="M9.028 20.837c-.714 0-.593-.271-.839-.949l-2.103-6.92L22.263 3.37"/>
+            <path d="M9.028 20.837c.552 0 .795-.252 1.105-.553l2.941-2.857-3.671-2.214"/>
+            <path d="M9.403 15.213l8.89 6.568c1.015.56 1.748.271 2-.942l3.62-17.053c.372-1.487-.564-2.159-1.534-1.72L1.125 10.263c-1.45.582-1.443 1.392-.264 1.753l5.455 1.7L18.94 5.753c.595-.36 1.143-.167.694.232"/>
+        </symbol>
+        <symbol id="icon-twitter" viewBox="0 0 24 24">
+            <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/>
+        </symbol>
+        <symbol id="icon-yt-btn" viewBox="0 0 576 512">
+            <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" class=""/>
+        </symbol>
+        <symbol id="icon-yt-vertical" viewBox="0 0 511.627 511.627">
+            <g>
+                <path d="M459.955,264.377c-2.471-11.233-7.949-20.653-16.416-28.264c-8.474-7.611-18.227-12.085-29.27-13.418    c-35.02-3.806-87.837-5.708-158.457-5.708c-70.618,0-123.341,1.903-158.174,5.708c-11.227,1.333-21.029,5.807-29.407,13.418    c-8.376,7.614-13.896,17.035-16.562,28.264c-4.948,22.083-7.423,55.391-7.423,99.931c0,45.299,2.475,78.61,7.423,99.93    c2.478,11.225,7.951,20.653,16.421,28.261c8.47,7.614,18.225,11.991,29.263,13.134c35.026,3.997,87.847,5.996,158.461,5.996    c70.609,0,123.44-1.999,158.453-5.996c11.043-1.143,20.748-5.52,29.126-13.134c8.377-7.607,13.897-17.036,16.56-28.261    c4.948-22.083,7.426-55.391,7.426-99.93C467.377,319.007,464.899,285.695,459.954,264.376z M165.025,293.218h-30.549v162.45    h-28.549v-162.45h-29.98v-26.837h89.079V293.218z M242.11,455.668H216.7v-15.421c-10.278,11.615-19.989,17.419-29.125,17.419    c-8.754,0-14.275-3.524-16.556-10.564c-1.521-4.568-2.286-11.519-2.286-20.844V314.627h25.41v103.924    c0,6.088,0.096,9.421,0.288,9.993c0.571,3.997,2.568,5.995,5.996,5.995c5.138,0,10.566-3.997,16.274-11.991V314.627h25.41V455.668    z M339.183,413.411c0,13.894-0.855,23.417-2.56,28.558c-3.244,10.462-9.996,15.697-20.273,15.697    c-9.137,0-17.986-5.235-26.556-15.697v13.702h-25.406v-189.29h25.406v61.955c8.189-10.273,17.036-15.413,26.556-15.413    c10.277,0,17.029,5.331,20.273,15.988c1.704,4.948,2.56,14.369,2.56,28.264V413.411z M435.685,390.003h-51.104v24.839    c0,13.134,4.374,19.697,13.131,19.697c6.279,0,10.089-3.422,11.42-10.28c0.376-1.902,0.571-7.706,0.571-17.412h25.981v3.71    c0,9.329-0.195,14.846-0.572,16.563c-0.567,5.133-2.56,10.273-5.995,15.413c-6.852,10.089-17.139,15.133-30.841,15.133    c-13.127,0-23.407-4.855-30.833-14.558c-5.517-7.043-8.275-18.083-8.275-33.12v-49.396c0-15.036,2.662-26.076,7.987-33.119    c7.427-9.705,17.61-14.558,30.557-14.558c12.755,0,22.85,4.853,30.263,14.558c5.146,7.043,7.71,18.083,7.71,33.119V390.003    L435.685,390.003z"/>
+                <path d="M302.634,336.043c-4.38,0-8.658,2.101-12.847,6.283v85.934c4.188,4.186,8.467,6.279,12.847,6.279    c7.419,0,11.14-6.372,11.14-19.13v-60.236C313.773,342.418,310.061,336.043,302.634,336.043z"/>
+                <path d="M397.428,336.043c-8.565,0-12.847,6.475-12.847,19.41v13.134h25.693v-13.134    C410.274,342.511,405.99,336.043,397.428,336.043z"/>
+                <path d="M148.473,113.917v77.375h28.549v-77.375L211.563,0h-29.121l-19.41,75.089L142.759,0h-30.262    c5.33,15.99,11.516,33.785,18.559,53.391C140.003,79.656,145.805,99.835,148.473,113.917z"/>
+                <path d="M249.82,193.291c13.134,0,23.219-4.854,30.262-14.561c5.332-7.043,7.994-18.274,7.994-33.689V95.075    c0-15.225-2.669-26.363-7.994-33.406c-7.043-9.707-17.128-14.561-30.262-14.561c-12.756,0-22.75,4.854-29.98,14.561    c-5.327,7.043-7.992,18.181-7.992,33.406v49.965c0,15.225,2.662,26.457,7.992,33.689    C227.073,188.437,237.063,193.291,249.82,193.291z M237.541,89.935c0-13.134,4.093-19.701,12.279-19.701    s12.275,6.567,12.275,19.701v59.955c0,13.328-4.089,19.985-12.275,19.985s-12.279-6.661-12.279-19.985V89.935z"/>
+                <path d="M328.328,193.291c9.523,0,19.328-5.901,29.413-17.705v15.703h25.981V48.822h-25.981v108.777    c-5.712,8.186-11.133,12.275-16.279,12.275c-3.429,0-5.428-2.093-5.996-6.28c-0.191-0.381-0.287-3.715-0.287-9.994V48.822h-25.981    v112.492c0,9.705,0.767,16.84,2.286,21.411C313.961,189.768,319.574,193.291,328.328,193.291z"/>
+            </g>
+        </symbol>
+    </svg>
 </div>
 
 
