@@ -34,7 +34,7 @@
                     $('html,body').animate({
                         scrollTop: target.offset().top + offset
                     }, 500, function () {
-                        if(window.location && window.location.hash){
+                        if (window.location && window.location.hash) {
                             window.location.hash = hash;
                         }
                     });
@@ -116,6 +116,7 @@
 
     function initMainCoverParallax() {
         var orcParallax = document.getElementById('orcParallax');
+        var $section1 = $('.section-1');
         if (!orcParallax) return;
 
         var $body = $("body");
@@ -135,10 +136,16 @@
         TweenLite.set($sectionBg, {transformStyle: 'preserve-3d'});
 
         $body.mousemove(function (e) {
+            var pageX = e.pageX;
+            var pageY = e.pageY;
+            var heightY = $section1.outerHeight()
+            if (pageY > heightY + 300) {
+                pageY = heightY + 300
+            }
 
-            var sxPos = e.pageX / $body.width() * 100 - 50;
-            var syPos = e.pageY / $body.height() * 100 - 50;
-            // console.log("x:" + sxPos + ", y:" + syPos);
+            var sxPos = pageX / $body.width() * 100 - 50;
+            var syPos = pageY / $body.height() * 100 - 50;
+            // console.log("x:" + sxPos + ", y:" + syPos, e.pageY);
             TweenLite.to($sectionBg, 0.55, {rotationY: 0.05 * sxPos, rotationX: 0.02 * syPos, rotationZ: '-0.1', transformPerspective: 650, transformOrigin: 'center center'});
 
         });

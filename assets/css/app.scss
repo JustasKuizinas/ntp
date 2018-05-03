@@ -1207,6 +1207,7 @@ button {
         display: none;
         @include media(lg) {
             display: block;
+            height: 102%;
         }
     }
 
@@ -1282,6 +1283,7 @@ button {
         display: none;
         @include media(lg) {
             display: block;
+            height: 102%;
         }
     }
 
