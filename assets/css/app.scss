@@ -1,3 +1,5 @@
+@import "vendor/_odometer.scss";
+
 @import "mixins/mixins";
 @import "fonts/fonts";
 @import "base/config";
@@ -410,13 +412,11 @@ button {
             .menu {
                 &__left {
                     position: absolute;
-                    left: 15px;
                     top: 21px;
                 }
 
                 &__right {
                     position: absolute;
-                    right: 15px;
                     top: 22px;
                 }
             }
@@ -438,7 +438,8 @@ button {
 
     &__left {
         position: absolute;
-        left: 40px;
+        right: 50%;
+        padding-right: 100px;
         top: 21px;
         display: none;
         align-items: center;
@@ -450,7 +451,8 @@ button {
 
     &__right {
         position: absolute;
-        right: 48px;
+        left: 50%;
+        padding-left: 100px;
         top: 22px;
         display: none;
         align-items: center;
@@ -1056,7 +1058,7 @@ button {
     &__about {
         text-align: center;
         @include media(lg) {
-            margin-left: 60px;
+            margin-left: 40px;
         }
         h1 {
             margin-bottom: 17px;
@@ -1264,7 +1266,7 @@ button {
             text-align: center;
         }
         @include media(lg) {
-            padding: 100px 0 109px 50px;
+            padding: 180px 0 250px 50px;
         }
         h2 {
             text-align: center;
@@ -1391,7 +1393,7 @@ button {
 
     &__left {
         @include media(md) {
-            padding-left: 50px;
+            padding-right: 50px;
         }
     }
     &__right {
@@ -1636,7 +1638,7 @@ button {
 
         @include media(lg) {
             font-size: 3.6rem;
-            transform: translate(-49%, -6%);
+            transform: translate(-50%, -40%);
         }
     }
     h3 {
@@ -2175,5 +2177,11 @@ button {
     }
     .par{
         margin-top: 20px;
+    }
+}
+
+.odometer{
+    .odometer-inside{
+        display: flex;
     }
 }

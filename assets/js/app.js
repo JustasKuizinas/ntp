@@ -13,12 +13,36 @@
         initRangeSlider()
         initTextSlider();
         initSticky();
+        initSmoothScroll();
         if (f.detect.isDesktop()) {
             initMainCoverParallax();
             initPaladinParallax();
         }
         // initMedium();
     });
+
+    function initSmoothScroll(offset) {
+        $('a[href*="#"]:not([href="#"])').click(function () {
+            if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+                var target = $(this.hash);
+                var hash = this.hash;
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (!offset) {
+                    offset = 0;
+                }
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top + offset
+                    }, 500, function () {
+                        if(window.location && window.location.hash){
+                            window.location.hash = hash;
+                        }
+                    });
+                    return false;
+                }
+            }
+        });
+    }
 
 
     function initMedium() {
@@ -158,49 +182,55 @@
     }
 
     function initRangeSlider() {
+        if ($('.calc').length === 0) return;
         var $transactionCut = $('.calc .transaction-cut');
         var $cosmetics = $('.calc .cosmetics');
         var $ladderEntrance = $('.calc .ladder-entrance');
         var $ransom = $('.calc .ransom');
         var $horizontView = $('.js-horizont-view');
 
+
         var vals = {
-            2018: {
-                'transactionCut': 1,
-                'cosmetics': 2,
-                'ladderEntrance': 3,
-                'ransom': 4
-            },
             2019: {
-                'transactionCut': 5,
-                'cosmetics': 6,
-                'ladderEntrance': 7,
-                'ransom': 8
+                'transactionCut': 360000,
+                'cosmetics': 150000,
+                'ladderEntrance': 60000,
+                'ransom': 30000
             },
             2020: {
-                'transactionCut': 9,
-                'cosmetics': 10,
-                'ladderEntrance': 11,
-                'ransom': 12
+                'transactionCut': 918000,
+                'cosmetics': 382500,
+                'ladderEntrance': 153000,
+                'ransom': 76500
             },
             2021: {
-                'transactionCut': 13,
-                'cosmetics': 14,
-                'ladderEntrance': 15,
-                'ransom': 16
+                'transactionCut': 1764900,
+                'cosmetics': 735375,
+                'ladderEntrance': 294150,
+                'ransom': 147075
             },
             2022: {
-                'transactionCut': 17,
-                'cosmetics': 18,
-                'ladderEntrance': 19,
-                'ransom': 20
+                'transactionCut': 2770695,
+                'cosmetics': 1154456,
+                'ladderEntrance': 461782,
+                'ransom': 230891
+            },
+            2023: {
+                'transactionCut': 3683882,
+                'cosmetics': 1534950,
+                'ladderEntrance': 613980,
+                'ransom': 306990
             }
         }
+        var transactionCutCountUp = new CountUp($transactionCut[0], 0, 0, 0, 0.1);
+        var cosmeticsCutCountUp = new CountUp($cosmetics[0], 0, 0, 0, 0.1);
+        var ladderEntranceCutCountUp = new CountUp($ladderEntrance[0], 0, 0, 0, 0.1);
+        var ransomCutCountUp = new CountUp($ransom[0], 0, 0, 0, 0.1);
 
 
         changeProjection(Object.keys(vals)[0]);
 
-        $('.calc input[type="range"]').rangeslider({
+        var slider = $('.calc input[type="range"]').rangeslider({
             polyfill: false,
 
             // Default CSS classes
@@ -214,21 +244,38 @@
             onInit: function () {
             },
             onSlide: f.debounce(function (position, value) {
-                changeProjection(value);
+                console.log(position, value, slider)
+                var years = parseInt(value);
+                changeProjection(years);
             }, 15),
             onSlideEnd: function (position, value) {
+                var years = Math.round(value);
+                $sliderHandle.css('transition', 'left .3s');
+                slider.val(years).change();
+                setTimeout(function () {
+                    $sliderHandle.css('transition', '');
+                }, 300);
 
             }
         });
+        var $sliderHandle = $('.rangeslider__handle');
 
         function changeProjection(year) {
             var blur = (2 * (Object.keys(vals).length - 1)) - (Object.keys(vals).indexOf(String(year)) * 2);
             $horizontView.css('filter', 'blur(' + blur + 'px)');
 
-            $transactionCut.html(vals[year].transactionCut + ' €');
-            $cosmetics.html(vals[year].cosmetics + ' €');
-            $ladderEntrance.html(vals[year].ladderEntrance + ' €');
-            $ransom.html(vals[year].ransom + ' €');
+            transactionCutCountUp.update(vals[year].transactionCut)
+            transactionCutCountUp.start();
+            cosmeticsCutCountUp.update(vals[year].cosmetics)
+            cosmeticsCutCountUp.start();
+            ladderEntranceCutCountUp.update(vals[year].ladderEntrance)
+            ladderEntranceCutCountUp.start();
+            ransomCutCountUp.update(vals[year].ransom)
+            ransomCutCountUp.start();
+            // $transactionCut.html(vals[year].transactionCut + ' €');
+            // $cosmetics.html(vals[year].cosmetics + ' €');
+            // $ladderEntrance.html(vals[year].ladderEntrance + ' €');
+            // $ransom.html(vals[year].ransom + ' €');
         }
     }
 
