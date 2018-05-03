@@ -33,7 +33,7 @@
                 if (target.length) {
                     $('html,body').animate({
                         scrollTop: target.offset().top + offset
-                    }, 500, function () {
+                    }, 500, 'easeOutCubic', function () {
                         if (window.location && window.location.hash) {
                             window.location.hash = hash;
                         }
