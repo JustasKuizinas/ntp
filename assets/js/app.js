@@ -50,7 +50,7 @@
             }else{
                 showErr('Incorrect email address.')
             }
- 
+
             function showSuccess(){
                 $subscribe.find('.subscribe__message').remove();
                 $subscribe.append('<div class="subscribe__message">Please check you email.</div>')

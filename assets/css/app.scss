@@ -541,6 +541,7 @@ button {
 
         &.-push {
             padding-top: 150px;
+            padding-bottom: 100px;
             @include media(xl) {
                 padding-top: 250px;
                 padding-bottom: 100px;
@@ -898,7 +899,7 @@ button {
         max-width: 230px;
         margin: 0 auto 15px;
 
-        img{
+        img {
             width: 230px;
             height: 230px;
             display: block;
@@ -2225,9 +2226,19 @@ button {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
 
         .button {
-            margin: 0 5px 5px;
+            margin: 0 5px 10px;
+        }
+    }
+}
+
+.section-thanks {
+    .section {
+
+        &__bg {
+            background-image: url('../img/main-cover.jpg');
         }
     }
 }
