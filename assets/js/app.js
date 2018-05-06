@@ -40,7 +40,7 @@
                         "email": email
                     },
                     success: function () {
-                        showSuccess()
+                        window.location.href = "https://www.notforp.com/thank-you.html";
                     },
                     error: function (response) {
                         showErr(response.responseJSON.message);
