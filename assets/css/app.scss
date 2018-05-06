@@ -897,6 +897,14 @@ button {
     &__img-hold {
         max-width: 230px;
         margin: 0 auto 15px;
+
+        img{
+            width: 230px;
+            height: 230px;
+            display: block;
+            object-fit: cover;
+            object-position: center center;
+        }
     }
     &__img {
         background-size: cover;
@@ -1793,7 +1801,6 @@ button {
 
 .footer {
 
-    background-color: #151515;
     color: #949899;
     font-size: 1.4rem;
 

@@ -28,7 +28,6 @@
             var input = $(this).parent('.subscribe').find('input')[0];
             var $subscribe = $(this).parent('.subscribe');
             var email = $(this).parent('.subscribe').find('input').val();
-            $subscribe.find('.subscribe__message').remove();
 
 
 
@@ -38,26 +37,27 @@
                     url: 'https://api.convertkit.com/v3/forms/386451/subscribe',
                     data: {
                         "api_key": "wR0SLE-B7kMUrW-WqVVKyg",
-                        "email": email,
-                        "tags":['ico_emailupdates'] 
+                        "email": email
                     },
                     success: function () {
                         showSuccess()
                     },
-                    error: function (err) {
-                        showErr(err.message);
+                    error: function (response) {
+                        showErr(response.responseJSON.message);
                     },
                     dataType: "JSON"
                 });
             }else{
                 showErr('Incorrect email address.')
             }
-
+ 
             function showSuccess(){
+                $subscribe.find('.subscribe__message').remove();
                 $subscribe.append('<div class="subscribe__message">Please check you email.</div>')
             }
 
             function showErr(err){
+                $subscribe.find('.subscribe__message').remove();
                 $subscribe.append('<div class="subscribe__message -err">'+err+'</div>')
             }
 
