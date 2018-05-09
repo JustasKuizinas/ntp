@@ -244,6 +244,21 @@ button {
     background-repeat: no-repeat;
 }
 
+.icon-telegram-big {
+    width: 99px;
+    height: 99px;
+    background-image: url(../img/icon-telegram-big.png);
+    background-size: contain;
+    background-repeat: no-repeat;;
+}
+
+.telegram-big{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 110;
+}
+
 .container-primary {
     width: 100%;
     max-width: 1200px;
@@ -271,8 +286,29 @@ button {
 
 .subscribe {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
+
+    &__message {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        text-align: left;
+        font-size: 1.4rem;
+
+        display: block;
+        padding: 5px;
+        color: #14b114;
+
+        &.-err {
+            color: #ff2628;
+        }
+    }
+    form{
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+    }
     input {
         &::placeholder {
             color: #000000;
@@ -314,22 +350,7 @@ button {
             width: 160px;
         }
     }
-    &__message {
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        left: 0;
-        text-align: left;
-        font-size: 1.4rem;
 
-        display: block;
-        padding: 5px;
-        color: #14b114;
-
-        &.-err {
-            color: #ff2628;
-        }
-    }
 }
 
 .social {
@@ -1434,14 +1455,15 @@ button {
     }
     .section {
         &__bg {
+            filter: brightness(120%);
             .is-desktop:not(.ie-old) & {
                 background-attachment: fixed;
             }
-            @include media(md-max) {
-                height: auto;
-                padding-bottom: 100%;
-                box-shadow: inset 0px -48px 71px -20px #151515;
-            }
+            //@include media(md-max) {
+            //    height: auto;
+            //    padding-bottom: 100%;
+            //    box-shadow: inset 0px -48px 71px -20px #151515;
+            //}
         }
         &__content {
             padding: 60px 0 60px;

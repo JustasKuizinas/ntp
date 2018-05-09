@@ -24,12 +24,13 @@
 
     function initSubscribe() {
         $('.subscribe button').on('click', function (e) {
+            e.preventDefault();
 
-            var input = $(this).parent('.subscribe').find('input')[0];
-            var $subscribe = $(this).parent('.subscribe');
-            var email = $(this).parent('.subscribe').find('input').val();
+            var input = $(this).closest('.subscribe').find('input')[0];
+            var $subscribe = $(this).closest('.subscribe');
+            var email = $(this).closest('.subscribe').find('input').val();
 
-
+            $subscribe.find('.subscribe__message').remove();
 
             if(input.checkValidity()){
                 $.ajax({
@@ -52,12 +53,10 @@
             }
 
             function showSuccess(){
-                $subscribe.find('.subscribe__message').remove();
                 $subscribe.append('<div class="subscribe__message">Please check you email.</div>')
             }
 
             function showErr(err){
-                $subscribe.find('.subscribe__message').remove();
                 $subscribe.append('<div class="subscribe__message -err">'+err+'</div>')
             }
 
