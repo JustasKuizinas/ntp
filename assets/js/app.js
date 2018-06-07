@@ -19,27 +19,36 @@
             initPaladinParallax();
         }
         initSubscribe();
-        // initMedium();
+        initMedium();
 
 
-        var config = {
-            apiKey: "AIzaSyDw889I-qyGHUvHlBTk7Yx4rAnM2nhA5x0",
-            authDomain: "not-for-p.firebaseapp.com",
-            databaseURL: "https://not-for-p.firebaseio.com",
-            projectId: "not-for-p",
-            storageBucket: "not-for-p.appspot.com",
-            messagingSenderId: "638049154524"
-        };
-        firebase.initializeApp(config);
+        // var config = {
+        //     apiKey: "AIzaSyDw889I-qyGHUvHlBTk7Yx4rAnM2nhA5x0",
+        //     authDomain: "not-for-p.firebaseapp.com",
+        //     databaseURL: "https://not-for-p.firebaseio.com",
+        //     projectId: "not-for-p",
+        //     storageBucket: "not-for-p.appspot.com",
+        //     messagingSenderId: "638049154524"
+        // };
+        // firebase.initializeApp(config);
+        //
+        // firebase.database().ref('/subscribers').once('value').then(function (snapshot) {
+        //     var $subscribers = $('.js-subscribers');
+        //     if ($subscribers.length > 0) {
+        //         subscribersCountUp = new CountUp($subscribers[0], snapshot.val(), snapshot.val(), 0, 0.001);
+        //         subscribersCountUp.start();
+        //     }
+        //
+        // });
 
-        firebase.database().ref('/subscribers').once('value').then(function (snapshot) {
-            var $subscribers = $('.js-subscribers');
-            if ($subscribers.length > 0) {
-                subscribersCountUp = new CountUp($subscribers[0], snapshot.val(), snapshot.val(), 0, 0.001);
-                subscribersCountUp.start();
-            }
+        if($('#embedded-typeform').length > 0){
+            window.typeformEmbed.makeWidget($('#embedded-typeform')[0], "https://justasbrazauskas.typeform.com/to/s9SKnK", {
+                hideFooter: true,
+                hideHeaders: true,
+                opacity: 0
+            });
+        }
 
-        });
     });
 
     function initSubscribe() {
@@ -115,7 +124,9 @@
 
 
     function initMedium() {
-        var mediumRSSFeed = 'https://medium.com/feed/@aprofita_co';
+        if ($('#blog-section').length === 0) return;
+
+        var mediumRSSFeed = 'https://medium.com/feed/not-for-p';
         var mediumJSON = 'https://api.rss2json.com/v1/api.json?rss_url=' + mediumRSSFeed;
         var blogFirstPosthtml = '';
         var blogPostshtml = '';
@@ -125,32 +136,33 @@
 
             for (var i = 0; i < response.items.length; i++) {
                 var item = response.items[i];
+                var date = moment(item.pubDate).format('MMMM D, YYYY');
                 var content = $('<span></span>').html(item.content).find('p:first').text();
                 console.log(content)
 
                 if (i == 0) {
                     blogFirstPosthtml = '<div class=" col-lg-8  order-lg-2">\n\
-                        <div class="blog__main-img lazyload" data-bg="' + f.escape(item.thumbnail) + '"></div>\n\
+                        <a class="blog__main-img lazyload" href="' + f.escape(item.link) + '" target="_blank" data-bg="' + f.escape(item.thumbnail) + '"></a>\n\
                         </div>\n\
                         <div class="col-lg-4 order-lg-1">\n\
-                        <div class="blog__card">\n\
+                        <a class="blog__card" href="' + f.escape(item.link) + '"  target="_blank">\n\
                         <div class="blog__text">\n\
                         <h3>' + f.escape(item.title) + '</h3>\n\
                     <p class="par">' + f.escape(content) + '</p>\n\
-                    <p class="par blog__date">' + f.escape(item.pubDate) + '</p>\n\
+                    <p class="par blog__date">' + date + '</p>\n\
                     </div>\n\
-                    </div>\n\
+                    </a>\n\
                     </div>';
                 } else {
                     blogPostshtml += '<div class="col-lg-4">\n\
-                        <div class="blog__card">\n\
+                        <a class="blog__card" href="' + f.escape(item.link) + '"  target="_blank">\n\
                         <div class="blog__img lazyload" data-bg="' + f.escape(item.thumbnail) + '"></div>\n\
                         <div class="blog__text">\n\
                         <h3>' + f.escape(item.title) + '</h3>\n\
                     <p class="par">' + f.escape(content) + '</p>\n\
-                    <p class="par blog__date">' + f.escape(item.pubDate) + '</p>\n\
+                    <p class="par blog__date">' + date + '</p>\n\
                     </div>\n\
-                    </div>\n\
+                    </a>\n\
                     </div>'
                 }
             }

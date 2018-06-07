@@ -251,19 +251,19 @@ button {
     background-size: contain;
     background-repeat: no-repeat;
 
-    @include media(lg){
+    @include media(lg) {
         width: 99px;
         height: 99px;
     }
 }
 
-.telegram-big{
+.telegram-big {
     position: fixed;
     right: 10px;
     bottom: 10px;
     z-index: 110;
 
-    @include media(lg){
+    @include media(lg) {
         right: 30px;
         bottom: 30px;
     }
@@ -313,7 +313,7 @@ button {
             color: #ff2628;
         }
     }
-    form{
+    form {
         width: 100%;
         position: relative;
         display: flex;
@@ -325,7 +325,7 @@ button {
         }
         height: 60px;
         flex: 1;
-        background-color: #979695;
+        background-color: #fff;
         font-family: $font-roboto;
         color: #000000;
         font-size: 18px;
@@ -1020,6 +1020,7 @@ button {
     &__main-img {
         @extend .h-center-bg-image;
         height: 230px;
+        display: block;
 
         @include media(lg) {
 
@@ -1031,6 +1032,7 @@ button {
         }
     }
     &__card {
+        display: block;
         background-image: url(../img/texture-1.jpg);
         background-repeat: repeat;
     }
@@ -1145,17 +1147,17 @@ button {
         }
 
     }
-    &__counter{
+    &__counter {
         margin-bottom: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
-        span{
+        span {
             font-size: 1.6rem;
             margin-right: 10px;
             color: #ccc;
         }
-        div{ 
+        div {
             font-size: 1.8rem;
             color: #ffc731;
         }
@@ -1323,10 +1325,20 @@ button {
         }
     }
 
+    .par {
+        text-align: left;
+        display: flex;
+        align-items: center;
+    }
+
     .text-slider {
         max-width: 440px;
         margin: 0 auto;
         margin-bottom: 20px;
+    }
+    .yl-logo {
+        flex: 1 0 auto;
+        margin-right: 10px;
     }
 
 }
@@ -1336,6 +1348,7 @@ button {
     background-color: #0b0e12;
     &__text {
         padding: 65px 0 60px;
+        text-align: center;
 
         @include media(lg-max) {
             text-align: center;
@@ -1345,6 +1358,16 @@ button {
         }
         h2 {
             text-align: center;
+        }
+    }
+    &__powered {
+        text-align: center;
+        margin-top: 50px;
+        div {
+            font-size: 1.2rem;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 10px;
         }
     }
 
@@ -1466,15 +1489,31 @@ button {
             margin-top: 50px;
         }
     }
-
-    &__left {
-        @include media(md) {
-            padding-right: 50px;
+    &__left, &__right {
+        position: relative;
+        @include media(xl) {
+            padding: 70px 40px 45px;
+            background-image: url(../img/frame.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-color: rgba(24, 24, 24, 0.8);
         }
     }
+
+    &__left {
+
+    }
     &__right {
-        @include media(md) {
-            padding-left: 50px;
+        @include media(xl) {
+            h2 {
+                font-size: 4.2rem;
+            }
+            h5 {
+                font-size: 2.2rem;
+            }
+            .par {
+                font-size: 1.7rem;
+            }
         }
     }
     .section {
@@ -1498,6 +1537,15 @@ button {
         }
     }
 
+    .shield-minus, .shield-plus {
+        @include media(xl) {
+            transform: translateX(-50%);
+            position: absolute;
+            top: -40px;
+            left: 50%;
+        }
+    }
+
     .divider {
         &.-primary {
             margin-top: 12px;
@@ -1510,7 +1558,7 @@ button {
 
     }
 
-    h4 {
+    h4, h5 {
         margin-bottom: 15px;
     }
 }
@@ -1824,10 +1872,6 @@ button {
         margin-bottom: 15px;
         margin: 0 auto;
         margin-bottom: 30px;
-
-        input {
-            background-color: #c7c7c7;
-        }
     }
     .social {
         justify-content: center;
@@ -2285,6 +2329,104 @@ button {
 
         &__bg {
             background-image: url('../img/main-cover.jpg');
+        }
+    }
+}
+
+.section-seen {
+    display: none;
+    &__logos {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        a {
+            margin: 10px;
+        }
+    }
+
+    .section {
+        &__content {
+            padding: 90px 0;
+        }
+    }
+}
+
+.section-supported {
+    &__logos {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        a {
+            margin: 10px;
+        }
+    }
+
+    .section {
+        &__content {
+            padding: 90px 0;
+        }
+    }
+}
+
+.yl-logo {
+    background-image: url(../img/yl-circle.png);
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #151515;
+    font-family: $font-astoria;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.section-crowdsale {
+    &.lazyloaded {
+        background-image: url(../img/texture-1.jpg);
+        background-repeat: repeat;
+        background-size: auto;
+    }
+
+    &__title {
+        background-color: rgba(37, 35, 34, 0.8);
+        text-align: center;
+
+        h4 {
+            padding: 20px 0 15px;
+        }
+    }
+    &__graph {
+        display: block;
+        position: relative;
+
+        left: 5%;
+        width: 90%;
+        margin-top: 30px;
+    }
+    &__graph-hdl{
+        padding: 0 0 30px;
+        margin-bottom: 20px;
+
+        @include media(md){
+            min-height: 100%;
+        }
+    }
+    &__brd {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .section {
+        &__content {
+            padding: 90px 0 80px;
         }
     }
 }
