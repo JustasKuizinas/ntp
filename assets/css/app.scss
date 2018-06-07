@@ -245,18 +245,28 @@ button {
 }
 
 .icon-telegram-big {
-    width: 99px;
-    height: 99px;
+    width: 70px;
+    height: 70px;
     background-image: url(../img/icon-telegram-big.png);
     background-size: contain;
-    background-repeat: no-repeat;;
+    background-repeat: no-repeat;
+
+    @include media(lg){
+        width: 99px;
+        height: 99px;
+    }
 }
 
 .telegram-big{
     position: fixed;
-    right: 30px;
-    bottom: 30px;
+    right: 10px;
+    bottom: 10px;
     z-index: 110;
+
+    @include media(lg){
+        right: 30px;
+        bottom: 30px;
+    }
 }
 
 .container-primary {
@@ -1135,12 +1145,26 @@ button {
         }
 
     }
+    &__counter{
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span{
+            font-size: 1.6rem;
+            margin-right: 10px;
+            color: #ccc;
+        }
+        div{ 
+            font-size: 1.8rem;
+            color: #ffc731;
+        }
+    }
     &__btns {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin-bottom: 30px;
-        margin-top: 35px;
 
         @include media(lg-max) {
             .button {
@@ -1187,7 +1211,7 @@ button {
     }
 
     .subscribe {
-        margin-bottom: 28px;
+        margin-bottom: 15px;
     }
 
     .section {

@@ -1,6 +1,6 @@
 (function () {
     "use strict";
-
+    var subscribersCountUp;
 
     $(function () {
         initDeviceCheck();
@@ -20,6 +20,26 @@
         }
         initSubscribe();
         // initMedium();
+
+
+        var config = {
+            apiKey: "AIzaSyDw889I-qyGHUvHlBTk7Yx4rAnM2nhA5x0",
+            authDomain: "not-for-p.firebaseapp.com",
+            databaseURL: "https://not-for-p.firebaseio.com",
+            projectId: "not-for-p",
+            storageBucket: "not-for-p.appspot.com",
+            messagingSenderId: "638049154524"
+        };
+        firebase.initializeApp(config);
+
+        firebase.database().ref('/subscribers').once('value').then(function (snapshot) {
+            var $subscribers = $('.js-subscribers');
+            if ($subscribers.length > 0) {
+                subscribersCountUp = new CountUp($subscribers[0], snapshot.val(), snapshot.val(), 0, 0.001);
+                subscribersCountUp.start();
+            }
+
+        });
     });
 
     function initSubscribe() {
@@ -32,32 +52,37 @@
 
             $subscribe.find('.subscribe__message').remove();
 
-            if(input.checkValidity()){
+            if (input.checkValidity()) {
                 $.ajax({
                     type: "POST",
-                    url: 'https://api.convertkit.com/v3/forms/386451/subscribe',
+                    url: "https://api.convertkit.com/v3/forms/386451/subscribe",
                     data: {
-                        "api_key": "wR0SLE-B7kMUrW-WqVVKyg",
-                        "email": email
+                        api_key: "wR0SLE-B7kMUrW-WqVVKyg",
+                        email: email
                     },
                     success: function () {
-                        window.location.href = "https://www.notforp.com/thank-you.html";
+                        dataLayer.push({'event': 'formSubmitted'});
+
+                        if (subscribersCountUp) {
+                            firebase.database().ref('/subscribers').set(subscribersCountUp.endVal + 1);
+                        }
+                        // window.location.href = "https://www.notforp.com/thank-you.html";
                     },
                     error: function (response) {
                         showErr(response.responseJSON.message);
                     },
                     dataType: "JSON"
                 });
-            }else{
+            } else {
                 showErr('Incorrect email address.')
             }
 
-            function showSuccess(){
+            function showSuccess() {
                 $subscribe.append('<div class="subscribe__message">Please check you email.</div>')
             }
 
-            function showErr(err){
-                $subscribe.append('<div class="subscribe__message -err">'+err+'</div>')
+            function showErr(err) {
+                $subscribe.append('<div class="subscribe__message -err">' + err + '</div>')
             }
 
 
@@ -316,13 +341,9 @@
             $horizontView.css('filter', 'blur(' + blur + 'px)');
 
             transactionCutCountUp.update(vals[year].transactionCut)
-            transactionCutCountUp.start();
             cosmeticsCutCountUp.update(vals[year].cosmetics)
-            cosmeticsCutCountUp.start();
             ladderEntranceCutCountUp.update(vals[year].ladderEntrance)
-            ladderEntranceCutCountUp.start();
             ransomCutCountUp.update(vals[year].ransom)
-            ransomCutCountUp.start();
             // $transactionCut.html(vals[year].transactionCut + ' €');
             // $cosmetics.html(vals[year].cosmetics + ' €');
             // $ladderEntrance.html(vals[year].ladderEntrance + ' €');
