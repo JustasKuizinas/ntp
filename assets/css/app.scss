@@ -1353,8 +1353,8 @@ button {
         @include media(lg-max) {
             text-align: center;
         }
-        @include media(lg) {
-            padding: 180px 0 250px 50px;
+        @include media(lg) { 
+            padding: 130px 0 180px 50px;
         }
         h2 {
             text-align: center;
