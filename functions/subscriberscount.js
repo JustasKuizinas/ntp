@@ -9,7 +9,7 @@ exports.handler = function(event, context, callback) {
             statusCode: 200,
             body: ""+subscriberscount
         });
-    }   
+    }
     if(event.httpMethod=='GET'){
         callback(null, {
             statusCode: 200,
