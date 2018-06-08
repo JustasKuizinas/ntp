@@ -176,20 +176,22 @@
                             var formGA = 'None';
                             var tagID='form_none';
 
-                            if(el.value =='None'){
-                                tagID='';
-                            }
-                            if(el.value =='Less than 1 ETH'){
-                                tagID='form_less_than_1';
-                            }
-                            if(el.value =='1 -3 ETH'){
-                                tagID='form_2_3';
-                            }
-                            if(el.value =='More than 3 ETH'){
-                                tagID='form_more_than_3';
-                            }
+
 
                             function inputChange(el) {
+                                if(el.value =='None'){
+                                    tagID='';
+                                }
+                                if(el.value =='Less than 1 ETH'){
+                                    tagID='form_less_than_1';
+                                }
+                                if(el.value =='1 -3 ETH'){
+                                    tagID='form_2_3';
+                                }
+                                if(el.value =='More than 3 ETH'){
+                                    tagID='form_more_than_3';
+                                }
+                                
                                 formGA = el.value;
                                 console.log(formGA);
                             }
