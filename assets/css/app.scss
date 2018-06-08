@@ -1513,7 +1513,17 @@ button {
     }
 
     &__left {
-
+        @include media(xl) {
+            h2 {
+                font-size: 2.8rem;
+            }
+            h5 {
+                font-size: 1.5rem;
+            }
+            .par {
+                font-size: 1.3rem;
+            }
+        }
     }
     &__right {
         @include media(xl) {

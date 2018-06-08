@@ -7,7 +7,7 @@ exports.handler = function (event, context, callback) {
             statusCode: 200,
             body: "" + subscriberscount
         });
-    }   
+    }
     if (event.httpMethod == 'GET') {
         var subscriberscount = parseInt(process.env.subscribersCount);
         callback(null, {
