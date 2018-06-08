@@ -1,6 +1,6 @@
 (function () {
     "use strict";
-    var subscribersCountUp;
+
 
     $(function () {
         initDeviceCheck();
@@ -41,7 +41,7 @@
         //
         // });
 
-        if($('#embedded-typeform').length > 0){
+        if ($('#embedded-typeform').length > 0) {
             window.typeformEmbed.makeWidget($('#embedded-typeform')[0], "https://justasbrazauskas.typeform.com/to/s9SKnK", {
                 hideFooter: true,
                 hideHeaders: true,
@@ -71,10 +71,8 @@
                     },
                     success: function () {
                         dataLayer.push({'event': 'formSubmitted'});
+                        localStorage.setItem('email', email);
 
-                        if (subscribersCountUp) {
-                            firebase.database().ref('/subscribers').set(subscribersCountUp.endVal + 1);
-                        }  
                         window.location.href = "https://www.notforp.com/thank-you.html";
                     },
                     error: function (response) {

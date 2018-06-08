@@ -929,8 +929,8 @@ button {
     &__img-hold {
         max-width: 230px;
         margin: 0 auto 15px;
-
-        img {
+        position: relative;
+        > img {
             width: 230px;
             height: 230px;
             display: block;
@@ -939,6 +939,7 @@ button {
         }
     }
     &__img {
+
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -950,6 +951,17 @@ button {
         object-fit: cover;
         mask-image: url("../img/masker.png");
         mask-size: 100%;
+    }
+    &__stamp{
+        @extend .h-flex-center;
+        position: absolute;
+        background-image: url(../img/circle-bg.png);
+        width:86px;
+        height: 86px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        right: 0;
+        bottom: 0;
     }
     &__desc {
         margin-top: 19px;
@@ -2428,5 +2440,35 @@ button {
         &__content {
             padding: 90px 0 80px;
         }
+    }
+}
+
+.gform{
+    text-align: center;
+    margin-top: 50px;
+    &__input-wrap{
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+        color: #fff;
+    }
+    .button{
+        max-width: 200px;
+        height: 60px;
+        width: 100%;
+        background-color: #ffc731;
+        font-family: $font-astoria;
+        color: #0c0c0c;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        @include hover() {
+            //color: #ffc731;
+            //background-color: #0c0c0c;
+        }
+    }
+    #thankYou{
+        font-size: 1.5rem;
+        color: #14b114;
+        margin-top: 10px;
     }
 }
