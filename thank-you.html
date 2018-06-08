@@ -180,7 +180,7 @@
 
                             function inputChange(el) {
                                 if(el.value =='None'){
-                                    tagID='form_none'; 
+                                    tagID='form_none';
                                 }
                                 if(el.value =='Less than 1 ETH'){
                                     tagID='form_less_than_1';
@@ -363,18 +363,17 @@
         $.ajax({
             type: "POST",
             url: "https://api.convertkit.com/v3/forms/386451/subscribe",
+            dataType: "JSON", 
             data: {
                 api_key: "wR0SLE-B7kMUrW-WqVVKyg",
                 email: localStorage.getItem('email'),
                 tags:[tagID]
             },
             success: function () {
-
             },
             error: function (response) {
-                showErr(response.responseJSON.message);
             },
-            dataType: "JSON"
+
         });
     }
 
