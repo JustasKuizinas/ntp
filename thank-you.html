@@ -174,22 +174,22 @@
                         <!--<div id="embedded-typeform" style="width: 100%; height: 500px;"></div>-->
                         <script>
                             var formGA = 'None';
-                            var tagID='form_none';
+                            var tagID='507253';
 
 
 
                             function inputChange(el) {
                                 if(el.value =='None'){
-                                    tagID='form_none';
+                                    tagID='507253';
                                 }
                                 if(el.value =='Less than 1 ETH'){
-                                    tagID='form_less_than_1';
+                                    tagID='507254';
                                 }
                                 if(el.value =='1 -3 ETH'){
-                                    tagID='form_2_3';
+                                    tagID='507255';
                                 }
                                 if(el.value =='More than 3 ETH'){
-                                    tagID='form_more_than_3';
+                                    tagID='507256';
                                 }
 
                                 formGA = el.value;
@@ -359,7 +359,7 @@
             'radio_button': formGA,
             'event': 'ethForm'
         });
-
+ 
         $.ajax({
             type: "POST",
             url: "https://api.convertkit.com/v3/tags/"+tagID+"/subscribe",
@@ -367,8 +367,7 @@
             data: {
                 api_key: "wR0SLE-B7kMUrW-WqVVKyg",
                 email: localStorage.getItem('email'),
-                tags:[tagID]
-            }, 
+            },
             success: function () {
             },
             error: function (response) {
