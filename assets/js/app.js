@@ -52,6 +52,20 @@
     });
 
     function initSubscribe() {
+        if($('.js-subscribers').length > 0){
+            $.ajax({
+                type: "POST",
+                url: "https://www.notforp.com/.netlify/functions/subscribers-count",
+                dataType: "JSON",
+                data: {},
+                success: function (resp) {
+                    $('.js-subscribers').text(resp);
+                },
+                error: function (response) {
+                },
+
+            });
+        }
         $('.subscribe button').on('click', function (e) {
             e.preventDefault();
 
@@ -68,12 +82,24 @@
                     data: {
                         api_key: "wR0SLE-B7kMUrW-WqVVKyg",
                         email: email
-                    },
+                    }, 
                     success: function () {
                         dataLayer.push({'event': 'formSubmitted'});
                         localStorage.setItem('email', email);
+                        $.ajax({
+                            type: "POST",
+                            url: "https://www.notforp.com/.netlify/functions/subscribers-count",
+                            dataType: "JSON",
+                            data: {},
+                            success: function (resp) {
+                                $('.js-subscribers').text(resp);
+                                window.location.href = "https://www.notforp.com/thank-you.html";
+                            },
+                            error: function (response) {
+                            },
 
-                        window.location.href = "https://www.notforp.com/thank-you.html";
+                        });
+
                     },
                     error: function (response) {
                         showErr(response.responseJSON.message);
