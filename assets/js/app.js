@@ -54,7 +54,7 @@
     function initSubscribe() {
         if($('.js-subscribers').length > 0){
             $.ajax({
-                type: "POST",
+                type: "GET",
                 url: "https://www.notforp.com/.netlify/functions/subscriberscount",
                 dataType: "JSON",
                 data: {},
