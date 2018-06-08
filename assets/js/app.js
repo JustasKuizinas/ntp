@@ -55,7 +55,7 @@
         if($('.js-subscribers').length > 0){
             $.ajax({
                 type: "POST",
-                url: "https://www.notforp.com/.netlify/functions/subscribers-count",
+                url: "https://www.notforp.com/.netlify/functions/subscriberscount",
                 dataType: "JSON",
                 data: {},
                 success: function (resp) {
@@ -82,13 +82,13 @@
                     data: {
                         api_key: "wR0SLE-B7kMUrW-WqVVKyg",
                         email: email
-                    }, 
+                    },
                     success: function () {
                         dataLayer.push({'event': 'formSubmitted'});
                         localStorage.setItem('email', email);
                         $.ajax({
                             type: "POST",
-                            url: "https://www.notforp.com/.netlify/functions/subscribers-count",
+                            url: "https://www.notforp.com/.netlify/functions/subscriberscount",
                             dataType: "JSON",
                             data: {},
                             success: function (resp) {
