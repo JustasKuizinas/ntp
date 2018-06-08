@@ -362,13 +362,13 @@
 
         $.ajax({
             type: "POST",
-            url: "https://api.convertkit.com/v3/forms/386451/subscribe",
-            dataType: "JSON", 
+            url: "https://api.convertkit.com/v3/tags/"+tagID+"/subscribe",
+            dataType: "JSON",
             data: {
                 api_key: "wR0SLE-B7kMUrW-WqVVKyg",
                 email: localStorage.getItem('email'),
                 tags:[tagID]
-            },
+            }, 
             success: function () {
             },
             error: function (response) {
