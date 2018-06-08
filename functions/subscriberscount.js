@@ -1,8 +1,7 @@
 var subscriberscount = 2556;
  
 exports.handler = function(event, context, callback) {
-
-    subscriberscount++;
+ 
     if(event.httpMethod=='POST'){
         subscriberscount++;
         callback(null, {
