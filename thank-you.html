@@ -196,7 +196,7 @@
                             }
                         </script>
 
-                        <form class="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSf6pYkahZY32y4UYvS1ZjIj8zcbWDCGmD8tB37Zw6a6efofTA/formResponse" target="hidden_iframe" onsubmit="document.getElementById('gformSubmit').setAttribute('disabled','true');submitted=true;gaFormSubmit();">
+                        <form class="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSf6pYkahZY32y4UYvS1ZjIj8zcbWDCGmD8tB37Zw6a6efofTA/formResponse" target="hidden_iframe" onsubmit="formSubmit();">
                             <h5>When we will start our ICO how much do you plan to contribute?</h5>
                             <div class="gform__input-wrap">
                                 <input type="radio" name="entry.904842309" id="e0" value="None" onchange="inputChange(this)" checked/>
@@ -353,10 +353,14 @@
 <script src="./assets/js/app.min.js?fileVersion=3"></script>
 
 <script>
-    function gaFormSubmit() {
+    function formSubmit() {
         var email = localStorage.getItem('email');
         localStorage.removeItem('email');
+        document.getElementById('gformSubmit').setAttribute('disabled', 'true');
+ 
         if (email) {
+            submitted = true;
+            gaFormSubmit();
             dataLayer.push({
                 'radio_button': formGA,
                 'event': 'ethForm'
@@ -376,6 +380,8 @@
                 },
 
             });
+        } else {
+            return false;
         }
 
     }
