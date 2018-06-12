@@ -1,5 +1,5 @@
 exports.handler = function (event, context, callback) {
-
+  
     if (event.httpMethod == 'POST') {
         process.env.subscribersCount = parseInt(process.env.subscribersCount) + 1;
         var subscriberscount = process.env.subscribersCount;
