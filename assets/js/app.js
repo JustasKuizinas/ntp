@@ -162,6 +162,8 @@
             for (var i = 0; i < response.items.length; i++) {
                 var item = response.items[i];
                 var date = moment(item.pubDate).format('MMMM D, YYYY');
+                item.content = item.content.replace(/img/g,'img000');
+                console.log('item', item.content);
                 var content = $('<span></span>').html(item.content).find('p:first').text();
                 console.log(content)
 
