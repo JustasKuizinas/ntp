@@ -954,11 +954,11 @@ button {
         mask-image: url("../img/masker.png");
         mask-size: 100%;
     }
-    &__stamp{
+    &__stamp {
         @extend .h-flex-center;
         position: absolute;
         background-image: url(../img/circle-bg.png);
-        width:86px;
+        width: 86px;
         height: 86px;
         background-size: contain;
         background-repeat: no-repeat;
@@ -1850,6 +1850,90 @@ button {
     }
 }
 
+.tag {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: rgba(24, 24, 24, 0.8);
+    padding: 40px 0px;
+    margin-bottom: 75px;
+    position: relative;
+
+    @include media(lg){
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding: 30px 60px 30px 30px;
+    }
+
+    .img{
+        display: block;
+        text-align: center;
+        @include media(lg){
+            flex: 1 1 400px;
+            border-right: solid 1px #4e4e4e;
+            padding-right: 40px;
+            margin-right: 40px;
+        }
+    }
+    .txt{
+        padding: 10px;
+        font-size: 1.6rem;
+        color: #d7d7d7;
+    }
+    .brd{
+        position: absolute;
+        width: 100%;
+        left: 0;
+    }
+    .brd1{
+        top: 0;
+    }
+    .brd2{
+        bottom: 0;
+    }
+}
+
+.section-developer {
+    background-repeat: repeat;
+    background-size: auto;
+
+    &.lazyloaded {
+        background-image: url("../img/texture-1.jpg");
+    }
+
+    .section {
+        &__content {
+            padding: 60px 0 30px;
+
+            &.lazyloaded {
+                background-image: url("../img/shadowfull.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            @include media(md) {
+                padding: 134px 0 83px;
+            }
+        }
+    }
+    h2 {
+        text-align: center;
+    }
+    .divider {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .person {
+        margin-bottom: 40px;
+    }
+    .advisors {
+        margin-top: 20px;
+    }
+    .container-fluid + .container-fluid {
+        margin-bottom: 85px;
+    }
+}
+
 .section-9 {
     background-color: #151515;
     .section {
@@ -2433,11 +2517,11 @@ button {
         width: 90%;
         margin-top: 30px;
     }
-    &__graph-hdl{
+    &__graph-hdl {
         padding: 0 0 30px;
         margin-bottom: 20px;
 
-        @include media(md){
+        @include media(md) {
             min-height: 100%;
         }
     }
@@ -2455,15 +2539,15 @@ button {
     }
 }
 
-.gform{
+.gform {
     text-align: center;
     margin-top: 50px;
-    &__input-wrap{
+    &__input-wrap {
         margin-bottom: 10px;
         font-size: 1.4rem;
         color: #fff;
     }
-    .button{
+    .button {
         max-width: 200px;
         height: 60px;
         width: 100%;
@@ -2478,7 +2562,7 @@ button {
             //background-color: #0c0c0c;
         }
     }
-    #thankYou{
+    #thankYou {
         font-size: 1.5rem;
         color: #14b114;
         margin-top: 10px;
