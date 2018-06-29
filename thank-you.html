@@ -355,7 +355,6 @@
 <script>
     function formSubmit() {
         var email = localStorage.getItem('email');
-        localStorage.removeItem('email');
         document.getElementById('gformSubmit').setAttribute('disabled', 'true');
 
         if (email) {
@@ -364,7 +363,7 @@
                 'radio_button': formGA,
                 'event': 'ethForm'
             });
- 
+
             $.ajax({
                 type: "POST",
                 url: "https://api.convertkit.com/v3/tags/" + tagID + "/subscribe",
@@ -374,6 +373,7 @@
                     email: localStorage.getItem('email'),
                 },
                 success: function () {
+                    localStorage.removeItem('email');
                 },
                 error: function (response) {
                 },

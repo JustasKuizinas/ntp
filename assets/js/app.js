@@ -732,6 +732,10 @@
                 closeOffCanvas(".off-canvas-side-menu");
             }
         });
+         
+        $('.menu-vertical').on("click", function (e) {
+            closeOffCanvas($(this).closest(".off-canvas"));
+        });
 
         $(".off-canvas__close").on("click", function (e) {
             e.preventDefault();
