@@ -732,7 +732,7 @@
                 closeOffCanvas(".off-canvas-side-menu");
             }
         });
-         
+
         $('.menu-vertical').on("click", function (e) {
             closeOffCanvas($(this).closest(".off-canvas"));
         });
@@ -761,7 +761,7 @@
             $body.addClass(canvas.slice(1) + "-is-active");
             $(canvas).addClass("is-visible");
         }
-
+ 
         function closeOffCanvas(canvas) {
             var $canvas;
             if (canvas) {
