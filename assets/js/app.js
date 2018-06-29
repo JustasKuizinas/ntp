@@ -51,8 +51,33 @@
 
     });
 
+    function closeOffCanvas(canvas) {
+        var $body = $("body");
+        var $canvas;
+        if (canvas) {
+            if (typeof canvas === 'object') {
+                $canvas = canvas;
+            } else {
+                $canvas = $(canvas);
+            }
+        }
+
+
+        $body.attr('class', function (i, c) {
+            return c.replace(/(^|\s)off-canvas\S+/g, '');
+        });
+        $body.removeClass("has-scrollbar");
+        if ($canvas) {
+            $canvas.removeClass("is-visible");
+        } else {
+            $(".off-canvas").removeClass("is-visible");
+        }
+        $(".hamburger").removeClass('is-active');
+
+    }
+
     function initSubscribe() {
-        if($('.js-subscribers').length > 0){
+        if ($('.js-subscribers').length > 0) {
             $.ajax({
                 type: "GET",
                 url: "https://www.notforp.com/.netlify/functions/subscriberscount",
@@ -134,6 +159,7 @@
                     offset = 0;
                 }
                 if (target.length) {
+                    closeOffCanvas('.off-canvas-side-menu');
                     $('html,body').animate({
                         scrollTop: target.offset().top + offset
                     }, 500, 'easeOutCubic', function () {
@@ -162,7 +188,7 @@
             for (var i = 0; i < response.items.length; i++) {
                 var item = response.items[i];
                 var date = moment(item.pubDate).format('MMMM D, YYYY');
-                item.content = item.content.replace(/img/g,'img000');
+                item.content = item.content.replace(/img/g, 'img000');
                 console.log('item', item.content);
                 var content = $('<span></span>').html(item.content).find('p:first').text();
                 console.log(content)
@@ -734,6 +760,7 @@
         });
 
         $('.menu-vertical').on("click", function (e) {
+            console.log('closing');
             closeOffCanvas($(this).closest(".off-canvas"));
         });
 
@@ -761,28 +788,8 @@
             $body.addClass(canvas.slice(1) + "-is-active");
             $(canvas).addClass("is-visible");
         }
- 
-        function closeOffCanvas(canvas) {
-            var $canvas;
-            if (canvas) {
-                if (typeof canvas === 'object') {
-                    $canvas = canvas;
-                } else {
-                    $canvas = $(canvas);
-                }
-            }
 
 
-            $body.attr('class', function (i, c) {
-                return c.replace(/(^|\s)off-canvas\S+/g, '');
-            });
-            $body.removeClass("has-scrollbar");
-            if ($canvas) {
-                $canvas.removeClass("is-visible");
-            } else {
-                $(".off-canvas").removeClass("is-visible");
-            }
-        }
     }
 
 
