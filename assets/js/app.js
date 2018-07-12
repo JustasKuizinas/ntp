@@ -80,7 +80,7 @@
         if ($('.js-subscribers').length > 0) {
             $.ajax({
                 type: "GET",
-                url: "https://www.notforp.com/.netlify/functions/subscriberscount",
+                url: "https://www.mergethegame.com/.netlify/functions/subscriberscount",
                 dataType: "JSON",
                 data: {},
                 success: function (resp) {
