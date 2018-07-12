@@ -114,12 +114,12 @@
 
                         $.ajax({
                             type: "POST",
-                            url: "https://www.notforp.com/.netlify/functions/subscriberscount",
+                            url: "https://www.mergethegame.com/.netlify/functions/subscriberscount",
                             dataType: "JSON",
                             data: {},
                             success: function (resp) {
                                 $('.js-subscribers').text(resp);
-                                window.location.href = "https://www.notforp.com/thank-you.html";
+                                window.location.href = "https://www.mergethegame.com/thank-you.html";
                             },
                             error: function (response) {
                             },
