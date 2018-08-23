@@ -710,7 +710,7 @@
 
     function initYT() {
         var theModal = '#videoModal';
-        var videoSRC = 'https://www.youtube.com/embed/VU0hyAx9meo' + "?autoplay=1";
+        var videoSRC = 'https://www.youtube.com/embed/dhsZQ9KCHX4' + "?autoplay=1";
 
 
         $('#videoModal').on('hidden.bs.modal', function (e) {
