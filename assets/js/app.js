@@ -177,7 +177,7 @@
     function initMedium() {
         if ($('#blog-section').length === 0) return;
 
-        var mediumRSSFeed = 'https://medium.com/feed/not-for-p';
+        var mediumRSSFeed = 'https://medium.com/feed/mergeeb';
         var mediumJSON = 'https://api.rss2json.com/v1/api.json?rss_url=' + mediumRSSFeed;
         var blogFirstPosthtml = '';
         var blogPostshtml = '';
